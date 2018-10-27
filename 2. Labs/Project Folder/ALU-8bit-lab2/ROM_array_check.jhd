@@ -1,0 +1,3 @@
+MODULE ROM_array_check
+	SUBMODULE bus8_mux
+		INSTANCE XLXI_1

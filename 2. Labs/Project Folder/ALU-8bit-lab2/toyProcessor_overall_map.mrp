@@ -1,0 +1,343 @@
+Release 14.2 Map P.28xd (nt64)
+Xilinx Mapping Report File for Design 'toyProcessor_overall'
+
+Design Information
+------------------
+Command Line   : map -intstyle ise -p xc3s250e-cp132-4 -cm area -ir off -pr off
+-c 100 -o toyProcessor_overall_map.ncd toyProcessor_overall.ngd
+toyProcessor_overall.pcf 
+Target Device  : xc3s250e
+Target Package : cp132
+Target Speed   : -4
+Mapper Version : spartan3e -- $Revision: 1.55 $
+Mapped Date    : Fri Mar 23 12:09:13 2018
+
+Design Summary
+--------------
+Number of errors:      0
+Number of warnings:    0
+Logic Utilization:
+  Number of Slice Flip Flops:            61 out of   4,896    1%
+  Number of 4 input LUTs:               629 out of   4,896   12%
+Logic Distribution:
+  Number of occupied Slices:            334 out of   2,448   13%
+    Number of Slices containing only related logic:     334 out of     334 100%
+    Number of Slices containing unrelated logic:          0 out of     334   0%
+      *See NOTES below for an explanation of the effects of unrelated logic.
+  Total Number of 4 input LUTs:         629 out of   4,896   12%
+    Number used as logic:               501
+    Number used for 32x1 RAMs:          128
+      (Two LUTs used per 32x1 RAM)
+
+  The Slice Logic Distribution report is not meaningful if the design is
+  over-mapped for a non-slice resource or if Placement fails.
+
+  Number of bonded IOBs:                 47 out of      92   51%
+  Number of BUFGMUXs:                     2 out of      24    8%
+
+  Number of RPM macros:           34
+Average Fanout of Non-Clock Nets:                5.16
+
+Peak Memory Usage:  246 MB
+Total REAL time to MAP completion:  2 secs 
+Total CPU time to MAP completion:   1 secs 
+
+NOTES:
+
+   Related logic is defined as being logic that shares connectivity - e.g. two
+   LUTs are "related" if they share common inputs.  When assembling slices,
+   Map gives priority to combine logic that is related.  Doing so results in
+   the best timing performance.
+
+   Unrelated logic shares no connectivity.  Map will only begin packing
+   unrelated logic into a slice once 99% of the slices are occupied through
+   related logic packing.
+
+   Note that once logic distribution reaches the 99% level through related
+   logic packing, this does not mean the device is completely utilized.
+   Unrelated logic packing will then begin, continuing until all usable LUTs
+   and FFs are occupied.  Depending on your timing budget, increased levels of
+   unrelated logic packing may adversely affect the overall timing performance
+   of your design.
+
+Table of Contents
+-----------------
+Section 1 - Errors
+Section 2 - Warnings
+Section 3 - Informational
+Section 4 - Removed Logic Summary
+Section 5 - Removed Logic
+Section 6 - IOB Properties
+Section 7 - RPMs
+Section 8 - Guide Report
+Section 9 - Area Group and Partition Summary
+Section 10 - Timing Report
+Section 11 - Configuration String Information
+Section 12 - Control Set Information
+Section 13 - Utilization by Hierarchy
+
+Section 1 - Errors
+------------------
+
+Section 2 - Warnings
+--------------------
+
+Section 3 - Informational
+-------------------------
+INFO:LIT:243 - Logical network XLXI_12/XLXI_2/CEO has no load.
+INFO:MapLib:562 - No environment variables are currently set.
+INFO:LIT:244 - All of the single ended outputs in this design are using slew
+   rate limited output drivers. The delay on speed critical single ended outputs
+   can be dramatically reduced by designating them as fast outputs.
+
+Section 4 - Removed Logic Summary
+---------------------------------
+  27 block(s) removed
+  22 block(s) optimized away
+  22 signal(s) removed
+
+Section 5 - Removed Logic
+-------------------------
+
+The trimmed logic report below shows the logic removed from your design due to
+sourceless or loadless signals, and VCC or ground connections.  If the removal
+of a signal or symbol results in the subsequent removal of an additional signal
+or symbol, the message explaining that second removal will be indented.  This
+indentation will be repeated as a chain of related logic is removed.
+
+To quickly locate the original cause for the removal of a chain of logic, look
+above the place where that logic is listed in the trimming report, then locate
+the lines that are least indented (begin at the leftmost edge).
+
+Loadless block "BOOTSTRAP/XLXI_5/XLXI_2/XLXI_8/XLXI_1" (AND) removed.
+Loadless block "XLXI_2/XLXI_8/XLXI_2/XLXI_3" (SFF) removed.
+Loadless block "XLXI_2/XLXI_8/XLXI_2/XLXI_5" (SFF) removed.
+Loadless block "XLXI_2/XLXI_8/XLXI_2/XLXI_6" (SFF) removed.
+Loadless block "XLXI_2/XLXI_8/XLXI_4/XLXI_2/XLXI_8/XLXI_1" (AND) removed.
+Loadless block "XLXI_2/XLXI_8/XLXI_5/XLXI_1/XLXI_3" (OR) removed.
+ The signal "XLXI_2/XLXI_8/XLXI_5/XLXI_1/XLXN_7" is loadless and has been
+removed.
+  Loadless block "XLXI_2/XLXI_8/XLXI_5/XLXI_1/XLXI_1" (AND) removed.
+ The signal "XLXI_2/XLXI_8/XLXI_5/XLXI_1/XLXN_16" is loadless and has been
+removed.
+  Loadless block "XLXI_2/XLXI_8/XLXI_5/XLXI_1/XLXI_2" (AND) removed.
+The signal "BOOTSTRAP/XLXI_19/dummy" is sourceless and has been removed.
+The signal "XLXI_2/XLXI_8/XLXI_7/XLXI_1/dummy" is sourceless and has been
+removed.
+The signal "BOOTSTRAP/ROMARRAY/XLXI_1/XLXI_44/dummy" is sourceless and has been
+removed.
+The signal "BOOTSTRAP/ROMARRAY/XLXI_1/XLXI_43/dummy" is sourceless and has been
+removed.
+The signal "BOOTSTRAP/ROMARRAY/XLXI_1/XLXI_42/dummy" is sourceless and has been
+removed.
+The signal "BOOTSTRAP/ROMARRAY/XLXI_1/XLXI_41/dummy" is sourceless and has been
+removed.
+The signal "BOOTSTRAP/ROMARRAY/XLXI_1/XLXI_40/dummy" is sourceless and has been
+removed.
+The signal "BOOTSTRAP/ROMARRAY/XLXI_1/XLXI_39/dummy" is sourceless and has been
+removed.
+The signal "BOOTSTRAP/ROMARRAY/XLXI_1/XLXI_38/dummy" is sourceless and has been
+removed.
+The signal "BOOTSTRAP/ROMARRAY/XLXI_1/XLXI_34/dummy" is sourceless and has been
+removed.
+The signal "XLXI_12/XLXI_2/CEO" is sourceless and has been removed.
+The signal "BOOTSTRAP/XLXI_2/XLXI_30/XLXI_34/dummy" is sourceless and has been
+removed.
+The signal "BOOTSTRAP/XLXI_2/XLXI_30/XLXI_38/dummy" is sourceless and has been
+removed.
+The signal "BOOTSTRAP/XLXI_2/XLXI_30/XLXI_39/dummy" is sourceless and has been
+removed.
+The signal "BOOTSTRAP/XLXI_2/XLXI_30/XLXI_40/dummy" is sourceless and has been
+removed.
+The signal "BOOTSTRAP/XLXI_2/XLXI_30/XLXI_41/dummy" is sourceless and has been
+removed.
+The signal "BOOTSTRAP/XLXI_2/XLXI_30/XLXI_42/dummy" is sourceless and has been
+removed.
+The signal "BOOTSTRAP/XLXI_2/XLXI_30/XLXI_43/dummy" is sourceless and has been
+removed.
+The signal "BOOTSTRAP/XLXI_2/XLXI_30/XLXI_44/dummy" is sourceless and has been
+removed.
+
+The trimmed logic reported below is either:
+   1. part of a cycle
+   2. part of disabled logic
+   3. a side-effect of other trimmed logic
+
+The signal "BOOTSTRAP/XLXI_5/XLXN_2" is unused and has been removed.
+Unused block "BOOTSTRAP/ROMARRAY/XLXI_1/XLXI_34/XST_GND" (ZERO) removed.
+Unused block "BOOTSTRAP/ROMARRAY/XLXI_1/XLXI_38/XST_GND" (ZERO) removed.
+Unused block "BOOTSTRAP/ROMARRAY/XLXI_1/XLXI_39/XST_GND" (ZERO) removed.
+Unused block "BOOTSTRAP/ROMARRAY/XLXI_1/XLXI_40/XST_GND" (ZERO) removed.
+Unused block "BOOTSTRAP/ROMARRAY/XLXI_1/XLXI_41/XST_GND" (ZERO) removed.
+Unused block "BOOTSTRAP/ROMARRAY/XLXI_1/XLXI_42/XST_GND" (ZERO) removed.
+Unused block "BOOTSTRAP/ROMARRAY/XLXI_1/XLXI_43/XST_GND" (ZERO) removed.
+Unused block "BOOTSTRAP/ROMARRAY/XLXI_1/XLXI_44/XST_GND" (ZERO) removed.
+Unused block "BOOTSTRAP/XLXI_19/XST_GND" (ZERO) removed.
+Unused block "BOOTSTRAP/XLXI_2/XLXI_30/XLXI_34/XST_GND" (ZERO) removed.
+Unused block "BOOTSTRAP/XLXI_2/XLXI_30/XLXI_38/XST_GND" (ZERO) removed.
+Unused block "BOOTSTRAP/XLXI_2/XLXI_30/XLXI_39/XST_GND" (ZERO) removed.
+Unused block "BOOTSTRAP/XLXI_2/XLXI_30/XLXI_40/XST_GND" (ZERO) removed.
+Unused block "BOOTSTRAP/XLXI_2/XLXI_30/XLXI_41/XST_GND" (ZERO) removed.
+Unused block "BOOTSTRAP/XLXI_2/XLXI_30/XLXI_42/XST_GND" (ZERO) removed.
+Unused block "BOOTSTRAP/XLXI_2/XLXI_30/XLXI_43/XST_GND" (ZERO) removed.
+Unused block "BOOTSTRAP/XLXI_2/XLXI_30/XLXI_44/XST_GND" (ZERO) removed.
+Unused block "XLXI_12/XLXI_2/I_36_54" (AND) removed.
+Unused block "XLXI_2/XLXI_8/XLXI_7/XLXI_1/XST_GND" (ZERO) removed.
+
+Optimized Block(s):
+TYPE 		BLOCK
+AND2 		BOOTSTRAP/XLXI_5/XLXI_3/XLXI_1/XLXI_1
+INV 		BOOTSTRAP/XLXI_5/XLXI_3/XLXI_1/XLXI_4
+AND2 		BOOTSTRAP/XLXI_5/XLXI_3/XLXI_2/XLXI_1
+INV 		BOOTSTRAP/XLXI_5/XLXI_3/XLXI_2/XLXI_4
+AND2 		BOOTSTRAP/XLXI_5/XLXI_3/XLXI_3/XLXI_1
+INV 		BOOTSTRAP/XLXI_5/XLXI_3/XLXI_3/XLXI_4
+AND2 		BOOTSTRAP/XLXI_5/XLXI_3/XLXI_4/XLXI_1
+INV 		BOOTSTRAP/XLXI_5/XLXI_3/XLXI_4/XLXI_4
+AND2 		BOOTSTRAP/XLXI_5/XLXI_3/XLXI_5/XLXI_1
+INV 		BOOTSTRAP/XLXI_5/XLXI_3/XLXI_5/XLXI_4
+AND2 		BOOTSTRAP/XLXI_5/XLXI_3/XLXI_6/XLXI_1
+INV 		BOOTSTRAP/XLXI_5/XLXI_3/XLXI_6/XLXI_4
+AND2 		BOOTSTRAP/XLXI_5/XLXI_3/XLXI_7/XLXI_1
+INV 		BOOTSTRAP/XLXI_5/XLXI_3/XLXI_7/XLXI_4
+AND2 		BOOTSTRAP/XLXI_5/XLXI_3/XLXI_8/XLXI_1
+INV 		BOOTSTRAP/XLXI_5/XLXI_3/XLXI_8/XLXI_4
+AND2 		BOOTSTRAP/XLXI_5/XLXI_4
+OR2 		BOOTSTRAP/XLXI_5/XLXI_5
+INV 		BOOTSTRAP/XLXI_5/XLXI_6
+GND 		BOOTSTRAP/XLXI_6
+VCC 		XLXI_12/XLXI_2/I_36_9
+VCC 		XLXI_4
+
+To enable printing of redundant blocks removed and signals merged, set the
+detailed map report option and rerun map.
+
+Section 6 - IOB Properties
+--------------------------
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| IOB Name                           | Type             | Direction | IO Standard          | Diff  | Drive    | Slew | Reg (s)      | Resistor | IOB      |
+|                                    |                  |           |                      | Term  | Strength | Rate |              |          | Delay    |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| ADDR<0>                            | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| ADDR<1>                            | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| ADDR<2>                            | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| ADDR<3>                            | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| ADDR<4>                            | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| ADDR<5>                            | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| ADDR<6>                            | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| ADDR<7>                            | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| CLK                                | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
+| D_IN<0>                            | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| D_IN<1>                            | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| D_IN<2>                            | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| D_IN<3>                            | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| D_IN<4>                            | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| D_IN<5>                            | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| D_IN<6>                            | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| D_IN<7>                            | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| EN_L                               | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| EN_ML                              | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| EN_MR                              | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| EN_R                               | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| MEM_EN                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| Output<0>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| Output<1>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| Output<2>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| Output<3>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| Output<4>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| Output<5>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| Output<6>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| Output<7>                          | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| Overflow                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| PUSH                               | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
+| RESET                              | IBUF             | INPUT     | LVCMOS25             |       |          |      |              |          | 0 / 0    |
+| S0                                 | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| S1                                 | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| S2                                 | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| S3                                 | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| S4                                 | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| S5                                 | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| WRITE_EN                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| seven_seg_out<0>                   | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| seven_seg_out<1>                   | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| seven_seg_out<2>                   | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| seven_seg_out<3>                   | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| seven_seg_out<4>                   | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| seven_seg_out<5>                   | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
+| seven_seg_out<6>                   | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          | 0 / 0    |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+Section 7 - RPMs
+----------------
+BOOTSTRAP/ROMARRAY/XLXI_1_XLXI_34_154   
+BOOTSTRAP/ROMARRAY/XLXI_1_XLXI_38_155   
+BOOTSTRAP/ROMARRAY/XLXI_1_XLXI_39_156   
+BOOTSTRAP/ROMARRAY/XLXI_1_XLXI_40_157   
+BOOTSTRAP/ROMARRAY/XLXI_1_XLXI_41_158   
+BOOTSTRAP/ROMARRAY/XLXI_1_XLXI_42_159   
+BOOTSTRAP/ROMARRAY/XLXI_1_XLXI_43_160   
+BOOTSTRAP/ROMARRAY/XLXI_1_XLXI_44_161   
+BOOTSTRAP/XLXI_2_XLXI_30_XLXI_34_154    
+BOOTSTRAP/XLXI_2_XLXI_30_XLXI_38_155    
+BOOTSTRAP/XLXI_2_XLXI_30_XLXI_39_156    
+BOOTSTRAP/XLXI_2_XLXI_30_XLXI_40_157    
+BOOTSTRAP/XLXI_2_XLXI_30_XLXI_41_158    
+BOOTSTRAP/XLXI_2_XLXI_30_XLXI_42_159    
+BOOTSTRAP/XLXI_2_XLXI_30_XLXI_43_160    
+BOOTSTRAP/XLXI_2_XLXI_30_XLXI_44_161    
+BOOTSTRAP_XLXI_19_162                   
+XLXI_12/XLXI_2/XLXI_2_I_Q0_136          
+XLXI_12/XLXI_2/XLXI_2_I_Q10_145         
+XLXI_12/XLXI_2/XLXI_2_I_Q11_146         
+XLXI_12/XLXI_2/XLXI_2_I_Q12_147         
+XLXI_12/XLXI_2/XLXI_2_I_Q13_148         
+XLXI_12/XLXI_2/XLXI_2_I_Q14_149         
+XLXI_12/XLXI_2/XLXI_2_I_Q15_150         
+XLXI_12/XLXI_2/XLXI_2_I_Q1_135          
+XLXI_12/XLXI_2/XLXI_2_I_Q2_138          
+XLXI_12/XLXI_2/XLXI_2_I_Q3_137          
+XLXI_12/XLXI_2/XLXI_2_I_Q4_142          
+XLXI_12/XLXI_2/XLXI_2_I_Q5_141          
+XLXI_12/XLXI_2/XLXI_2_I_Q6_140          
+XLXI_12/XLXI_2/XLXI_2_I_Q7_139          
+XLXI_12/XLXI_2/XLXI_2_I_Q8_143          
+XLXI_12/XLXI_2/XLXI_2_I_Q9_144          
+XLXI_2_XLXI_8_XLXI_7_XLXI_1_153         
+
+Section 8 - Guide Report
+------------------------
+Guide not run on this design.
+
+Section 9 - Area Group and Partition Summary
+--------------------------------------------
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Area Group Information
+----------------------
+
+  No area groups were found in this design.
+
+----------------------
+
+Section 10 - Timing Report
+--------------------------
+This design was not run using timing mode.
+
+Section 11 - Configuration String Details
+-----------------------------------------
+Use the "-detail" map option to print out Configuration Strings
+
+Section 12 - Control Set Information
+------------------------------------
+No control set information for this architecture.
+
+Section 13 - Utilization by Hierarchy
+-------------------------------------
+Use the "-detail" map option to print out the Utilization by Hierarchy section.

@@ -1,0 +1,16 @@
+vhdtdtfi -lib work {Z:/CSEE 4280/Lab 2/ALU-8bit-lab2/CONTROL.v} -lang verilog -prj ALU-8bit-lab2 -o CONTROL.spl -module CONTROL -template C:/Xilinx/14.2/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e CONTROL.spl {Z:/CSEE 4280/Lab 2/ALU-8bit-lab2/CONTROL.sym} 
+vhdtdtfi -lib work {Z:/CSEE 4280/Lab 2/ALU-8bit-lab2/CONTROL.v} -lang verilog -prj ALU-8bit-lab2 -o CONTROL.spl -module CONTROL -template C:/Xilinx/14.2/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e -w CONTROL.spl {Z:/CSEE 4280/Lab 2/ALU-8bit-lab2/CONTROL.sym} 
+vhdtdtfi -lib work {Z:/CSEE 4280/Lab 2/ALU-8bit-lab2/CONTROL.v} -lang verilog -prj ALU-8bit-lab2 -o CONTROL.spl -module CONTROL -template C:/Xilinx/14.2/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e -w CONTROL.spl {Z:/CSEE 4280/Lab 2/ALU-8bit-lab2/CONTROL.sym} 
+vhdtdtfi -lib work F:/ALU-8bit-lab2/CONTROL.v -lang verilog -prj ALU-8bit-lab2 -o CONTROL.spl -module CONTROL -template C:/Xilinx/14.2/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e -w CONTROL.spl F:/ALU-8bit-lab2/CONTROL.sym 
+vhdtdtfi -lib work F:/ALU-8bit-lab2/CONTROL.v -lang verilog -prj ALU-8bit-lab2 -o CONTROL.spl -module CONTROL -template C:/Xilinx/14.2/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e -w CONTROL.spl F:/ALU-8bit-lab2/CONTROL.sym 
+vhdtdtfi -lib work F:/ALU-8bit-lab2/CONTROL.v -lang verilog -prj ALU-8bit-lab2 -o CONTROL.spl -module CONTROL -template C:/Xilinx/14.2/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e -w CONTROL.spl F:/ALU-8bit-lab2/CONTROL.sym 
+vhdtdtfi -lib work F:/ALU-8bit-lab2/CONTROL.v -lang verilog -prj ALU-8bit-lab2 -o CONTROL.spl -module CONTROL -template C:/Xilinx/14.2/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e -w CONTROL.spl F:/ALU-8bit-lab2/CONTROL.sym 
+vhdtdtfi -lib work F:/ALU-8bit-lab2/CONTROL.v -lang verilog -prj ALU-8bit-lab2 -o CONTROL.spl -module CONTROL -template C:/Xilinx/14.2/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e -w CONTROL.spl F:/ALU-8bit-lab2/CONTROL.sym 

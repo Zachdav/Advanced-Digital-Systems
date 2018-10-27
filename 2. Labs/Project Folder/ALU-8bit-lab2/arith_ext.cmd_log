@@ -1,0 +1,1 @@
+sch2sym -intstyle ise -family artix7 -refsym arith_ext {Z:/CSEE 4280/Lab 2/ALU-8bit-lab2/arith_ext.sch} {Z:/CSEE 4280/Lab 2/ALU-8bit-lab2/arith_ext.sym} 

@@ -1,0 +1,2 @@
+sch2sym -intstyle ise -family spartan3e -w -refsym RAM_array {Z:/CSEE 4280/Lab 5/ALU-8bit-lab2/RAM_array.sch} {Z:/CSEE 4280/Lab 5/ALU-8bit-lab2/RAM_array.sym} 
+sch2sym -intstyle ise -family spartan3e -w -refsym RAM_array {U:/School/2018 Spring Semester/CSEE 4280/Labs/Lab 6/Lab 6/ALU-8bit-lab2/RAM_array.sch} {U:/School/2018 Spring Semester/CSEE 4280/Labs/Lab 6/Lab 6/ALU-8bit-lab2/RAM_array.sym} 

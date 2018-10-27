@@ -1,0 +1,54 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.2
+//  \   \         Application : sch2hdl
+//  /   /         Filename : fa_sch.vf
+// /___/   /\     Timestamp : 03/21/2018 11:32:46
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan3e -verilog E:/ALU-8bit-lab2/fa_sch.vf -w E:/ALU-8bit-lab2/fa_sch.sch
+//Design Name: fa_sch
+//Device: spartan3e
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module fa_sch(cprev, 
+              x, 
+              y, 
+              cnext, 
+              res);
+
+    input cprev;
+    input x;
+    input y;
+   output cnext;
+   output res;
+   
+   wire XLXN_7;
+   wire XLXN_15;
+   wire XLXN_16;
+   
+   AND2  XLXI_1 (.I0(x), 
+                .I1(y), 
+                .O(XLXN_7));
+   AND2  XLXI_2 (.I0(XLXN_15), 
+                .I1(cprev), 
+                .O(XLXN_16));
+   OR2  XLXI_3 (.I0(XLXN_7), 
+               .I1(XLXN_16), 
+               .O(cnext));
+   XOR2  XLXI_6 (.I0(y), 
+                .I1(x), 
+                .O(XLXN_15));
+   XOR2  XLXI_7 (.I0(XLXN_15), 
+                .I1(cprev), 
+                .O(res));
+endmodule

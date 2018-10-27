@@ -1,0 +1,2 @@
+vhdtdtfi -lib work F:/LED7SegmentBehavioral/LED7SegmentBehavioral.v -lang verilog -prj ALU-8bit-lab2 -o LED7SegmentBehavioral.spl -module LED7SegmentBehavioral -template C:/Xilinx/14.2/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 LED7SegmentBehavioral.spl {Z:/CSEE 4280/Lab 2/ALU-8bit-lab2/LED7SegmentBehavioral.sym} 

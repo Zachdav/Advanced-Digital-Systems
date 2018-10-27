@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=E:\ALU-8bit-lab2\toyProcessor_overall.ncd
+OUTFILE=E:\ALU-8bit-lab2\toyProcessor_overall.bit
+FAMILY=Spartan3E
+PART=xc3s250e-4cp132
+WORKINGDIR=E:\ALU-8bit-lab2
+LICENSE=WebPack
+USER_INFO=206971330_0_0_375

@@ -1,0 +1,546 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.2
+//  \   \         Application : sch2hdl
+//  /   /         Filename : Datapath.vf
+// /___/   /\     Timestamp : 03/21/2018 17:54:24
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan3e -verilog E:/ALU-8bit-lab2/Datapath.vf -w E:/ALU-8bit-lab2/Datapath.sch
+//Design Name: Datapath
+//Device: spartan3e
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module mux_MUSER_Datapath(in0, 
+                          in1, 
+                          sel, 
+                          mux_out);
+
+    input in0;
+    input in1;
+    input sel;
+   output mux_out;
+   
+   wire XLXN_2;
+   wire XLXN_5;
+   wire XLXN_6;
+   
+   AND2  XLXI_1 (.I0(XLXN_2), 
+                .I1(in0), 
+                .O(XLXN_5));
+   OR2  XLXI_2 (.I0(XLXN_6), 
+               .I1(XLXN_5), 
+               .O(mux_out));
+   AND2  XLXI_3 (.I0(in1), 
+                .I1(sel), 
+                .O(XLXN_6));
+   INV  XLXI_4 (.I(sel), 
+               .O(XLXN_2));
+endmodule
+`timescale 1ns / 1ps
+
+module mux8_sch_MUSER_Datapath(in0, 
+                               in1, 
+                               sel, 
+                               mux_out);
+
+    input [7:0] in0;
+    input [7:0] in1;
+    input sel;
+   output [7:0] mux_out;
+   
+   
+   mux_MUSER_Datapath  XLXI_1 (.in0(in0[0]), 
+                              .in1(in1[0]), 
+                              .sel(sel), 
+                              .mux_out(mux_out[0]));
+   mux_MUSER_Datapath  XLXI_2 (.in0(in0[1]), 
+                              .in1(in1[1]), 
+                              .sel(sel), 
+                              .mux_out(mux_out[1]));
+   mux_MUSER_Datapath  XLXI_3 (.in0(in0[2]), 
+                              .in1(in1[2]), 
+                              .sel(sel), 
+                              .mux_out(mux_out[2]));
+   mux_MUSER_Datapath  XLXI_4 (.in0(in0[3]), 
+                              .in1(in1[3]), 
+                              .sel(sel), 
+                              .mux_out(mux_out[3]));
+   mux_MUSER_Datapath  XLXI_5 (.in0(in0[4]), 
+                              .in1(in1[4]), 
+                              .sel(sel), 
+                              .mux_out(mux_out[4]));
+   mux_MUSER_Datapath  XLXI_6 (.in0(in0[5]), 
+                              .in1(in1[5]), 
+                              .sel(sel), 
+                              .mux_out(mux_out[5]));
+   mux_MUSER_Datapath  XLXI_7 (.in0(in0[6]), 
+                              .in1(in1[6]), 
+                              .sel(sel), 
+                              .mux_out(mux_out[6]));
+   mux_MUSER_Datapath  XLXI_8 (.in0(in0[7]), 
+                              .in1(in1[7]), 
+                              .sel(sel), 
+                              .mux_out(mux_out[7]));
+endmodule
+`timescale 1ns / 1ps
+
+module NOR8_MXILINX_Datapath(I0, 
+                             I1, 
+                             I2, 
+                             I3, 
+                             I4, 
+                             I5, 
+                             I6, 
+                             I7, 
+                             O);
+
+    input I0;
+    input I1;
+    input I2;
+    input I3;
+    input I4;
+    input I5;
+    input I6;
+    input I7;
+   output O;
+   
+   wire dummy;
+   wire S0;
+   wire S1;
+   wire O_DUMMY;
+   
+   assign O = O_DUMMY;
+   (* RLOC = "X0Y0" *) 
+   FMAP  I_36_29 (.I1(I0), 
+                 .I2(I1), 
+                 .I3(I2), 
+                 .I4(I3), 
+                 .O(S0));
+   OR4  I_36_110 (.I0(I0), 
+                 .I1(I1), 
+                 .I2(I2), 
+                 .I3(I3), 
+                 .O(S0));
+   OR4  I_36_127 (.I0(I4), 
+                 .I1(I5), 
+                 .I2(I6), 
+                 .I3(I7), 
+                 .O(S1));
+   (* RLOC = "X0Y0" *) 
+   FMAP  I_36_138 (.I1(I4), 
+                  .I2(I5), 
+                  .I3(I6), 
+                  .I4(I7), 
+                  .O(S1));
+   NOR2  I_36_140 (.I0(S0), 
+                  .I1(S1), 
+                  .O(O_DUMMY));
+   (* RLOC = "X0Y1" *) 
+   FMAP  I_36_144 (.I1(S0), 
+                  .I2(S1), 
+                  .I3(dummy), 
+                  .I4(dummy), 
+                  .O(O_DUMMY));
+endmodule
+`timescale 1ns / 1ps
+
+module toZERO_sch_MUSER_Datapath(zero_in, 
+                                 zero_out);
+
+    input [7:0] zero_in;
+   output zero_out;
+   
+   
+   (* HU_SET = "XLXI_1_134" *) 
+   NOR8_MXILINX_Datapath  XLXI_1 (.I0(zero_in[0]), 
+                                 .I1(zero_in[1]), 
+                                 .I2(zero_in[2]), 
+                                 .I3(zero_in[3]), 
+                                 .I4(zero_in[4]), 
+                                 .I5(zero_in[5]), 
+                                 .I6(zero_in[6]), 
+                                 .I7(zero_in[7]), 
+                                 .O(zero_out));
+endmodule
+`timescale 1ns / 1ps
+
+module fa_sch_MUSER_Datapath(cprev, 
+                             x, 
+                             y, 
+                             cnext, 
+                             res);
+
+    input cprev;
+    input x;
+    input y;
+   output cnext;
+   output res;
+   
+   wire XLXN_7;
+   wire XLXN_15;
+   wire XLXN_16;
+   
+   AND2  XLXI_1 (.I0(x), 
+                .I1(y), 
+                .O(XLXN_7));
+   AND2  XLXI_2 (.I0(XLXN_15), 
+                .I1(cprev), 
+                .O(XLXN_16));
+   OR2  XLXI_3 (.I0(XLXN_7), 
+               .I1(XLXN_16), 
+               .O(cnext));
+   XOR2  XLXI_6 (.I0(y), 
+                .I1(x), 
+                .O(XLXN_15));
+   XOR2  XLXI_7 (.I0(XLXN_15), 
+                .I1(cprev), 
+                .O(res));
+endmodule
+`timescale 1ns / 1ps
+
+module alu_sch_MUSER_Datapath(sel, 
+                              x, 
+                              y, 
+                              cnext, 
+                              dataout);
+
+    input sel;
+    input [7:0] x;
+    input [7:0] y;
+   output cnext;
+   output [7:0] dataout;
+   
+   wire XLXN_35;
+   wire XLXN_37;
+   wire XLXN_38;
+   wire XLXN_39;
+   wire XLXN_42;
+   wire XLXN_43;
+   wire XLXN_44;
+   wire XLXN_54;
+   wire XLXN_56;
+   wire XLXN_58;
+   wire XLXN_60;
+   wire XLXN_62;
+   wire XLXN_64;
+   wire XLXN_66;
+   wire XLXN_68;
+   
+   fa_sch_MUSER_Datapath  XLXI_1 (.cprev(XLXN_44), 
+                                 .x(x[7]), 
+                                 .y(XLXN_54), 
+                                 .cnext(cnext), 
+                                 .res(dataout[7]));
+   fa_sch_MUSER_Datapath  XLXI_2 (.cprev(XLXN_39), 
+                                 .x(x[4]), 
+                                 .y(XLXN_58), 
+                                 .cnext(XLXN_42), 
+                                 .res(dataout[4]));
+   fa_sch_MUSER_Datapath  XLXI_3 (.cprev(XLXN_43), 
+                                 .x(x[6]), 
+                                 .y(XLXN_56), 
+                                 .cnext(XLXN_44), 
+                                 .res(dataout[6]));
+   fa_sch_MUSER_Datapath  XLXI_4 (.cprev(XLXN_42), 
+                                 .x(x[5]), 
+                                 .y(XLXN_60), 
+                                 .cnext(XLXN_43), 
+                                 .res(dataout[5]));
+   fa_sch_MUSER_Datapath  XLXI_5 (.cprev(XLXN_38), 
+                                 .x(x[3]), 
+                                 .y(XLXN_62), 
+                                 .cnext(XLXN_39), 
+                                 .res(dataout[3]));
+   fa_sch_MUSER_Datapath  XLXI_6 (.cprev(XLXN_37), 
+                                 .x(x[2]), 
+                                 .y(XLXN_64), 
+                                 .cnext(XLXN_38), 
+                                 .res(dataout[2]));
+   fa_sch_MUSER_Datapath  XLXI_7 (.cprev(sel), 
+                                 .x(x[0]), 
+                                 .y(XLXN_68), 
+                                 .cnext(XLXN_35), 
+                                 .res(dataout[0]));
+   fa_sch_MUSER_Datapath  XLXI_8 (.cprev(XLXN_35), 
+                                 .x(x[1]), 
+                                 .y(XLXN_66), 
+                                 .cnext(XLXN_37), 
+                                 .res(dataout[1]));
+   XOR2  XLXI_9 (.I0(sel), 
+                .I1(y[7]), 
+                .O(XLXN_54));
+   XOR2  XLXI_10 (.I0(sel), 
+                 .I1(y[6]), 
+                 .O(XLXN_56));
+   XOR2  XLXI_11 (.I0(sel), 
+                 .I1(y[5]), 
+                 .O(XLXN_60));
+   XOR2  XLXI_12 (.I0(sel), 
+                 .I1(y[4]), 
+                 .O(XLXN_58));
+   XOR2  XLXI_13 (.I0(sel), 
+                 .I1(y[3]), 
+                 .O(XLXN_62));
+   XOR2  XLXI_14 (.I0(sel), 
+                 .I1(y[2]), 
+                 .O(XLXN_64));
+   XOR2  XLXI_15 (.I0(sel), 
+                 .I1(y[1]), 
+                 .O(XLXN_66));
+   XOR2  XLXI_16 (.I0(sel), 
+                 .I1(y[0]), 
+                 .O(XLXN_68));
+endmodule
+`timescale 1ns / 1ps
+
+module ha_sch_MUSER_Datapath(Ci, 
+                             Xi, 
+                             Cout, 
+                             S);
+
+    input Ci;
+    input Xi;
+   output Cout;
+   output S;
+   
+   
+   AND2  XLXI_1 (.I0(Xi), 
+                .I1(Ci), 
+                .O(Cout));
+   XOR2  XLXI_2 (.I0(Xi), 
+                .I1(Ci), 
+                .O(S));
+endmodule
+`timescale 1ns / 1ps
+
+module ha8_sch_MUSER_Datapath(HA_IN, 
+                              HA_OUT);
+
+    input [7:0] HA_IN;
+   output [7:0] HA_OUT;
+   
+   wire XLXN_11;
+   wire XLXN_12;
+   wire XLXN_13;
+   wire XLXN_14;
+   wire XLXN_15;
+   wire XLXN_16;
+   
+   ha_sch_MUSER_Datapath  XLXI_2 (.Ci(XLXN_16), 
+                                 .Xi(HA_IN[2]), 
+                                 .Cout(XLXN_15), 
+                                 .S(HA_OUT[2]));
+   ha_sch_MUSER_Datapath  XLXI_3 (.Ci(HA_IN[0]), 
+                                 .Xi(HA_IN[1]), 
+                                 .Cout(XLXN_16), 
+                                 .S(HA_OUT[1]));
+   ha_sch_MUSER_Datapath  XLXI_4 (.Ci(XLXN_13), 
+                                 .Xi(HA_IN[5]), 
+                                 .Cout(XLXN_12), 
+                                 .S(HA_OUT[5]));
+   ha_sch_MUSER_Datapath  XLXI_5 (.Ci(XLXN_15), 
+                                 .Xi(HA_IN[3]), 
+                                 .Cout(XLXN_14), 
+                                 .S(HA_OUT[3]));
+   ha_sch_MUSER_Datapath  XLXI_6 (.Ci(XLXN_14), 
+                                 .Xi(HA_IN[4]), 
+                                 .Cout(XLXN_13), 
+                                 .S(HA_OUT[4]));
+   ha_sch_MUSER_Datapath  XLXI_7 (.Ci(XLXN_12), 
+                                 .Xi(HA_IN[6]), 
+                                 .Cout(XLXN_11), 
+                                 .S(HA_OUT[6]));
+   ha_sch_MUSER_Datapath  XLXI_8 (.Ci(XLXN_11), 
+                                 .Xi(HA_IN[7]), 
+                                 .Cout(), 
+                                 .S(HA_OUT[7]));
+   INV  XLXI_9 (.I(HA_IN[0]), 
+               .O(HA_OUT[0]));
+endmodule
+`timescale 1ns / 1ps
+
+module reg_sch_MUSER_Datapath(CLK, 
+                              LOAD, 
+                              REG_IN, 
+                              RST, 
+                              REG_OUT);
+
+    input CLK;
+    input LOAD;
+    input [7:0] REG_IN;
+    input RST;
+   output [7:0] REG_OUT;
+   
+   
+   FDRE #( .INIT(1'b0) ) XLXI_3 (.C(CLK), 
+                .CE(LOAD), 
+                .D(REG_IN[7]), 
+                .R(RST), 
+                .Q(REG_OUT[7]));
+   FDRE #( .INIT(1'b0) ) XLXI_5 (.C(CLK), 
+                .CE(LOAD), 
+                .D(REG_IN[6]), 
+                .R(RST), 
+                .Q(REG_OUT[6]));
+   FDRE #( .INIT(1'b0) ) XLXI_6 (.C(CLK), 
+                .CE(LOAD), 
+                .D(REG_IN[5]), 
+                .R(RST), 
+                .Q(REG_OUT[5]));
+   FDRE #( .INIT(1'b0) ) XLXI_7 (.C(CLK), 
+                .CE(LOAD), 
+                .D(REG_IN[4]), 
+                .R(RST), 
+                .Q(REG_OUT[4]));
+   FDRE #( .INIT(1'b0) ) XLXI_8 (.C(CLK), 
+                .CE(LOAD), 
+                .D(REG_IN[3]), 
+                .R(RST), 
+                .Q(REG_OUT[3]));
+   FDRE #( .INIT(1'b0) ) XLXI_9 (.C(CLK), 
+                .CE(LOAD), 
+                .D(REG_IN[2]), 
+                .R(RST), 
+                .Q(REG_OUT[2]));
+   FDRE #( .INIT(1'b0) ) XLXI_10 (.C(CLK), 
+                 .CE(LOAD), 
+                 .D(REG_IN[1]), 
+                 .R(RST), 
+                 .Q(REG_OUT[1]));
+   FDRE #( .INIT(1'b0) ) XLXI_11 (.C(CLK), 
+                 .CE(LOAD), 
+                 .D(REG_IN[0]), 
+                 .R(RST), 
+                 .Q(REG_OUT[0]));
+endmodule
+`timescale 1ns / 1ps
+
+module counter_sch_MUSER_Datapath(CLK, 
+                                  COUNT, 
+                                  COUNT_IN, 
+                                  LOAD, 
+                                  RST, 
+                                  COUNT_OUT);
+
+    input CLK;
+    input COUNT;
+    input [7:0] COUNT_IN;
+    input LOAD;
+    input RST;
+   output [7:0] COUNT_OUT;
+   
+   wire XLXN_1;
+   wire XLXN_2;
+   wire XLXN_9;
+   wire [7:0] XLXN_11;
+   wire [7:0] XLXN_12;
+   wire [7:0] COUNT_OUT_DUMMY;
+   
+   assign COUNT_OUT[7:0] = COUNT_OUT_DUMMY[7:0];
+   reg_sch_MUSER_Datapath  XLXI_1 (.CLK(CLK), 
+                                  .LOAD(XLXN_2), 
+                                  .REG_IN(XLXN_11[7:0]), 
+                                  .RST(RST), 
+                                  .REG_OUT(COUNT_OUT_DUMMY[7:0]));
+   ha8_sch_MUSER_Datapath  XLXI_2 (.HA_IN(COUNT_OUT_DUMMY[7:0]), 
+                                  .HA_OUT(XLXN_12[7:0]));
+   mux8_sch_MUSER_Datapath  XLXI_3 (.in0(COUNT_IN[7:0]), 
+                                   .in1(XLXN_12[7:0]), 
+                                   .sel(XLXN_1), 
+                                   .mux_out(XLXN_11[7:0]));
+   AND2  XLXI_4 (.I0(COUNT), 
+                .I1(XLXN_9), 
+                .O(XLXN_1));
+   OR2  XLXI_5 (.I0(COUNT), 
+               .I1(LOAD), 
+               .O(XLXN_2));
+   INV  XLXI_6 (.I(LOAD), 
+               .O(XLXN_9));
+endmodule
+`timescale 1ns / 1ps
+
+module Datapath(ADDORSUB, 
+                CLK, 
+                CL_AC, 
+                CL_D, 
+                CL_IR, 
+                CL_PC, 
+                COUNT, 
+                DORPC, 
+                D_IN, 
+                LD_AC, 
+                LD_D, 
+                LD_IR, 
+                LD_PC, 
+                A, 
+                IR_OUT, 
+                REG_OUT, 
+                ZERO);
+
+    input ADDORSUB;
+    input CLK;
+    input CL_AC;
+    input CL_D;
+    input CL_IR;
+    input CL_PC;
+    input COUNT;
+    input DORPC;
+    input [7:0] D_IN;
+    input LD_AC;
+    input LD_D;
+    input LD_IR;
+    input LD_PC;
+   output [7:0] A;
+   output [7:0] IR_OUT;
+   output [7:0] REG_OUT;
+   output ZERO;
+   
+   wire [7:0] XLXN_2;
+   wire [7:0] XLXN_32;
+   wire [7:0] XLXN_39;
+   wire [7:0] REG_OUT_DUMMY;
+   
+   assign REG_OUT[7:0] = REG_OUT_DUMMY[7:0];
+   reg_sch_MUSER_Datapath  XLXI_1 (.CLK(CLK), 
+                                  .LOAD(LD_D), 
+                                  .REG_IN(D_IN[7:0]), 
+                                  .RST(CL_D), 
+                                  .REG_OUT(XLXN_39[7:0]));
+   reg_sch_MUSER_Datapath  XLXI_2 (.CLK(CLK), 
+                                  .LOAD(LD_IR), 
+                                  .REG_IN(D_IN[7:0]), 
+                                  .RST(CL_IR), 
+                                  .REG_OUT(IR_OUT[7:0]));
+   reg_sch_MUSER_Datapath  XLXI_3 (.CLK(CLK), 
+                                  .LOAD(LD_AC), 
+                                  .REG_IN(XLXN_32[7:0]), 
+                                  .RST(CL_AC), 
+                                  .REG_OUT(REG_OUT_DUMMY[7:0]));
+   counter_sch_MUSER_Datapath  XLXI_4 (.CLK(CLK), 
+                                      .COUNT(COUNT), 
+                                      .COUNT_IN(XLXN_39[7:0]), 
+                                      .LOAD(LD_PC), 
+                                      .RST(CL_PC), 
+                                      .COUNT_OUT(XLXN_2[7:0]));
+   alu_sch_MUSER_Datapath  XLXI_5 (.sel(ADDORSUB), 
+                                  .x(REG_OUT_DUMMY[7:0]), 
+                                  .y(XLXN_39[7:0]), 
+                                  .cnext(), 
+                                  .dataout(XLXN_32[7:0]));
+   toZERO_sch_MUSER_Datapath  XLXI_7 (.zero_in(REG_OUT_DUMMY[7:0]), 
+                                     .zero_out(ZERO));
+   mux8_sch_MUSER_Datapath  XLXI_8 (.in0(XLXN_39[7:0]), 
+                                   .in1(XLXN_2[7:0]), 
+                                   .sel(DORPC), 
+                                   .mux_out(A[7:0]));
+endmodule

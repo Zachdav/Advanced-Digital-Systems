@@ -1,0 +1,5 @@
+sch2sym -intstyle ise -family spartan3e -w -refsym toy_sch F:/ALU-8bit-lab2/toy_sch.sch F:/ALU-8bit-lab2/toy_sch.sym 
+sch2sym -intstyle ise -family spartan3e -w -refsym toy_sch F:/ALU-8bit-lab2/toy_sch.sch F:/ALU-8bit-lab2/toy_sch.sym 
+sch2sym -intstyle ise -family spartan3e -w -refsym toy_sch F:/ALU-8bit-lab2/toy_sch.sch F:/ALU-8bit-lab2/toy_sch.sym 
+sch2sym -intstyle ise -family spartan3e -w -refsym toy_sch F:/ALU-8bit-lab2/toy_sch.sch F:/ALU-8bit-lab2/toy_sch.sym 
+sch2sym -intstyle ise -family spartan3e -w -refsym toy_sch F:/ALU-8bit-lab2/toy_sch.sch F:/ALU-8bit-lab2/toy_sch.sym 

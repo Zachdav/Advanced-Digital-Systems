@@ -1,0 +1,149 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.2
+//  \   \         Application : sch2hdl
+//  /   /         Filename : alu_sch.vf
+// /___/   /\     Timestamp : 03/21/2018 17:53:56
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan3e -verilog E:/ALU-8bit-lab2/alu_sch.vf -w E:/ALU-8bit-lab2/alu_sch.sch
+//Design Name: alu_sch
+//Device: spartan3e
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module fa_sch_MUSER_alu_sch(cprev, 
+                            x, 
+                            y, 
+                            cnext, 
+                            res);
+
+    input cprev;
+    input x;
+    input y;
+   output cnext;
+   output res;
+   
+   wire XLXN_7;
+   wire XLXN_15;
+   wire XLXN_16;
+   
+   AND2  XLXI_1 (.I0(x), 
+                .I1(y), 
+                .O(XLXN_7));
+   AND2  XLXI_2 (.I0(XLXN_15), 
+                .I1(cprev), 
+                .O(XLXN_16));
+   OR2  XLXI_3 (.I0(XLXN_7), 
+               .I1(XLXN_16), 
+               .O(cnext));
+   XOR2  XLXI_6 (.I0(y), 
+                .I1(x), 
+                .O(XLXN_15));
+   XOR2  XLXI_7 (.I0(XLXN_15), 
+                .I1(cprev), 
+                .O(res));
+endmodule
+`timescale 1ns / 1ps
+
+module alu_sch(sel, 
+               x, 
+               y, 
+               cnext, 
+               dataout);
+
+    input sel;
+    input [7:0] x;
+    input [7:0] y;
+   output cnext;
+   output [7:0] dataout;
+   
+   wire XLXN_35;
+   wire XLXN_37;
+   wire XLXN_38;
+   wire XLXN_39;
+   wire XLXN_42;
+   wire XLXN_43;
+   wire XLXN_44;
+   wire XLXN_54;
+   wire XLXN_56;
+   wire XLXN_58;
+   wire XLXN_60;
+   wire XLXN_62;
+   wire XLXN_64;
+   wire XLXN_66;
+   wire XLXN_68;
+   
+   fa_sch_MUSER_alu_sch  XLXI_1 (.cprev(XLXN_44), 
+                                .x(x[7]), 
+                                .y(XLXN_54), 
+                                .cnext(cnext), 
+                                .res(dataout[7]));
+   fa_sch_MUSER_alu_sch  XLXI_2 (.cprev(XLXN_39), 
+                                .x(x[4]), 
+                                .y(XLXN_58), 
+                                .cnext(XLXN_42), 
+                                .res(dataout[4]));
+   fa_sch_MUSER_alu_sch  XLXI_3 (.cprev(XLXN_43), 
+                                .x(x[6]), 
+                                .y(XLXN_56), 
+                                .cnext(XLXN_44), 
+                                .res(dataout[6]));
+   fa_sch_MUSER_alu_sch  XLXI_4 (.cprev(XLXN_42), 
+                                .x(x[5]), 
+                                .y(XLXN_60), 
+                                .cnext(XLXN_43), 
+                                .res(dataout[5]));
+   fa_sch_MUSER_alu_sch  XLXI_5 (.cprev(XLXN_38), 
+                                .x(x[3]), 
+                                .y(XLXN_62), 
+                                .cnext(XLXN_39), 
+                                .res(dataout[3]));
+   fa_sch_MUSER_alu_sch  XLXI_6 (.cprev(XLXN_37), 
+                                .x(x[2]), 
+                                .y(XLXN_64), 
+                                .cnext(XLXN_38), 
+                                .res(dataout[2]));
+   fa_sch_MUSER_alu_sch  XLXI_7 (.cprev(sel), 
+                                .x(x[0]), 
+                                .y(XLXN_68), 
+                                .cnext(XLXN_35), 
+                                .res(dataout[0]));
+   fa_sch_MUSER_alu_sch  XLXI_8 (.cprev(XLXN_35), 
+                                .x(x[1]), 
+                                .y(XLXN_66), 
+                                .cnext(XLXN_37), 
+                                .res(dataout[1]));
+   XOR2  XLXI_9 (.I0(sel), 
+                .I1(y[7]), 
+                .O(XLXN_54));
+   XOR2  XLXI_10 (.I0(sel), 
+                 .I1(y[6]), 
+                 .O(XLXN_56));
+   XOR2  XLXI_11 (.I0(sel), 
+                 .I1(y[5]), 
+                 .O(XLXN_60));
+   XOR2  XLXI_12 (.I0(sel), 
+                 .I1(y[4]), 
+                 .O(XLXN_58));
+   XOR2  XLXI_13 (.I0(sel), 
+                 .I1(y[3]), 
+                 .O(XLXN_62));
+   XOR2  XLXI_14 (.I0(sel), 
+                 .I1(y[2]), 
+                 .O(XLXN_64));
+   XOR2  XLXI_15 (.I0(sel), 
+                 .I1(y[1]), 
+                 .O(XLXN_66));
+   XOR2  XLXI_16 (.I0(sel), 
+                 .I1(y[0]), 
+                 .O(XLXN_68));
+endmodule

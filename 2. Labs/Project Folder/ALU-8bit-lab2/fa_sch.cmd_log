@@ -1,0 +1,1 @@
+sch2sym -intstyle ise -family artix7 -refsym fa_sch {Z:/CSEE 4280/Lab 2/ALU-8bit-lab2/fa_sch.sch} {Z:/CSEE 4280/Lab 2/ALU-8bit-lab2/fa_sch.sym} 

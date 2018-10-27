@@ -1,0 +1,1 @@
+sch2sym -intstyle ise -family spartan3e -refsym seven_seg_control_sch {Z:/CSEE 4280/Lab 2/ALU-8bit-lab2/seven_seg_control_sch.sch} {Z:/CSEE 4280/Lab 2/ALU-8bit-lab2/seven_seg_control_sch.sym} 

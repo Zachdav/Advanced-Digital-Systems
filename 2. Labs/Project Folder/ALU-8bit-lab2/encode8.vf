@@ -1,0 +1,89 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.2
+//  \   \         Application : sch2hdl
+//  /   /         Filename : encode8.vf
+// /___/   /\     Timestamp : 03/21/2018 17:54:00
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan3e -verilog E:/ALU-8bit-lab2/encode8.vf -w E:/ALU-8bit-lab2/encode8.sch
+//Design Name: encode8
+//Device: spartan3e
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module encode8(S1, 
+               S2, 
+               S3, 
+               Out0, 
+               Out1, 
+               Out2, 
+               Out3, 
+               Out4, 
+               Out5, 
+               Out6, 
+               Out7);
+
+    input S1;
+    input S2;
+    input S3;
+   output Out0;
+   output Out1;
+   output Out2;
+   output Out3;
+   output Out4;
+   output Out5;
+   output Out6;
+   output Out7;
+   
+   wire SN1;
+   wire SN2;
+   wire SN3;
+   
+   INV  XLXI_22 (.I(S3), 
+                .O(SN3));
+   INV  XLXI_23 (.I(S2), 
+                .O(SN2));
+   INV  XLXI_24 (.I(S1), 
+                .O(SN1));
+   AND3  XLXI_25 (.I0(S1), 
+                 .I1(S2), 
+                 .I2(S3), 
+                 .O(Out7));
+   AND3  XLXI_26 (.I0(S1), 
+                 .I1(S2), 
+                 .I2(SN3), 
+                 .O(Out3));
+   AND3  XLXI_27 (.I0(S1), 
+                 .I1(SN2), 
+                 .I2(S3), 
+                 .O(Out5));
+   AND3  XLXI_28 (.I0(S2), 
+                 .I1(S3), 
+                 .I2(SN1), 
+                 .O(Out6));
+   AND3  XLXI_29 (.I0(SN3), 
+                 .I1(SN2), 
+                 .I2(S1), 
+                 .O(Out1));
+   AND3  XLXI_30 (.I0(SN1), 
+                 .I1(S2), 
+                 .I2(SN3), 
+                 .O(Out2));
+   AND3  XLXI_31 (.I0(SN1), 
+                 .I1(SN2), 
+                 .I2(S3), 
+                 .O(Out4));
+   AND3  XLXI_32 (.I0(SN3), 
+                 .I1(SN2), 
+                 .I2(SN1), 
+                 .O(Out0));
+endmodule

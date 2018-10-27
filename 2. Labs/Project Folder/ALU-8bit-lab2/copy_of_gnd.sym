@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<symbol version="7" name="gnd">
+    <symboltype>BLOCK</symboltype>
+    <timestamp>2000-1-1T10:10:10</timestamp>
+    <attr value="GND" name="VeriModel" />
+    <attr value="Copy Of Symbol With Level: XILINX" name="Level" />
+    <attr value="GND" name="VhdlModel" />
+    <attr value="2.0.0" name="Libver" />
+    <pin polarity="Output" x="64" y="-128" name="G" />
+    <graph>
+        <line x2="64" y1="-64" y2="-96" x1="64" />
+        <line x2="52" y1="-48" y2="-48" x1="76" />
+        <line x2="60" y1="-32" y2="-32" x1="68" />
+        <line x2="40" y1="-64" y2="-64" x1="88" />
+        <line x2="64" y1="-64" y2="-80" x1="64" />
+        <line x2="64" y1="-128" y2="-96" x1="64" />
+        <text style="fontsize:24;fontname:Arial" x="16" y="0">GND</text>
+    </graph>
+</symbol>

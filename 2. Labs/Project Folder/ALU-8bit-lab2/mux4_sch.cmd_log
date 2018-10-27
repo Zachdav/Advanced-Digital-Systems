@@ -1,0 +1,1 @@
+sch2sym -intstyle ise -family spartan3e -refsym mux4_sch {Z:/CSEE 4280/Lab 2/ALU-8bit-lab2/mux4_sch.sch} {Z:/CSEE 4280/Lab 2/ALU-8bit-lab2/mux4_sch.sym} 

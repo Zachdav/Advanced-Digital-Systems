@@ -1,0 +1,6 @@
+sch2sym -intstyle ise -family spartan3e -refsym Datapath {Z:/CSEE 4280/Lab 2/ALU-8bit-lab2/Datapath.sch} {Z:/CSEE 4280/Lab 2/ALU-8bit-lab2/Datapath.sym} 
+sch2sym -intstyle ise -family spartan3e -refsym Datapath {Z:/CSEE 4280/Lab 2/ALU-8bit-lab2/Datapath.sch} {Z:/CSEE 4280/Lab 2/ALU-8bit-lab2/Datapath.sym} 
+sch2sym -intstyle ise -family spartan3e -w -refsym Datapath {Z:/CSEE 4280/Lab 2/ALU-8bit-lab2/Datapath.sch} {Z:/CSEE 4280/Lab 2/ALU-8bit-lab2/Datapath.sym} 
+sch2sym -intstyle ise -family spartan3e -w -refsym Datapath {Z:/CSEE 4280/Lab 2/ALU-8bit-lab2/Datapath.sch} {Z:/CSEE 4280/Lab 2/ALU-8bit-lab2/Datapath.sym} 
+sch2sym -intstyle ise -family spartan3e -w -refsym Datapath F:/ALU-8bit-lab2/Datapath.sch F:/ALU-8bit-lab2/Datapath.sym 
+sch2sym -intstyle ise -family spartan3e -w -refsym Datapath F:/ALU-8bit-lab2/Datapath.sch F:/ALU-8bit-lab2/Datapath.sym 

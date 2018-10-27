@@ -1,0 +1,223 @@
+--------------------------------------------------------------------------------
+Release 14.2 Trace  (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.2\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 4
+-n 3 -fastpaths -xml toyProcessor_overall.twx toyProcessor_overall.ncd -o
+toyProcessor_overall.twr toyProcessor_overall.pcf -ucf toyProcessor_ucf.ucf
+
+Design file:              toyProcessor_overall.ncd
+Physical constraint file: toyProcessor_overall.pcf
+Device,package,speed:     xc3s250e,cp132,-4 (PRODUCTION 1.27 2012-07-09)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+INFO:Timing:3390 - This architecture does not support a default System Jitter 
+   value, please add SYSTEM_JITTER constraint to the UCF to modify the Clock 
+   Uncertainty calculation.
+INFO:Timing:3389 - This architecture does not support 'Discrete Jitter' and 
+   'Phase Error' calculations, these terms will be zero in the Clock 
+   Uncertainty calculation.  Please make appropriate modification to 
+   SYSTEM_JITTER to account for the unsupported Discrete Jitter and Phase 
+   Error.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Setup/Hold to clock CLK
+------------+------------+------------+------------------+--------+
+            |Max Setup to|Max Hold to |                  | Clock  |
+Source      | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
+------------+------------+------------+------------------+--------+
+RESET       |    2.073(R)|   -0.385(R)|CLK_IBUF          |   0.000|
+            |    8.982(R)|    2.846(R)|XLXN_174          |   0.000|
+------------+------------+------------+------------------+--------+
+
+Setup/Hold to clock PUSH
+------------+------------+------------+------------------+--------+
+            |Max Setup to|Max Hold to |                  | Clock  |
+Source      | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
+------------+------------+------------+------------------+--------+
+RESET       |    7.874(R)|    3.480(R)|XLXN_174          |   0.000|
+------------+------------+------------+------------------+--------+
+
+Clock CLK to Pad
+----------------+------------+------------------+--------+
+                | clk (edge) |                  | Clock  |
+Destination     |   to PAD   |Internal Clock(s) | Phase  |
+----------------+------------+------------------+--------+
+ADDR<0>         |   14.372(R)|XLXN_174          |   0.000|
+ADDR<1>         |   14.690(R)|XLXN_174          |   0.000|
+ADDR<2>         |   13.366(R)|XLXN_174          |   0.000|
+ADDR<3>         |   14.577(R)|XLXN_174          |   0.000|
+ADDR<4>         |   14.456(R)|XLXN_174          |   0.000|
+ADDR<5>         |   14.643(R)|XLXN_174          |   0.000|
+ADDR<6>         |   14.624(R)|XLXN_174          |   0.000|
+ADDR<7>         |   14.174(R)|XLXN_174          |   0.000|
+D_IN<0>         |   20.822(R)|XLXN_174          |   0.000|
+D_IN<1>         |   19.618(R)|XLXN_174          |   0.000|
+D_IN<2>         |   19.515(R)|XLXN_174          |   0.000|
+D_IN<3>         |   19.784(R)|XLXN_174          |   0.000|
+D_IN<4>         |   19.260(R)|XLXN_174          |   0.000|
+D_IN<5>         |   20.009(R)|XLXN_174          |   0.000|
+D_IN<6>         |   20.282(R)|XLXN_174          |   0.000|
+D_IN<7>         |   19.779(R)|XLXN_174          |   0.000|
+EN_L            |   10.253(R)|CLK_IBUF          |   0.000|
+EN_ML           |   12.258(R)|CLK_IBUF          |   0.000|
+EN_MR           |   11.794(R)|CLK_IBUF          |   0.000|
+EN_R            |   11.593(R)|CLK_IBUF          |   0.000|
+MEM_EN          |   13.099(R)|XLXN_174          |   0.000|
+Output<0>       |   12.376(R)|XLXN_174          |   0.000|
+Output<1>       |   11.356(R)|XLXN_174          |   0.000|
+Output<2>       |   10.862(R)|XLXN_174          |   0.000|
+Output<3>       |   10.799(R)|XLXN_174          |   0.000|
+Output<4>       |   12.343(R)|XLXN_174          |   0.000|
+Output<5>       |   11.465(R)|XLXN_174          |   0.000|
+Output<6>       |   11.612(R)|XLXN_174          |   0.000|
+Output<7>       |   12.054(R)|XLXN_174          |   0.000|
+Overflow        |   15.177(R)|XLXN_174          |   0.000|
+S0              |   12.316(R)|XLXN_174          |   0.000|
+S1              |   13.674(R)|XLXN_174          |   0.000|
+S2              |   10.650(R)|XLXN_174          |   0.000|
+S3              |   11.555(R)|XLXN_174          |   0.000|
+S4              |   11.904(R)|XLXN_174          |   0.000|
+S5              |   11.551(R)|XLXN_174          |   0.000|
+WRITE_EN        |   14.492(R)|XLXN_174          |   0.000|
+seven_seg_out<0>|   12.217(R)|CLK_IBUF          |   0.000|
+                |   18.049(R)|XLXN_174          |   0.000|
+seven_seg_out<1>|   12.619(R)|CLK_IBUF          |   0.000|
+                |   17.618(R)|XLXN_174          |   0.000|
+seven_seg_out<2>|   13.373(R)|CLK_IBUF          |   0.000|
+                |   19.051(R)|XLXN_174          |   0.000|
+seven_seg_out<3>|   13.599(R)|CLK_IBUF          |   0.000|
+                |   18.398(R)|XLXN_174          |   0.000|
+seven_seg_out<4>|   13.012(R)|CLK_IBUF          |   0.000|
+                |   18.280(R)|XLXN_174          |   0.000|
+seven_seg_out<5>|   13.120(R)|CLK_IBUF          |   0.000|
+                |   18.108(R)|XLXN_174          |   0.000|
+seven_seg_out<6>|   13.734(R)|CLK_IBUF          |   0.000|
+                |   18.504(R)|XLXN_174          |   0.000|
+----------------+------------+------------------+--------+
+
+Clock PUSH to Pad
+----------------+------------+------------------+--------+
+                | clk (edge) |                  | Clock  |
+Destination     |   to PAD   |Internal Clock(s) | Phase  |
+----------------+------------+------------------+--------+
+ADDR<0>         |   15.006(R)|XLXN_174          |   0.000|
+ADDR<1>         |   15.324(R)|XLXN_174          |   0.000|
+ADDR<2>         |   14.000(R)|XLXN_174          |   0.000|
+ADDR<3>         |   15.211(R)|XLXN_174          |   0.000|
+ADDR<4>         |   15.090(R)|XLXN_174          |   0.000|
+ADDR<5>         |   15.277(R)|XLXN_174          |   0.000|
+ADDR<6>         |   15.258(R)|XLXN_174          |   0.000|
+ADDR<7>         |   14.808(R)|XLXN_174          |   0.000|
+D_IN<0>         |   21.456(R)|XLXN_174          |   0.000|
+D_IN<1>         |   20.252(R)|XLXN_174          |   0.000|
+D_IN<2>         |   20.149(R)|XLXN_174          |   0.000|
+D_IN<3>         |   20.418(R)|XLXN_174          |   0.000|
+D_IN<4>         |   19.894(R)|XLXN_174          |   0.000|
+D_IN<5>         |   20.643(R)|XLXN_174          |   0.000|
+D_IN<6>         |   20.916(R)|XLXN_174          |   0.000|
+D_IN<7>         |   20.413(R)|XLXN_174          |   0.000|
+MEM_EN          |   13.733(R)|XLXN_174          |   0.000|
+Output<0>       |   13.010(R)|XLXN_174          |   0.000|
+Output<1>       |   11.990(R)|XLXN_174          |   0.000|
+Output<2>       |   11.496(R)|XLXN_174          |   0.000|
+Output<3>       |   11.433(R)|XLXN_174          |   0.000|
+Output<4>       |   12.977(R)|XLXN_174          |   0.000|
+Output<5>       |   12.099(R)|XLXN_174          |   0.000|
+Output<6>       |   12.246(R)|XLXN_174          |   0.000|
+Output<7>       |   12.688(R)|XLXN_174          |   0.000|
+Overflow        |   15.811(R)|XLXN_174          |   0.000|
+S0              |   12.950(R)|XLXN_174          |   0.000|
+S1              |   14.308(R)|XLXN_174          |   0.000|
+S2              |   11.284(R)|XLXN_174          |   0.000|
+S3              |   12.189(R)|XLXN_174          |   0.000|
+S4              |   12.538(R)|XLXN_174          |   0.000|
+S5              |   12.185(R)|XLXN_174          |   0.000|
+WRITE_EN        |   15.126(R)|XLXN_174          |   0.000|
+seven_seg_out<0>|   18.683(R)|XLXN_174          |   0.000|
+seven_seg_out<1>|   18.252(R)|XLXN_174          |   0.000|
+seven_seg_out<2>|   19.685(R)|XLXN_174          |   0.000|
+seven_seg_out<3>|   19.032(R)|XLXN_174          |   0.000|
+seven_seg_out<4>|   18.914(R)|XLXN_174          |   0.000|
+seven_seg_out<5>|   18.742(R)|XLXN_174          |   0.000|
+seven_seg_out<6>|   19.138(R)|XLXN_174          |   0.000|
+----------------+------------+------------------+--------+
+
+Clock to Setup on destination clock CLK
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK            |   10.176|         |         |         |
+PUSH           |   10.176|    0.614|         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock PUSH
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK            |   10.176|         |         |         |
+PUSH           |   10.176|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Pad to Pad
+---------------+----------------+---------+
+Source Pad     |Destination Pad |  Delay  |
+---------------+----------------+---------+
+RESET          |ADDR<0>         |   11.442|
+RESET          |ADDR<1>         |   11.760|
+RESET          |ADDR<2>         |   10.436|
+RESET          |ADDR<3>         |   11.647|
+RESET          |ADDR<4>         |   11.526|
+RESET          |ADDR<5>         |   11.713|
+RESET          |ADDR<6>         |   11.694|
+RESET          |ADDR<7>         |   11.244|
+RESET          |D_IN<0>         |   17.892|
+RESET          |D_IN<1>         |   16.688|
+RESET          |D_IN<2>         |   16.585|
+RESET          |D_IN<3>         |   16.854|
+RESET          |D_IN<4>         |   16.330|
+RESET          |D_IN<5>         |   17.079|
+RESET          |D_IN<6>         |   17.352|
+RESET          |D_IN<7>         |   16.849|
+RESET          |seven_seg_out<0>|   15.119|
+RESET          |seven_seg_out<1>|   14.688|
+RESET          |seven_seg_out<2>|   16.121|
+RESET          |seven_seg_out<3>|   15.468|
+RESET          |seven_seg_out<4>|   15.350|
+RESET          |seven_seg_out<5>|   15.178|
+RESET          |seven_seg_out<6>|   15.574|
+---------------+----------------+---------+
+
+
+Analysis completed Fri Mar 23 12:09:41 2018 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 167 MB
+
+
+

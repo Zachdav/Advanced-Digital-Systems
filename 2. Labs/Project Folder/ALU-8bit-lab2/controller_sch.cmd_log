@@ -1,0 +1,17 @@
+sch2sym -intstyle ise -family spartan3e -refsym controller_sch {Z:/CSEE 4280/Lab 2/ALU-8bit-lab2/controller_sch.sch} {Z:/CSEE 4280/Lab 2/ALU-8bit-lab2/controller_sch.sym} 
+sch2sym -intstyle ise -family spartan3e -refsym controller_sch {Z:/CSEE 4280/Lab 2/ALU-8bit-lab2/controller_sch.sch} {Z:/CSEE 4280/Lab 2/ALU-8bit-lab2/controller_sch.sym} 
+sch2sym -intstyle ise -family spartan3e -w -refsym controller_sch {Z:/CSEE 4280/Lab 2/ALU-8bit-lab2/controller_sch.sch} {Z:/CSEE 4280/Lab 2/ALU-8bit-lab2/controller_sch.sym} 
+sch2sym -intstyle ise -family spartan3e -w -refsym controller_sch {Z:/CSEE 4280/Lab 2/ALU-8bit-lab2/controller_sch.sch} {Z:/CSEE 4280/Lab 2/ALU-8bit-lab2/controller_sch.sym} 
+sch2sym -intstyle ise -family spartan3e -w -refsym controller_sch {Z:/CSEE 4280/Lab 2/ALU-8bit-lab2/controller_sch.sch} {Z:/CSEE 4280/Lab 2/ALU-8bit-lab2/controller_sch.sym} 
+sch2sym -intstyle ise -family spartan3e -w -refsym controller_sch {Z:/CSEE 4280/Lab 2/ALU-8bit-lab2/controller_sch.sch} {Z:/CSEE 4280/Lab 2/ALU-8bit-lab2/controller_sch.sym} 
+sch2sym -intstyle ise -family spartan3e -w -refsym controller_sch {Z:/CSEE 4280/Lab 2/ALU-8bit-lab2/controller_sch.sch} {Z:/CSEE 4280/Lab 2/ALU-8bit-lab2/controller_sch.sym} 
+sch2sym -intstyle ise -family spartan3e -w -refsym controller_sch {Z:/CSEE 4280/Lab 2/ALU-8bit-lab2/controller_sch.sch} {Z:/CSEE 4280/Lab 2/ALU-8bit-lab2/controller_sch.sym} 
+sch2sym -intstyle ise -family spartan3e -w -refsym controller_sch {Z:/CSEE 4280/Lab 2/ALU-8bit-lab2/controller_sch.sch} {Z:/CSEE 4280/Lab 2/ALU-8bit-lab2/controller_sch.sym} 
+sch2sym -intstyle ise -family spartan3e -w -refsym controller_sch {Z:/CSEE 4280/Lab 2/ALU-8bit-lab2/controller_sch.sch} {Z:/CSEE 4280/Lab 2/ALU-8bit-lab2/controller_sch.sym} 
+sch2sym -intstyle ise -family spartan3e -w -refsym controller_sch C:/Users/vkp43001/Downloads/Archive/ALU-8bit-lab2/controller_sch.sch C:/Users/vkp43001/Downloads/Archive/ALU-8bit-lab2/controller_sch.sym 
+sch2sym -intstyle ise -family spartan3e -w -refsym controller_sch F:/ALU-8bit-lab2/controller_sch.sch F:/ALU-8bit-lab2/controller_sch.sym 
+sch2sym -intstyle ise -family spartan3e -w -refsym controller_sch F:/ALU-8bit-lab2/controller_sch.sch F:/ALU-8bit-lab2/controller_sch.sym 
+sch2sym -intstyle ise -family spartan3e -w -refsym controller_sch F:/ALU-8bit-lab2/controller_sch.sch F:/ALU-8bit-lab2/controller_sch.sym 
+sch2sym -intstyle ise -family spartan3e -w -refsym controller_sch F:/ALU-8bit-lab2/controller_sch.sch F:/ALU-8bit-lab2/controller_sch.sym 
+sch2sym -intstyle ise -family spartan3e -w -refsym controller_sch F:/ALU-8bit-lab2/controller_sch.sch F:/ALU-8bit-lab2/controller_sch.sym 
+sch2sym -intstyle ise -family spartan3e -w -refsym controller_sch F:/ALU-8bit-lab2/controller_sch.sch F:/ALU-8bit-lab2/controller_sch.sym 

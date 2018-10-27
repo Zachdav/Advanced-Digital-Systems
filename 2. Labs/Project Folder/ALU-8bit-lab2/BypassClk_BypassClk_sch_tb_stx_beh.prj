@@ -1,0 +1,4 @@
+verilog isim_temp "clk_signal_sch.vf"
+verilog isim_temp "BypassClk.vf"
+verilog isim_temp "BypassClk_tb.v"
+verilog isim_temp "C:/Xilinx/14.2/ISE_DS/ISE//verilog/src/glbl.v"

@@ -1,0 +1,91 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.2
+//  \   \         Application : sch2hdl
+//  /   /         Filename : BypassClk.vf
+// /___/   /\     Timestamp : 03/21/2018 17:54:22
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan3e -verilog E:/ALU-8bit-lab2/BypassClk.vf -w E:/ALU-8bit-lab2/BypassClk.sch
+//Design Name: BypassClk
+//Device: spartan3e
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module clk_signal_sch_MUSER_BypassClk(CLK, 
+                                      PUSH, 
+                                      SIGNAL_OUT);
+
+    input CLK;
+    input PUSH;
+   output SIGNAL_OUT;
+   
+   wire XLXN_1;
+   wire XLXN_2;
+   wire XLXN_5;
+   wire XLXN_6;
+   wire SIGNAL_OUT_DUMMY;
+   
+   assign SIGNAL_OUT = SIGNAL_OUT_DUMMY;
+   FD #( .INIT(1'b0) ) XLXI_1 (.C(CLK), 
+              .D(PUSH), 
+              .Q(XLXN_1));
+   AND2  XLXI_2 (.I0(XLXN_2), 
+                .I1(PUSH), 
+                .O(XLXN_5));
+   AND2  XLXI_3 (.I0(SIGNAL_OUT_DUMMY), 
+                .I1(CLK), 
+                .O(XLXN_6));
+   OR2  XLXI_4 (.I0(XLXN_6), 
+               .I1(XLXN_5), 
+               .O(SIGNAL_OUT_DUMMY));
+   INV  XLXI_5 (.I(XLXN_1), 
+               .O(XLXN_2));
+endmodule
+`timescale 1ns / 1ps
+
+module BypassClk(CLK, 
+                 OVERFLOW, 
+                 PUSH, 
+                 RESET, 
+                 SIG_OUT);
+
+    input CLK;
+    input OVERFLOW;
+    input PUSH;
+    input RESET;
+   output SIG_OUT;
+   
+   wire XLXN_1;
+   wire XLXN_3;
+   wire XLXN_8;
+   wire XLXN_11;
+   wire XLXN_12;
+   
+   clk_signal_sch_MUSER_BypassClk  XLXI_1 (.CLK(CLK), 
+                                          .PUSH(PUSH), 
+                                          .SIGNAL_OUT(XLXN_12));
+   FDR #( .INIT(1'b0) ) XLXI_3 (.C(CLK), 
+               .D(XLXN_1), 
+               .R(RESET), 
+               .Q(XLXN_3));
+   OR2  XLXI_4 (.I0(OVERFLOW), 
+               .I1(XLXN_3), 
+               .O(XLXN_1));
+   OR2  XLXI_5 (.I0(XLXN_11), 
+               .I1(XLXN_12), 
+               .O(SIG_OUT));
+   AND2  XLXI_6 (.I0(XLXN_8), 
+                .I1(CLK), 
+                .O(XLXN_11));
+   INV  XLXI_7 (.I(XLXN_3), 
+               .O(XLXN_8));
+endmodule

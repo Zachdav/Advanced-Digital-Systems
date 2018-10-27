@@ -1,0 +1,1611 @@
+Release 14.2 - xst P.28xd (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.26 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.26 secs
+ 
+--> Reading design: toyProcessor_overall.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "toyProcessor_overall.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "toyProcessor_overall"
+Output Format                      : NGC
+Target Device                      : xc3s250e-4-cp132
+
+---- Source Options
+Top Module Name                    : toyProcessor_overall
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "mux.vf" in library work
+Compiling verilog file "ha_sch.vf" in library work
+Module <mux> compiled
+Compiling verilog file "reg_sch.vf" in library work
+Module <ha_sch> compiled
+Compiling verilog file "mux8_sch.vf" in library work
+Module <reg_sch> compiled
+Module <mux_MUSER_mux8_sch> compiled
+Compiling verilog file "ha8_sch.vf" in library work
+Module <mux8_sch> compiled
+Module <ha_sch_MUSER_ha8_sch> compiled
+Compiling verilog file "enoutput8_sch.vf" in library work
+Module <ha8_sch> compiled
+Compiling verilog file "encode8.vf" in library work
+Module <enoutput8_sch> compiled
+Compiling verilog file "toZERO_sch.vf" in library work
+Module <encode8> compiled
+Module <NOR8_MXILINX_toZERO_sch> compiled
+Compiling verilog file "mux4_sch.vf" in library work
+Module <toZERO_sch> compiled
+Compiling verilog file "counter_sch.vf" in library work
+Module <mux4_sch> compiled
+Module <mux_MUSER_counter_sch> compiled
+Module <mux8_sch_MUSER_counter_sch> compiled
+Module <ha_sch_MUSER_counter_sch> compiled
+Module <ha8_sch_MUSER_counter_sch> compiled
+Module <reg_sch_MUSER_counter_sch> compiled
+Compiling verilog file "CONTROL.v" in library work
+Module <counter_sch> compiled
+Compiling verilog file "bus8_mux.vf" in library work
+Module <CONTROL> compiled
+Module <OR8_MXILINX_bus8_mux> compiled
+Module <enoutput8_sch_MUSER_bus8_mux> compiled
+Module <encode8_MUSER_bus8_mux> compiled
+Compiling verilog file "alu_sch.vf" in library work
+Module <bus8_mux> compiled
+Module <fa_sch_MUSER_alu_sch> compiled
+Compiling verilog file "ROM_array.vf" in library work
+Module <alu_sch> compiled
+Module <OR8_MXILINX_ROM_array> compiled
+Module <enoutput8_sch_MUSER_ROM_array> compiled
+Module <encode8_MUSER_ROM_array> compiled
+Module <bus8_mux_MUSER_ROM_array> compiled
+Compiling verilog file "RAM_array.vf" in library work
+Module <ROM_array> compiled
+Module <OR8_MXILINX_RAM_array> compiled
+Module <enoutput8_sch_MUSER_RAM_array> compiled
+Module <encode8_MUSER_RAM_array> compiled
+Module <bus8_mux_MUSER_RAM_array> compiled
+Compiling verilog file "mux4_7bit_sch.vf" in library work
+Module <RAM_array> compiled
+Module <mux4_sch_MUSER_mux4_7bit_sch> compiled
+Compiling verilog file "Datapath.vf" in library work
+Module <mux4_7bit_sch> compiled
+Module <mux_MUSER_Datapath> compiled
+Module <mux8_sch_MUSER_Datapath> compiled
+Module <NOR8_MXILINX_Datapath> compiled
+Module <toZERO_sch_MUSER_Datapath> compiled
+Module <fa_sch_MUSER_Datapath> compiled
+Module <alu_sch_MUSER_Datapath> compiled
+Module <ha_sch_MUSER_Datapath> compiled
+Module <ha8_sch_MUSER_Datapath> compiled
+Module <reg_sch_MUSER_Datapath> compiled
+Module <counter_sch_MUSER_Datapath> compiled
+Compiling verilog file "controller_sch.vf" in library work
+Module <Datapath> compiled
+Compiling verilog file "clk_signal_sch.vf" in library work
+Module <controller_sch> compiled
+Compiling verilog file "toy_sch.vf" in library work
+Module <clk_signal_sch> compiled
+Module <mux_MUSER_toy_sch> compiled
+Module <mux8_sch_MUSER_toy_sch> compiled
+Module <NOR8_MXILINX_toy_sch> compiled
+Module <toZERO_sch_MUSER_toy_sch> compiled
+Module <fa_sch_MUSER_toy_sch> compiled
+Module <alu_sch_MUSER_toy_sch> compiled
+Module <ha_sch_MUSER_toy_sch> compiled
+Module <ha8_sch_MUSER_toy_sch> compiled
+Module <reg_sch_MUSER_toy_sch> compiled
+Module <counter_sch_MUSER_toy_sch> compiled
+Module <Datapath_MUSER_toy_sch> compiled
+Module <controller_sch_MUSER_toy_sch> compiled
+Compiling verilog file "seven_seg_control_sch.vf" in library work
+Module <toy_sch> compiled
+Module <D2_4E_MXILINX_seven_seg_control_sch> compiled
+Module <FTCE_MXILINX_seven_seg_control_sch> compiled
+Module <CB16CE_MXILINX_seven_seg_control_sch> compiled
+Module <mux4_sch_MUSER_seven_seg_control_sch> compiled
+Module <mux4_7bit_sch_MUSER_seven_seg_control_sch> compiled
+Compiling verilog file "mem_bootstrap.vf" in library work
+Module <seven_seg_control_sch> compiled
+Module <AND8_MXILINX_mem_bootstrap> compiled
+Module <mux_MUSER_mem_bootstrap> compiled
+Module <mux8_sch_MUSER_mem_bootstrap> compiled
+Module <ha_sch_MUSER_mem_bootstrap> compiled
+Module <ha8_sch_MUSER_mem_bootstrap> compiled
+Module <reg_sch_MUSER_mem_bootstrap> compiled
+Module <counter_sch_MUSER_mem_bootstrap> compiled
+Module <OR8_MXILINX_mem_bootstrap> compiled
+Module <enoutput8_sch_MUSER_mem_bootstrap> compiled
+Module <encode8_MUSER_mem_bootstrap> compiled
+Module <bus8_mux_MUSER_mem_bootstrap> compiled
+Module <RAM_array_MUSER_mem_bootstrap> compiled
+Module <ROM_array_MUSER_mem_bootstrap> compiled
+Compiling verilog file "LED7SegmentBehavioral.v" in library work
+Module <mem_bootstrap> compiled
+Compiling verilog file "BypassClk.vf" in library work
+Module <LED7SegmentBehavioral> compiled
+Module <clk_signal_sch_MUSER_BypassClk> compiled
+Compiling verilog file "toyProcessor_overall.vf" in library work
+Module <BypassClk> compiled
+Module <D2_4E_MXILINX_toyProcessor_overall> compiled
+Module <FTCE_MXILINX_toyProcessor_overall> compiled
+Module <CB16CE_MXILINX_toyProcessor_overall> compiled
+Module <mux4_sch_MUSER_toyProcessor_overall> compiled
+Module <mux4_7bit_sch_MUSER_toyProcessor_overall> compiled
+Module <seven_seg_control_sch_MUSER_toyProcessor_overall> compiled
+Module <mux_MUSER_toyProcessor_overall> compiled
+Module <mux8_sch_MUSER_toyProcessor_overall> compiled
+Module <NOR8_MXILINX_toyProcessor_overall> compiled
+Module <toZERO_sch_MUSER_toyProcessor_overall> compiled
+Module <fa_sch_MUSER_toyProcessor_overall> compiled
+Module <alu_sch_MUSER_toyProcessor_overall> compiled
+Module <ha_sch_MUSER_toyProcessor_overall> compiled
+Module <ha8_sch_MUSER_toyProcessor_overall> compiled
+Module <reg_sch_MUSER_toyProcessor_overall> compiled
+Module <counter_sch_MUSER_toyProcessor_overall> compiled
+Module <Datapath_MUSER_toyProcessor_overall> compiled
+Module <controller_sch_MUSER_toyProcessor_overall> compiled
+Module <toy_sch_MUSER_toyProcessor_overall> compiled
+Module <AND8_MXILINX_toyProcessor_overall> compiled
+Module <OR8_MXILINX_toyProcessor_overall> compiled
+Module <enoutput8_sch_MUSER_toyProcessor_overall> compiled
+Module <encode8_MUSER_toyProcessor_overall> compiled
+Module <bus8_mux_MUSER_toyProcessor_overall> compiled
+Module <RAM_array_MUSER_toyProcessor_overall> compiled
+Module <ROM_array_MUSER_toyProcessor_overall> compiled
+Module <mem_bootstrap_MUSER_toyProcessor_overall> compiled
+Module <clk_signal_sch_MUSER_toyProcessor_overall> compiled
+Module <BypassClk_MUSER_toyProcessor_overall> compiled
+Module <toyProcessor_overall> compiled
+No errors in compilation
+Analysis of file <"toyProcessor_overall.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <toyProcessor_overall> in library <work>.
+
+Analyzing hierarchy for module <mem_bootstrap_MUSER_toyProcessor_overall> in library <work>.
+
+Analyzing hierarchy for module <toy_sch_MUSER_toyProcessor_overall> in library <work>.
+
+Analyzing hierarchy for module <LED7SegmentBehavioral> in library <work>.
+
+Analyzing hierarchy for module <seven_seg_control_sch_MUSER_toyProcessor_overall> in library <work>.
+
+Analyzing hierarchy for module <BypassClk_MUSER_toyProcessor_overall> in library <work>.
+
+Analyzing hierarchy for module <ROM_array_MUSER_toyProcessor_overall> in library <work>.
+
+Analyzing hierarchy for module <RAM_array_MUSER_toyProcessor_overall> in library <work>.
+
+Analyzing hierarchy for module <mux8_sch_MUSER_toyProcessor_overall> in library <work>.
+
+Analyzing hierarchy for module <counter_sch_MUSER_toyProcessor_overall> in library <work>.
+
+Analyzing hierarchy for module <AND8_MXILINX_toyProcessor_overall> in library <work>.
+
+Analyzing hierarchy for module <controller_sch_MUSER_toyProcessor_overall> in library <work>.
+
+Analyzing hierarchy for module <Datapath_MUSER_toyProcessor_overall> in library <work>.
+
+Analyzing hierarchy for module <mux4_7bit_sch_MUSER_toyProcessor_overall> in library <work>.
+
+Analyzing hierarchy for module <CB16CE_MXILINX_toyProcessor_overall> in library <work>.
+
+Analyzing hierarchy for module <D2_4E_MXILINX_toyProcessor_overall> in library <work>.
+
+Analyzing hierarchy for module <clk_signal_sch_MUSER_toyProcessor_overall> in library <work>.
+
+Analyzing hierarchy for module <bus8_mux_MUSER_toyProcessor_overall> in library <work>.
+
+Analyzing hierarchy for module <mux_MUSER_toyProcessor_overall> in library <work>.
+
+Analyzing hierarchy for module <reg_sch_MUSER_toyProcessor_overall> in library <work>.
+
+Analyzing hierarchy for module <ha8_sch_MUSER_toyProcessor_overall> in library <work>.
+
+Analyzing hierarchy for module <mux8_sch_MUSER_toyProcessor_overall> in library <work>.
+
+Analyzing hierarchy for module <CONTROL> in library <work>.
+
+Analyzing hierarchy for module <counter_sch_MUSER_toyProcessor_overall> in library <work>.
+
+Analyzing hierarchy for module <alu_sch_MUSER_toyProcessor_overall> in library <work>.
+
+Analyzing hierarchy for module <toZERO_sch_MUSER_toyProcessor_overall> in library <work>.
+
+Analyzing hierarchy for module <mux8_sch_MUSER_toyProcessor_overall> in library <work>.
+
+Analyzing hierarchy for module <mux4_sch_MUSER_toyProcessor_overall> in library <work>.
+
+Analyzing hierarchy for module <FTCE_MXILINX_toyProcessor_overall> in library <work> with parameters.
+	INIT = "0"
+
+Analyzing hierarchy for module <FTCE_MXILINX_toyProcessor_overall> in library <work> with parameters.
+	INIT = "0"
+
+Analyzing hierarchy for module <FTCE_MXILINX_toyProcessor_overall> in library <work> with parameters.
+	INIT = "0"
+
+Analyzing hierarchy for module <FTCE_MXILINX_toyProcessor_overall> in library <work> with parameters.
+	INIT = "0"
+
+Analyzing hierarchy for module <FTCE_MXILINX_toyProcessor_overall> in library <work> with parameters.
+	INIT = "0"
+
+Analyzing hierarchy for module <FTCE_MXILINX_toyProcessor_overall> in library <work> with parameters.
+	INIT = "0"
+
+Analyzing hierarchy for module <FTCE_MXILINX_toyProcessor_overall> in library <work> with parameters.
+	INIT = "0"
+
+Analyzing hierarchy for module <FTCE_MXILINX_toyProcessor_overall> in library <work> with parameters.
+	INIT = "0"
+
+Analyzing hierarchy for module <FTCE_MXILINX_toyProcessor_overall> in library <work> with parameters.
+	INIT = "0"
+
+Analyzing hierarchy for module <FTCE_MXILINX_toyProcessor_overall> in library <work> with parameters.
+	INIT = "0"
+
+Analyzing hierarchy for module <FTCE_MXILINX_toyProcessor_overall> in library <work> with parameters.
+	INIT = "0"
+
+Analyzing hierarchy for module <FTCE_MXILINX_toyProcessor_overall> in library <work> with parameters.
+	INIT = "0"
+
+Analyzing hierarchy for module <FTCE_MXILINX_toyProcessor_overall> in library <work> with parameters.
+	INIT = "0"
+
+Analyzing hierarchy for module <FTCE_MXILINX_toyProcessor_overall> in library <work> with parameters.
+	INIT = "0"
+
+Analyzing hierarchy for module <FTCE_MXILINX_toyProcessor_overall> in library <work> with parameters.
+	INIT = "0"
+
+Analyzing hierarchy for module <FTCE_MXILINX_toyProcessor_overall> in library <work> with parameters.
+	INIT = "0"
+
+Analyzing hierarchy for module <encode8_MUSER_toyProcessor_overall> in library <work>.
+
+Analyzing hierarchy for module <enoutput8_sch_MUSER_toyProcessor_overall> in library <work>.
+
+Analyzing hierarchy for module <OR8_MXILINX_toyProcessor_overall> in library <work>.
+
+Analyzing hierarchy for module <OR8_MXILINX_toyProcessor_overall> in library <work>.
+
+Analyzing hierarchy for module <OR8_MXILINX_toyProcessor_overall> in library <work>.
+
+Analyzing hierarchy for module <OR8_MXILINX_toyProcessor_overall> in library <work>.
+
+Analyzing hierarchy for module <OR8_MXILINX_toyProcessor_overall> in library <work>.
+
+Analyzing hierarchy for module <OR8_MXILINX_toyProcessor_overall> in library <work>.
+
+Analyzing hierarchy for module <OR8_MXILINX_toyProcessor_overall> in library <work>.
+
+Analyzing hierarchy for module <OR8_MXILINX_toyProcessor_overall> in library <work>.
+
+Analyzing hierarchy for module <ha_sch_MUSER_toyProcessor_overall> in library <work>.
+
+Analyzing hierarchy for module <mux_MUSER_toyProcessor_overall> in library <work>.
+
+Analyzing hierarchy for module <reg_sch_MUSER_toyProcessor_overall> in library <work>.
+
+Analyzing hierarchy for module <ha8_sch_MUSER_toyProcessor_overall> in library <work>.
+
+Analyzing hierarchy for module <fa_sch_MUSER_toyProcessor_overall> in library <work>.
+
+Analyzing hierarchy for module <NOR8_MXILINX_toyProcessor_overall> in library <work>.
+
+Analyzing hierarchy for module <mux_MUSER_toyProcessor_overall> in library <work>.
+
+Analyzing hierarchy for module <mux_MUSER_toyProcessor_overall> in library <work>.
+
+Analyzing hierarchy for module <mux_MUSER_toyProcessor_overall> in library <work>.
+
+Analyzing hierarchy for module <mux_MUSER_toyProcessor_overall> in library <work>.
+
+Analyzing hierarchy for module <mux_MUSER_toyProcessor_overall> in library <work>.
+
+Analyzing hierarchy for module <mux_MUSER_toyProcessor_overall> in library <work>.
+
+Analyzing hierarchy for module <mux_MUSER_toyProcessor_overall> in library <work>.
+
+Analyzing hierarchy for module <mux_MUSER_toyProcessor_overall> in library <work>.
+
+Analyzing hierarchy for module <ha_sch_MUSER_toyProcessor_overall> in library <work>.
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <toyProcessor_overall>.
+Module <toyProcessor_overall> is correct for synthesis.
+ 
+Analyzing module <mem_bootstrap_MUSER_toyProcessor_overall> in library <work>.
+Module <mem_bootstrap_MUSER_toyProcessor_overall> is correct for synthesis.
+ 
+    Set user-defined property "HU_SET =  XLXI_19_162" for instance <XLXI_19> in unit <mem_bootstrap_MUSER_toyProcessor_overall>.
+Analyzing module <ROM_array_MUSER_toyProcessor_overall> in library <work>.
+Module <ROM_array_MUSER_toyProcessor_overall> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  00000912" for instance <ROM11> in unit <ROM_array_MUSER_toyProcessor_overall>.
+    Set user-defined property "INIT =  00000910" for instance <ROM12> in unit <ROM_array_MUSER_toyProcessor_overall>.
+    Set user-defined property "INIT =  00000912" for instance <ROM13> in unit <ROM_array_MUSER_toyProcessor_overall>.
+    Set user-defined property "INIT =  00000990" for instance <ROM14> in unit <ROM_array_MUSER_toyProcessor_overall>.
+    Set user-defined property "INIT =  00000D12" for instance <ROM15> in unit <ROM_array_MUSER_toyProcessor_overall>.
+    Set user-defined property "INIT =  00000B14" for instance <ROM16> in unit <ROM_array_MUSER_toyProcessor_overall>.
+    Set user-defined property "INIT =  00000932" for instance <ROM17> in unit <ROM_array_MUSER_toyProcessor_overall>.
+    Set user-defined property "INIT =  00000149" for instance <ROM18> in unit <ROM_array_MUSER_toyProcessor_overall>.
+    Set user-defined property "INIT =  00000000" for instance <ROM21> in unit <ROM_array_MUSER_toyProcessor_overall>.
+    Set user-defined property "INIT =  00000000" for instance <ROM22> in unit <ROM_array_MUSER_toyProcessor_overall>.
+    Set user-defined property "INIT =  00000000" for instance <ROM23> in unit <ROM_array_MUSER_toyProcessor_overall>.
+    Set user-defined property "INIT =  00000000" for instance <ROM24> in unit <ROM_array_MUSER_toyProcessor_overall>.
+    Set user-defined property "INIT =  00000000" for instance <ROM25> in unit <ROM_array_MUSER_toyProcessor_overall>.
+    Set user-defined property "INIT =  00000000" for instance <ROM26> in unit <ROM_array_MUSER_toyProcessor_overall>.
+    Set user-defined property "INIT =  00000000" for instance <ROM27> in unit <ROM_array_MUSER_toyProcessor_overall>.
+    Set user-defined property "INIT =  00000000" for instance <ROM28> in unit <ROM_array_MUSER_toyProcessor_overall>.
+    Set user-defined property "INIT =  00000000" for instance <ROM31> in unit <ROM_array_MUSER_toyProcessor_overall>.
+    Set user-defined property "INIT =  00000000" for instance <ROM32> in unit <ROM_array_MUSER_toyProcessor_overall>.
+    Set user-defined property "INIT =  00000000" for instance <ROM33> in unit <ROM_array_MUSER_toyProcessor_overall>.
+    Set user-defined property "INIT =  00000000" for instance <ROM34> in unit <ROM_array_MUSER_toyProcessor_overall>.
+    Set user-defined property "INIT =  00000000" for instance <ROM35> in unit <ROM_array_MUSER_toyProcessor_overall>.
+    Set user-defined property "INIT =  00000000" for instance <ROM36> in unit <ROM_array_MUSER_toyProcessor_overall>.
+    Set user-defined property "INIT =  00000000" for instance <ROM37> in unit <ROM_array_MUSER_toyProcessor_overall>.
+    Set user-defined property "INIT =  00000000" for instance <ROM38> in unit <ROM_array_MUSER_toyProcessor_overall>.
+    Set user-defined property "INIT =  00000000" for instance <ROM41> in unit <ROM_array_MUSER_toyProcessor_overall>.
+    Set user-defined property "INIT =  00000000" for instance <ROM42> in unit <ROM_array_MUSER_toyProcessor_overall>.
+    Set user-defined property "INIT =  00000000" for instance <ROM43> in unit <ROM_array_MUSER_toyProcessor_overall>.
+    Set user-defined property "INIT =  00000000" for instance <ROM44> in unit <ROM_array_MUSER_toyProcessor_overall>.
+    Set user-defined property "INIT =  00000000" for instance <ROM45> in unit <ROM_array_MUSER_toyProcessor_overall>.
+    Set user-defined property "INIT =  00000000" for instance <ROM46> in unit <ROM_array_MUSER_toyProcessor_overall>.
+    Set user-defined property "INIT =  00000000" for instance <ROM47> in unit <ROM_array_MUSER_toyProcessor_overall>.
+    Set user-defined property "INIT =  00000000" for instance <ROM48> in unit <ROM_array_MUSER_toyProcessor_overall>.
+    Set user-defined property "INIT =  00000000" for instance <ROM51> in unit <ROM_array_MUSER_toyProcessor_overall>.
+    Set user-defined property "INIT =  00000000" for instance <ROM52> in unit <ROM_array_MUSER_toyProcessor_overall>.
+    Set user-defined property "INIT =  00000000" for instance <ROM53> in unit <ROM_array_MUSER_toyProcessor_overall>.
+    Set user-defined property "INIT =  00000000" for instance <ROM54> in unit <ROM_array_MUSER_toyProcessor_overall>.
+    Set user-defined property "INIT =  00000000" for instance <ROM55> in unit <ROM_array_MUSER_toyProcessor_overall>.
+    Set user-defined property "INIT =  00000000" for instance <ROM56> in unit <ROM_array_MUSER_toyProcessor_overall>.
+    Set user-defined property "INIT =  00000000" for instance <ROM57> in unit <ROM_array_MUSER_toyProcessor_overall>.
+    Set user-defined property "INIT =  00000000" for instance <ROM58> in unit <ROM_array_MUSER_toyProcessor_overall>.
+    Set user-defined property "INIT =  00000000" for instance <ROM61> in unit <ROM_array_MUSER_toyProcessor_overall>.
+    Set user-defined property "INIT =  00000000" for instance <ROM62> in unit <ROM_array_MUSER_toyProcessor_overall>.
+    Set user-defined property "INIT =  00000000" for instance <ROM63> in unit <ROM_array_MUSER_toyProcessor_overall>.
+    Set user-defined property "INIT =  00000000" for instance <ROM64> in unit <ROM_array_MUSER_toyProcessor_overall>.
+    Set user-defined property "INIT =  00000000" for instance <ROM65> in unit <ROM_array_MUSER_toyProcessor_overall>.
+    Set user-defined property "INIT =  00000000" for instance <ROM66> in unit <ROM_array_MUSER_toyProcessor_overall>.
+    Set user-defined property "INIT =  00000000" for instance <ROM67> in unit <ROM_array_MUSER_toyProcessor_overall>.
+    Set user-defined property "INIT =  00000000" for instance <ROM68> in unit <ROM_array_MUSER_toyProcessor_overall>.
+    Set user-defined property "INIT =  00000000" for instance <ROM71> in unit <ROM_array_MUSER_toyProcessor_overall>.
+    Set user-defined property "INIT =  00000000" for instance <ROM72> in unit <ROM_array_MUSER_toyProcessor_overall>.
+    Set user-defined property "INIT =  00000000" for instance <ROM73> in unit <ROM_array_MUSER_toyProcessor_overall>.
+    Set user-defined property "INIT =  00000000" for instance <ROM74> in unit <ROM_array_MUSER_toyProcessor_overall>.
+    Set user-defined property "INIT =  00000000" for instance <ROM75> in unit <ROM_array_MUSER_toyProcessor_overall>.
+    Set user-defined property "INIT =  00000000" for instance <ROM76> in unit <ROM_array_MUSER_toyProcessor_overall>.
+    Set user-defined property "INIT =  00000000" for instance <ROM77> in unit <ROM_array_MUSER_toyProcessor_overall>.
+    Set user-defined property "INIT =  00000000" for instance <ROM78> in unit <ROM_array_MUSER_toyProcessor_overall>.
+    Set user-defined property "INIT =  00000001" for instance <ROM81> in unit <ROM_array_MUSER_toyProcessor_overall>.
+    Set user-defined property "INIT =  00000000" for instance <ROM82> in unit <ROM_array_MUSER_toyProcessor_overall>.
+    Set user-defined property "INIT =  00000000" for instance <ROM83> in unit <ROM_array_MUSER_toyProcessor_overall>.
+    Set user-defined property "INIT =  00000000" for instance <ROM84> in unit <ROM_array_MUSER_toyProcessor_overall>.
+    Set user-defined property "INIT =  00000000" for instance <ROM85> in unit <ROM_array_MUSER_toyProcessor_overall>.
+    Set user-defined property "INIT =  00000000" for instance <ROM86> in unit <ROM_array_MUSER_toyProcessor_overall>.
+    Set user-defined property "INIT =  00000000" for instance <ROM87> in unit <ROM_array_MUSER_toyProcessor_overall>.
+    Set user-defined property "INIT =  00000000" for instance <ROM88> in unit <ROM_array_MUSER_toyProcessor_overall>.
+Analyzing module <bus8_mux_MUSER_toyProcessor_overall> in library <work>.
+Module <bus8_mux_MUSER_toyProcessor_overall> is correct for synthesis.
+ 
+    Set user-defined property "HU_SET =  XLXI_34_154" for instance <XLXI_34> in unit <bus8_mux_MUSER_toyProcessor_overall>.
+    Set user-defined property "HU_SET =  XLXI_38_155" for instance <XLXI_38> in unit <bus8_mux_MUSER_toyProcessor_overall>.
+    Set user-defined property "HU_SET =  XLXI_39_156" for instance <XLXI_39> in unit <bus8_mux_MUSER_toyProcessor_overall>.
+    Set user-defined property "HU_SET =  XLXI_40_157" for instance <XLXI_40> in unit <bus8_mux_MUSER_toyProcessor_overall>.
+    Set user-defined property "HU_SET =  XLXI_41_158" for instance <XLXI_41> in unit <bus8_mux_MUSER_toyProcessor_overall>.
+    Set user-defined property "HU_SET =  XLXI_42_159" for instance <XLXI_42> in unit <bus8_mux_MUSER_toyProcessor_overall>.
+    Set user-defined property "HU_SET =  XLXI_43_160" for instance <XLXI_43> in unit <bus8_mux_MUSER_toyProcessor_overall>.
+    Set user-defined property "HU_SET =  XLXI_44_161" for instance <XLXI_44> in unit <bus8_mux_MUSER_toyProcessor_overall>.
+Analyzing module <encode8_MUSER_toyProcessor_overall> in library <work>.
+Module <encode8_MUSER_toyProcessor_overall> is correct for synthesis.
+ 
+Analyzing module <enoutput8_sch_MUSER_toyProcessor_overall> in library <work>.
+Module <enoutput8_sch_MUSER_toyProcessor_overall> is correct for synthesis.
+ 
+Analyzing module <OR8_MXILINX_toyProcessor_overall.1> in library <work>.
+Module <OR8_MXILINX_toyProcessor_overall.1> is correct for synthesis.
+ 
+    Set user-defined property "RLOC =  X0Y1" for instance <I_36_91> in unit <OR8_MXILINX_toyProcessor_overall.1>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_116> in unit <OR8_MXILINX_toyProcessor_overall.1>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_117> in unit <OR8_MXILINX_toyProcessor_overall.1>.
+Analyzing module <OR8_MXILINX_toyProcessor_overall.2> in library <work>.
+Module <OR8_MXILINX_toyProcessor_overall.2> is correct for synthesis.
+ 
+    Set user-defined property "RLOC =  X0Y1" for instance <I_36_91> in unit <OR8_MXILINX_toyProcessor_overall.2>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_116> in unit <OR8_MXILINX_toyProcessor_overall.2>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_117> in unit <OR8_MXILINX_toyProcessor_overall.2>.
+Analyzing module <OR8_MXILINX_toyProcessor_overall.3> in library <work>.
+Module <OR8_MXILINX_toyProcessor_overall.3> is correct for synthesis.
+ 
+    Set user-defined property "RLOC =  X0Y1" for instance <I_36_91> in unit <OR8_MXILINX_toyProcessor_overall.3>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_116> in unit <OR8_MXILINX_toyProcessor_overall.3>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_117> in unit <OR8_MXILINX_toyProcessor_overall.3>.
+Analyzing module <OR8_MXILINX_toyProcessor_overall.4> in library <work>.
+Module <OR8_MXILINX_toyProcessor_overall.4> is correct for synthesis.
+ 
+    Set user-defined property "RLOC =  X0Y1" for instance <I_36_91> in unit <OR8_MXILINX_toyProcessor_overall.4>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_116> in unit <OR8_MXILINX_toyProcessor_overall.4>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_117> in unit <OR8_MXILINX_toyProcessor_overall.4>.
+Analyzing module <OR8_MXILINX_toyProcessor_overall.5> in library <work>.
+Module <OR8_MXILINX_toyProcessor_overall.5> is correct for synthesis.
+ 
+    Set user-defined property "RLOC =  X0Y1" for instance <I_36_91> in unit <OR8_MXILINX_toyProcessor_overall.5>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_116> in unit <OR8_MXILINX_toyProcessor_overall.5>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_117> in unit <OR8_MXILINX_toyProcessor_overall.5>.
+Analyzing module <OR8_MXILINX_toyProcessor_overall.6> in library <work>.
+Module <OR8_MXILINX_toyProcessor_overall.6> is correct for synthesis.
+ 
+    Set user-defined property "RLOC =  X0Y1" for instance <I_36_91> in unit <OR8_MXILINX_toyProcessor_overall.6>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_116> in unit <OR8_MXILINX_toyProcessor_overall.6>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_117> in unit <OR8_MXILINX_toyProcessor_overall.6>.
+Analyzing module <OR8_MXILINX_toyProcessor_overall.7> in library <work>.
+Module <OR8_MXILINX_toyProcessor_overall.7> is correct for synthesis.
+ 
+    Set user-defined property "RLOC =  X0Y1" for instance <I_36_91> in unit <OR8_MXILINX_toyProcessor_overall.7>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_116> in unit <OR8_MXILINX_toyProcessor_overall.7>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_117> in unit <OR8_MXILINX_toyProcessor_overall.7>.
+Analyzing module <OR8_MXILINX_toyProcessor_overall.8> in library <work>.
+Module <OR8_MXILINX_toyProcessor_overall.8> is correct for synthesis.
+ 
+    Set user-defined property "RLOC =  X0Y1" for instance <I_36_91> in unit <OR8_MXILINX_toyProcessor_overall.8>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_116> in unit <OR8_MXILINX_toyProcessor_overall.8>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_117> in unit <OR8_MXILINX_toyProcessor_overall.8>.
+Analyzing module <RAM_array_MUSER_toyProcessor_overall> in library <work>.
+Module <RAM_array_MUSER_toyProcessor_overall> is correct for synthesis.
+ 
+    Set user-defined property "INIT_00 =  00000000" for instance <XLXI_1> in unit <RAM_array_MUSER_toyProcessor_overall>.
+    Set user-defined property "INIT_01 =  00000000" for instance <XLXI_1> in unit <RAM_array_MUSER_toyProcessor_overall>.
+    Set user-defined property "INIT_02 =  00000000" for instance <XLXI_1> in unit <RAM_array_MUSER_toyProcessor_overall>.
+    Set user-defined property "INIT_03 =  00000000" for instance <XLXI_1> in unit <RAM_array_MUSER_toyProcessor_overall>.
+    Set user-defined property "INIT_04 =  00000000" for instance <XLXI_1> in unit <RAM_array_MUSER_toyProcessor_overall>.
+    Set user-defined property "INIT_05 =  00000000" for instance <XLXI_1> in unit <RAM_array_MUSER_toyProcessor_overall>.
+    Set user-defined property "INIT_06 =  00000000" for instance <XLXI_1> in unit <RAM_array_MUSER_toyProcessor_overall>.
+    Set user-defined property "INIT_07 =  00000000" for instance <XLXI_1> in unit <RAM_array_MUSER_toyProcessor_overall>.
+    Set user-defined property "INIT_00 =  00000000" for instance <XLXI_2> in unit <RAM_array_MUSER_toyProcessor_overall>.
+    Set user-defined property "INIT_01 =  00000000" for instance <XLXI_2> in unit <RAM_array_MUSER_toyProcessor_overall>.
+    Set user-defined property "INIT_02 =  00000000" for instance <XLXI_2> in unit <RAM_array_MUSER_toyProcessor_overall>.
+    Set user-defined property "INIT_03 =  00000000" for instance <XLXI_2> in unit <RAM_array_MUSER_toyProcessor_overall>.
+    Set user-defined property "INIT_04 =  00000000" for instance <XLXI_2> in unit <RAM_array_MUSER_toyProcessor_overall>.
+    Set user-defined property "INIT_05 =  00000000" for instance <XLXI_2> in unit <RAM_array_MUSER_toyProcessor_overall>.
+    Set user-defined property "INIT_06 =  00000000" for instance <XLXI_2> in unit <RAM_array_MUSER_toyProcessor_overall>.
+    Set user-defined property "INIT_07 =  00000000" for instance <XLXI_2> in unit <RAM_array_MUSER_toyProcessor_overall>.
+    Set user-defined property "INIT_00 =  00000000" for instance <XLXI_11> in unit <RAM_array_MUSER_toyProcessor_overall>.
+    Set user-defined property "INIT_01 =  00000000" for instance <XLXI_11> in unit <RAM_array_MUSER_toyProcessor_overall>.
+    Set user-defined property "INIT_02 =  00000000" for instance <XLXI_11> in unit <RAM_array_MUSER_toyProcessor_overall>.
+    Set user-defined property "INIT_03 =  00000000" for instance <XLXI_11> in unit <RAM_array_MUSER_toyProcessor_overall>.
+    Set user-defined property "INIT_04 =  00000000" for instance <XLXI_11> in unit <RAM_array_MUSER_toyProcessor_overall>.
+    Set user-defined property "INIT_05 =  00000000" for instance <XLXI_11> in unit <RAM_array_MUSER_toyProcessor_overall>.
+    Set user-defined property "INIT_06 =  00000000" for instance <XLXI_11> in unit <RAM_array_MUSER_toyProcessor_overall>.
+    Set user-defined property "INIT_07 =  00000000" for instance <XLXI_11> in unit <RAM_array_MUSER_toyProcessor_overall>.
+    Set user-defined property "INIT_00 =  00000000" for instance <XLXI_12> in unit <RAM_array_MUSER_toyProcessor_overall>.
+    Set user-defined property "INIT_01 =  00000000" for instance <XLXI_12> in unit <RAM_array_MUSER_toyProcessor_overall>.
+    Set user-defined property "INIT_02 =  00000000" for instance <XLXI_12> in unit <RAM_array_MUSER_toyProcessor_overall>.
+    Set user-defined property "INIT_03 =  00000000" for instance <XLXI_12> in unit <RAM_array_MUSER_toyProcessor_overall>.
+    Set user-defined property "INIT_04 =  00000000" for instance <XLXI_12> in unit <RAM_array_MUSER_toyProcessor_overall>.
+    Set user-defined property "INIT_05 =  00000000" for instance <XLXI_12> in unit <RAM_array_MUSER_toyProcessor_overall>.
+    Set user-defined property "INIT_06 =  00000000" for instance <XLXI_12> in unit <RAM_array_MUSER_toyProcessor_overall>.
+    Set user-defined property "INIT_07 =  00000000" for instance <XLXI_12> in unit <RAM_array_MUSER_toyProcessor_overall>.
+    Set user-defined property "INIT_00 =  00000000" for instance <XLXI_15> in unit <RAM_array_MUSER_toyProcessor_overall>.
+    Set user-defined property "INIT_01 =  00000000" for instance <XLXI_15> in unit <RAM_array_MUSER_toyProcessor_overall>.
+    Set user-defined property "INIT_02 =  00000000" for instance <XLXI_15> in unit <RAM_array_MUSER_toyProcessor_overall>.
+    Set user-defined property "INIT_03 =  00000000" for instance <XLXI_15> in unit <RAM_array_MUSER_toyProcessor_overall>.
+    Set user-defined property "INIT_04 =  00000000" for instance <XLXI_15> in unit <RAM_array_MUSER_toyProcessor_overall>.
+    Set user-defined property "INIT_05 =  00000000" for instance <XLXI_15> in unit <RAM_array_MUSER_toyProcessor_overall>.
+    Set user-defined property "INIT_06 =  00000000" for instance <XLXI_15> in unit <RAM_array_MUSER_toyProcessor_overall>.
+    Set user-defined property "INIT_07 =  00000000" for instance <XLXI_15> in unit <RAM_array_MUSER_toyProcessor_overall>.
+    Set user-defined property "INIT_00 =  00000000" for instance <XLXI_16> in unit <RAM_array_MUSER_toyProcessor_overall>.
+    Set user-defined property "INIT_01 =  00000000" for instance <XLXI_16> in unit <RAM_array_MUSER_toyProcessor_overall>.
+    Set user-defined property "INIT_02 =  00000000" for instance <XLXI_16> in unit <RAM_array_MUSER_toyProcessor_overall>.
+    Set user-defined property "INIT_03 =  00000000" for instance <XLXI_16> in unit <RAM_array_MUSER_toyProcessor_overall>.
+    Set user-defined property "INIT_04 =  00000000" for instance <XLXI_16> in unit <RAM_array_MUSER_toyProcessor_overall>.
+    Set user-defined property "INIT_05 =  00000000" for instance <XLXI_16> in unit <RAM_array_MUSER_toyProcessor_overall>.
+    Set user-defined property "INIT_06 =  00000000" for instance <XLXI_16> in unit <RAM_array_MUSER_toyProcessor_overall>.
+    Set user-defined property "INIT_07 =  00000000" for instance <XLXI_16> in unit <RAM_array_MUSER_toyProcessor_overall>.
+    Set user-defined property "INIT_00 =  00000000" for instance <XLXI_19> in unit <RAM_array_MUSER_toyProcessor_overall>.
+    Set user-defined property "INIT_01 =  00000000" for instance <XLXI_19> in unit <RAM_array_MUSER_toyProcessor_overall>.
+    Set user-defined property "INIT_02 =  00000000" for instance <XLXI_19> in unit <RAM_array_MUSER_toyProcessor_overall>.
+    Set user-defined property "INIT_03 =  00000000" for instance <XLXI_19> in unit <RAM_array_MUSER_toyProcessor_overall>.
+    Set user-defined property "INIT_04 =  00000000" for instance <XLXI_19> in unit <RAM_array_MUSER_toyProcessor_overall>.
+    Set user-defined property "INIT_05 =  00000000" for instance <XLXI_19> in unit <RAM_array_MUSER_toyProcessor_overall>.
+    Set user-defined property "INIT_06 =  00000000" for instance <XLXI_19> in unit <RAM_array_MUSER_toyProcessor_overall>.
+    Set user-defined property "INIT_07 =  00000000" for instance <XLXI_19> in unit <RAM_array_MUSER_toyProcessor_overall>.
+    Set user-defined property "INIT_00 =  00000000" for instance <XLXI_20> in unit <RAM_array_MUSER_toyProcessor_overall>.
+    Set user-defined property "INIT_01 =  00000000" for instance <XLXI_20> in unit <RAM_array_MUSER_toyProcessor_overall>.
+    Set user-defined property "INIT_02 =  00000000" for instance <XLXI_20> in unit <RAM_array_MUSER_toyProcessor_overall>.
+    Set user-defined property "INIT_03 =  00000000" for instance <XLXI_20> in unit <RAM_array_MUSER_toyProcessor_overall>.
+    Set user-defined property "INIT_04 =  00000000" for instance <XLXI_20> in unit <RAM_array_MUSER_toyProcessor_overall>.
+    Set user-defined property "INIT_05 =  00000000" for instance <XLXI_20> in unit <RAM_array_MUSER_toyProcessor_overall>.
+    Set user-defined property "INIT_06 =  00000000" for instance <XLXI_20> in unit <RAM_array_MUSER_toyProcessor_overall>.
+    Set user-defined property "INIT_07 =  00000000" for instance <XLXI_20> in unit <RAM_array_MUSER_toyProcessor_overall>.
+Analyzing module <mux8_sch_MUSER_toyProcessor_overall> in library <work>.
+Module <mux8_sch_MUSER_toyProcessor_overall> is correct for synthesis.
+ 
+Analyzing module <mux_MUSER_toyProcessor_overall> in library <work>.
+Module <mux_MUSER_toyProcessor_overall> is correct for synthesis.
+ 
+Analyzing module <counter_sch_MUSER_toyProcessor_overall> in library <work>.
+Module <counter_sch_MUSER_toyProcessor_overall> is correct for synthesis.
+ 
+Analyzing module <reg_sch_MUSER_toyProcessor_overall> in library <work>.
+Module <reg_sch_MUSER_toyProcessor_overall> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <XLXI_3> in unit <reg_sch_MUSER_toyProcessor_overall>.
+    Set user-defined property "INIT =  0" for instance <XLXI_5> in unit <reg_sch_MUSER_toyProcessor_overall>.
+    Set user-defined property "INIT =  0" for instance <XLXI_6> in unit <reg_sch_MUSER_toyProcessor_overall>.
+    Set user-defined property "INIT =  0" for instance <XLXI_7> in unit <reg_sch_MUSER_toyProcessor_overall>.
+    Set user-defined property "INIT =  0" for instance <XLXI_8> in unit <reg_sch_MUSER_toyProcessor_overall>.
+    Set user-defined property "INIT =  0" for instance <XLXI_9> in unit <reg_sch_MUSER_toyProcessor_overall>.
+    Set user-defined property "INIT =  0" for instance <XLXI_10> in unit <reg_sch_MUSER_toyProcessor_overall>.
+    Set user-defined property "INIT =  0" for instance <XLXI_11> in unit <reg_sch_MUSER_toyProcessor_overall>.
+Analyzing module <ha8_sch_MUSER_toyProcessor_overall> in library <work>.
+Module <ha8_sch_MUSER_toyProcessor_overall> is correct for synthesis.
+ 
+Analyzing module <ha_sch_MUSER_toyProcessor_overall> in library <work>.
+Module <ha_sch_MUSER_toyProcessor_overall> is correct for synthesis.
+ 
+Analyzing module <AND8_MXILINX_toyProcessor_overall> in library <work>.
+Module <AND8_MXILINX_toyProcessor_overall> is correct for synthesis.
+ 
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_29> in unit <AND8_MXILINX_toyProcessor_overall>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_138> in unit <AND8_MXILINX_toyProcessor_overall>.
+    Set user-defined property "RLOC =  X0Y1" for instance <I_36_152> in unit <AND8_MXILINX_toyProcessor_overall>.
+Analyzing module <toy_sch_MUSER_toyProcessor_overall> in library <work>.
+Module <toy_sch_MUSER_toyProcessor_overall> is correct for synthesis.
+ 
+Analyzing module <controller_sch_MUSER_toyProcessor_overall> in library <work>.
+Module <controller_sch_MUSER_toyProcessor_overall> is correct for synthesis.
+ 
+Analyzing module <CONTROL> in library <work>.
+Module <CONTROL> is correct for synthesis.
+ 
+Analyzing module <Datapath_MUSER_toyProcessor_overall> in library <work>.
+Module <Datapath_MUSER_toyProcessor_overall> is correct for synthesis.
+ 
+Analyzing module <alu_sch_MUSER_toyProcessor_overall> in library <work>.
+Module <alu_sch_MUSER_toyProcessor_overall> is correct for synthesis.
+ 
+Analyzing module <fa_sch_MUSER_toyProcessor_overall> in library <work>.
+Module <fa_sch_MUSER_toyProcessor_overall> is correct for synthesis.
+ 
+Analyzing module <toZERO_sch_MUSER_toyProcessor_overall> in library <work>.
+Module <toZERO_sch_MUSER_toyProcessor_overall> is correct for synthesis.
+ 
+    Set user-defined property "HU_SET =  XLXI_1_153" for instance <XLXI_1> in unit <toZERO_sch_MUSER_toyProcessor_overall>.
+Analyzing module <NOR8_MXILINX_toyProcessor_overall> in library <work>.
+Module <NOR8_MXILINX_toyProcessor_overall> is correct for synthesis.
+ 
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_29> in unit <NOR8_MXILINX_toyProcessor_overall>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_138> in unit <NOR8_MXILINX_toyProcessor_overall>.
+    Set user-defined property "RLOC =  X0Y1" for instance <I_36_144> in unit <NOR8_MXILINX_toyProcessor_overall>.
+Analyzing module <LED7SegmentBehavioral> in library <work>.
+Module <LED7SegmentBehavioral> is correct for synthesis.
+ 
+Analyzing module <seven_seg_control_sch_MUSER_toyProcessor_overall> in library <work>.
+Module <seven_seg_control_sch_MUSER_toyProcessor_overall> is correct for synthesis.
+ 
+    Set user-defined property "HU_SET =  XLXI_2_151" for instance <XLXI_2> in unit <seven_seg_control_sch_MUSER_toyProcessor_overall>.
+    Set user-defined property "HU_SET =  XLXI_3_152" for instance <XLXI_3> in unit <seven_seg_control_sch_MUSER_toyProcessor_overall>.
+Analyzing module <mux4_7bit_sch_MUSER_toyProcessor_overall> in library <work>.
+Module <mux4_7bit_sch_MUSER_toyProcessor_overall> is correct for synthesis.
+ 
+Analyzing module <mux4_sch_MUSER_toyProcessor_overall> in library <work>.
+Module <mux4_sch_MUSER_toyProcessor_overall> is correct for synthesis.
+ 
+Analyzing module <CB16CE_MXILINX_toyProcessor_overall> in library <work>.
+Module <CB16CE_MXILINX_toyProcessor_overall> is correct for synthesis.
+ 
+    Set user-defined property "HU_SET =  I_Q0_136" for instance <I_Q0> in unit <CB16CE_MXILINX_toyProcessor_overall>.
+    Set user-defined property "HU_SET =  I_Q1_135" for instance <I_Q1> in unit <CB16CE_MXILINX_toyProcessor_overall>.
+    Set user-defined property "HU_SET =  I_Q10_145" for instance <I_Q10> in unit <CB16CE_MXILINX_toyProcessor_overall>.
+    Set user-defined property "HU_SET =  I_Q11_146" for instance <I_Q11> in unit <CB16CE_MXILINX_toyProcessor_overall>.
+    Set user-defined property "HU_SET =  I_Q12_147" for instance <I_Q12> in unit <CB16CE_MXILINX_toyProcessor_overall>.
+    Set user-defined property "HU_SET =  I_Q13_148" for instance <I_Q13> in unit <CB16CE_MXILINX_toyProcessor_overall>.
+    Set user-defined property "HU_SET =  I_Q14_149" for instance <I_Q14> in unit <CB16CE_MXILINX_toyProcessor_overall>.
+    Set user-defined property "HU_SET =  I_Q15_150" for instance <I_Q15> in unit <CB16CE_MXILINX_toyProcessor_overall>.
+    Set user-defined property "HU_SET =  I_Q2_138" for instance <I_Q2> in unit <CB16CE_MXILINX_toyProcessor_overall>.
+    Set user-defined property "HU_SET =  I_Q3_137" for instance <I_Q3> in unit <CB16CE_MXILINX_toyProcessor_overall>.
+    Set user-defined property "HU_SET =  I_Q4_142" for instance <I_Q4> in unit <CB16CE_MXILINX_toyProcessor_overall>.
+    Set user-defined property "HU_SET =  I_Q5_141" for instance <I_Q5> in unit <CB16CE_MXILINX_toyProcessor_overall>.
+    Set user-defined property "HU_SET =  I_Q6_140" for instance <I_Q6> in unit <CB16CE_MXILINX_toyProcessor_overall>.
+    Set user-defined property "HU_SET =  I_Q7_139" for instance <I_Q7> in unit <CB16CE_MXILINX_toyProcessor_overall>.
+    Set user-defined property "HU_SET =  I_Q8_143" for instance <I_Q8> in unit <CB16CE_MXILINX_toyProcessor_overall>.
+    Set user-defined property "HU_SET =  I_Q9_144" for instance <I_Q9> in unit <CB16CE_MXILINX_toyProcessor_overall>.
+Analyzing module <FTCE_MXILINX_toyProcessor_overall.1> in library <work>.
+	INIT = 1'b0
+Module <FTCE_MXILINX_toyProcessor_overall.1> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_36_35> in unit <FTCE_MXILINX_toyProcessor_overall.1>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_35> in unit <FTCE_MXILINX_toyProcessor_overall.1>.
+Analyzing module <FTCE_MXILINX_toyProcessor_overall.2> in library <work>.
+	INIT = 1'b0
+Module <FTCE_MXILINX_toyProcessor_overall.2> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_36_35> in unit <FTCE_MXILINX_toyProcessor_overall.2>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_35> in unit <FTCE_MXILINX_toyProcessor_overall.2>.
+Analyzing module <FTCE_MXILINX_toyProcessor_overall.3> in library <work>.
+	INIT = 1'b0
+Module <FTCE_MXILINX_toyProcessor_overall.3> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_36_35> in unit <FTCE_MXILINX_toyProcessor_overall.3>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_35> in unit <FTCE_MXILINX_toyProcessor_overall.3>.
+Analyzing module <FTCE_MXILINX_toyProcessor_overall.4> in library <work>.
+	INIT = 1'b0
+Module <FTCE_MXILINX_toyProcessor_overall.4> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_36_35> in unit <FTCE_MXILINX_toyProcessor_overall.4>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_35> in unit <FTCE_MXILINX_toyProcessor_overall.4>.
+Analyzing module <FTCE_MXILINX_toyProcessor_overall.5> in library <work>.
+	INIT = 1'b0
+Module <FTCE_MXILINX_toyProcessor_overall.5> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_36_35> in unit <FTCE_MXILINX_toyProcessor_overall.5>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_35> in unit <FTCE_MXILINX_toyProcessor_overall.5>.
+Analyzing module <FTCE_MXILINX_toyProcessor_overall.6> in library <work>.
+	INIT = 1'b0
+Module <FTCE_MXILINX_toyProcessor_overall.6> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_36_35> in unit <FTCE_MXILINX_toyProcessor_overall.6>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_35> in unit <FTCE_MXILINX_toyProcessor_overall.6>.
+Analyzing module <FTCE_MXILINX_toyProcessor_overall.7> in library <work>.
+	INIT = 1'b0
+Module <FTCE_MXILINX_toyProcessor_overall.7> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_36_35> in unit <FTCE_MXILINX_toyProcessor_overall.7>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_35> in unit <FTCE_MXILINX_toyProcessor_overall.7>.
+Analyzing module <FTCE_MXILINX_toyProcessor_overall.8> in library <work>.
+	INIT = 1'b0
+Module <FTCE_MXILINX_toyProcessor_overall.8> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_36_35> in unit <FTCE_MXILINX_toyProcessor_overall.8>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_35> in unit <FTCE_MXILINX_toyProcessor_overall.8>.
+Analyzing module <FTCE_MXILINX_toyProcessor_overall.9> in library <work>.
+	INIT = 1'b0
+Module <FTCE_MXILINX_toyProcessor_overall.9> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_36_35> in unit <FTCE_MXILINX_toyProcessor_overall.9>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_35> in unit <FTCE_MXILINX_toyProcessor_overall.9>.
+Analyzing module <FTCE_MXILINX_toyProcessor_overall.10> in library <work>.
+	INIT = 1'b0
+Module <FTCE_MXILINX_toyProcessor_overall.10> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_36_35> in unit <FTCE_MXILINX_toyProcessor_overall.10>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_35> in unit <FTCE_MXILINX_toyProcessor_overall.10>.
+Analyzing module <FTCE_MXILINX_toyProcessor_overall.11> in library <work>.
+	INIT = 1'b0
+Module <FTCE_MXILINX_toyProcessor_overall.11> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_36_35> in unit <FTCE_MXILINX_toyProcessor_overall.11>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_35> in unit <FTCE_MXILINX_toyProcessor_overall.11>.
+Analyzing module <FTCE_MXILINX_toyProcessor_overall.12> in library <work>.
+	INIT = 1'b0
+Module <FTCE_MXILINX_toyProcessor_overall.12> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_36_35> in unit <FTCE_MXILINX_toyProcessor_overall.12>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_35> in unit <FTCE_MXILINX_toyProcessor_overall.12>.
+Analyzing module <FTCE_MXILINX_toyProcessor_overall.13> in library <work>.
+	INIT = 1'b0
+Module <FTCE_MXILINX_toyProcessor_overall.13> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_36_35> in unit <FTCE_MXILINX_toyProcessor_overall.13>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_35> in unit <FTCE_MXILINX_toyProcessor_overall.13>.
+Analyzing module <FTCE_MXILINX_toyProcessor_overall.14> in library <work>.
+	INIT = 1'b0
+Module <FTCE_MXILINX_toyProcessor_overall.14> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_36_35> in unit <FTCE_MXILINX_toyProcessor_overall.14>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_35> in unit <FTCE_MXILINX_toyProcessor_overall.14>.
+Analyzing module <FTCE_MXILINX_toyProcessor_overall.15> in library <work>.
+	INIT = 1'b0
+Module <FTCE_MXILINX_toyProcessor_overall.15> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_36_35> in unit <FTCE_MXILINX_toyProcessor_overall.15>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_35> in unit <FTCE_MXILINX_toyProcessor_overall.15>.
+Analyzing module <FTCE_MXILINX_toyProcessor_overall.16> in library <work>.
+	INIT = 1'b0
+Module <FTCE_MXILINX_toyProcessor_overall.16> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <I_36_35> in unit <FTCE_MXILINX_toyProcessor_overall.16>.
+    Set user-defined property "RLOC =  X0Y0" for instance <I_36_35> in unit <FTCE_MXILINX_toyProcessor_overall.16>.
+Analyzing module <D2_4E_MXILINX_toyProcessor_overall> in library <work>.
+Module <D2_4E_MXILINX_toyProcessor_overall> is correct for synthesis.
+ 
+Analyzing module <BypassClk_MUSER_toyProcessor_overall> in library <work>.
+Module <BypassClk_MUSER_toyProcessor_overall> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <XLXI_3> in unit <BypassClk_MUSER_toyProcessor_overall>.
+Analyzing module <clk_signal_sch_MUSER_toyProcessor_overall> in library <work>.
+Module <clk_signal_sch_MUSER_toyProcessor_overall> is correct for synthesis.
+ 
+    Set user-defined property "INIT =  0" for instance <XLXI_1> in unit <clk_signal_sch_MUSER_toyProcessor_overall>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <LED7SegmentBehavioral>.
+    Related source file is "LED7SegmentBehavioral.v".
+Unit <LED7SegmentBehavioral> synthesized.
+
+
+Synthesizing Unit <CONTROL>.
+    Related source file is "CONTROL.v".
+    Found 1-bit register for signal <S0>.
+    Found 1-bit register for signal <S1>.
+    Found 1-bit register for signal <S2>.
+    Found 1-bit register for signal <S3>.
+    Found 1-bit register for signal <S4>.
+    Found 1-bit register for signal <S5>.
+    Found 1-bit register for signal <STATE0>.
+    Found 1-bit register for signal <STATE1>.
+    Found 1-bit register for signal <STATE2>.
+    Found 1-bit register for signal <STATE3>.
+    Found 1-bit register for signal <STATE4>.
+    Found 1-bit register for signal <STATE5>.
+    Summary:
+	inferred  12 D-type flip-flop(s).
+Unit <CONTROL> synthesized.
+
+
+Synthesizing Unit <AND8_MXILINX_toyProcessor_overall>.
+    Related source file is "toyProcessor_overall.vf".
+WARNING:Xst:653 - Signal <dummy> is used but never assigned. This sourceless signal will be automatically connected to value 0.
+Unit <AND8_MXILINX_toyProcessor_overall> synthesized.
+
+
+Synthesizing Unit <encode8_MUSER_toyProcessor_overall>.
+    Related source file is "toyProcessor_overall.vf".
+Unit <encode8_MUSER_toyProcessor_overall> synthesized.
+
+
+Synthesizing Unit <enoutput8_sch_MUSER_toyProcessor_overall>.
+    Related source file is "toyProcessor_overall.vf".
+Unit <enoutput8_sch_MUSER_toyProcessor_overall> synthesized.
+
+
+Synthesizing Unit <OR8_MXILINX_toyProcessor_overall_1>.
+    Related source file is "toyProcessor_overall.vf".
+WARNING:Xst:653 - Signal <dummy> is used but never assigned. This sourceless signal will be automatically connected to value 0.
+Unit <OR8_MXILINX_toyProcessor_overall_1> synthesized.
+
+
+Synthesizing Unit <OR8_MXILINX_toyProcessor_overall_2>.
+    Related source file is "toyProcessor_overall.vf".
+WARNING:Xst:653 - Signal <dummy> is used but never assigned. This sourceless signal will be automatically connected to value 0.
+Unit <OR8_MXILINX_toyProcessor_overall_2> synthesized.
+
+
+Synthesizing Unit <OR8_MXILINX_toyProcessor_overall_3>.
+    Related source file is "toyProcessor_overall.vf".
+WARNING:Xst:653 - Signal <dummy> is used but never assigned. This sourceless signal will be automatically connected to value 0.
+Unit <OR8_MXILINX_toyProcessor_overall_3> synthesized.
+
+
+Synthesizing Unit <OR8_MXILINX_toyProcessor_overall_4>.
+    Related source file is "toyProcessor_overall.vf".
+WARNING:Xst:653 - Signal <dummy> is used but never assigned. This sourceless signal will be automatically connected to value 0.
+Unit <OR8_MXILINX_toyProcessor_overall_4> synthesized.
+
+
+Synthesizing Unit <OR8_MXILINX_toyProcessor_overall_5>.
+    Related source file is "toyProcessor_overall.vf".
+WARNING:Xst:653 - Signal <dummy> is used but never assigned. This sourceless signal will be automatically connected to value 0.
+Unit <OR8_MXILINX_toyProcessor_overall_5> synthesized.
+
+
+Synthesizing Unit <OR8_MXILINX_toyProcessor_overall_6>.
+    Related source file is "toyProcessor_overall.vf".
+WARNING:Xst:653 - Signal <dummy> is used but never assigned. This sourceless signal will be automatically connected to value 0.
+Unit <OR8_MXILINX_toyProcessor_overall_6> synthesized.
+
+
+Synthesizing Unit <OR8_MXILINX_toyProcessor_overall_7>.
+    Related source file is "toyProcessor_overall.vf".
+WARNING:Xst:653 - Signal <dummy> is used but never assigned. This sourceless signal will be automatically connected to value 0.
+Unit <OR8_MXILINX_toyProcessor_overall_7> synthesized.
+
+
+Synthesizing Unit <OR8_MXILINX_toyProcessor_overall_8>.
+    Related source file is "toyProcessor_overall.vf".
+WARNING:Xst:653 - Signal <dummy> is used but never assigned. This sourceless signal will be automatically connected to value 0.
+Unit <OR8_MXILINX_toyProcessor_overall_8> synthesized.
+
+
+Synthesizing Unit <mux_MUSER_toyProcessor_overall>.
+    Related source file is "toyProcessor_overall.vf".
+Unit <mux_MUSER_toyProcessor_overall> synthesized.
+
+
+Synthesizing Unit <reg_sch_MUSER_toyProcessor_overall>.
+    Related source file is "toyProcessor_overall.vf".
+Unit <reg_sch_MUSER_toyProcessor_overall> synthesized.
+
+
+Synthesizing Unit <ha_sch_MUSER_toyProcessor_overall>.
+    Related source file is "toyProcessor_overall.vf".
+Unit <ha_sch_MUSER_toyProcessor_overall> synthesized.
+
+
+Synthesizing Unit <controller_sch_MUSER_toyProcessor_overall>.
+    Related source file is "toyProcessor_overall.vf".
+Unit <controller_sch_MUSER_toyProcessor_overall> synthesized.
+
+
+Synthesizing Unit <fa_sch_MUSER_toyProcessor_overall>.
+    Related source file is "toyProcessor_overall.vf".
+Unit <fa_sch_MUSER_toyProcessor_overall> synthesized.
+
+
+Synthesizing Unit <NOR8_MXILINX_toyProcessor_overall>.
+    Related source file is "toyProcessor_overall.vf".
+WARNING:Xst:653 - Signal <dummy> is used but never assigned. This sourceless signal will be automatically connected to value 0.
+Unit <NOR8_MXILINX_toyProcessor_overall> synthesized.
+
+
+Synthesizing Unit <D2_4E_MXILINX_toyProcessor_overall>.
+    Related source file is "toyProcessor_overall.vf".
+Unit <D2_4E_MXILINX_toyProcessor_overall> synthesized.
+
+
+Synthesizing Unit <mux4_sch_MUSER_toyProcessor_overall>.
+    Related source file is "toyProcessor_overall.vf".
+Unit <mux4_sch_MUSER_toyProcessor_overall> synthesized.
+
+
+Synthesizing Unit <FTCE_MXILINX_toyProcessor_overall_1>.
+    Related source file is "toyProcessor_overall.vf".
+Unit <FTCE_MXILINX_toyProcessor_overall_1> synthesized.
+
+
+Synthesizing Unit <FTCE_MXILINX_toyProcessor_overall_2>.
+    Related source file is "toyProcessor_overall.vf".
+Unit <FTCE_MXILINX_toyProcessor_overall_2> synthesized.
+
+
+Synthesizing Unit <FTCE_MXILINX_toyProcessor_overall_3>.
+    Related source file is "toyProcessor_overall.vf".
+Unit <FTCE_MXILINX_toyProcessor_overall_3> synthesized.
+
+
+Synthesizing Unit <FTCE_MXILINX_toyProcessor_overall_4>.
+    Related source file is "toyProcessor_overall.vf".
+Unit <FTCE_MXILINX_toyProcessor_overall_4> synthesized.
+
+
+Synthesizing Unit <FTCE_MXILINX_toyProcessor_overall_5>.
+    Related source file is "toyProcessor_overall.vf".
+Unit <FTCE_MXILINX_toyProcessor_overall_5> synthesized.
+
+
+Synthesizing Unit <FTCE_MXILINX_toyProcessor_overall_6>.
+    Related source file is "toyProcessor_overall.vf".
+Unit <FTCE_MXILINX_toyProcessor_overall_6> synthesized.
+
+
+Synthesizing Unit <FTCE_MXILINX_toyProcessor_overall_7>.
+    Related source file is "toyProcessor_overall.vf".
+Unit <FTCE_MXILINX_toyProcessor_overall_7> synthesized.
+
+
+Synthesizing Unit <FTCE_MXILINX_toyProcessor_overall_8>.
+    Related source file is "toyProcessor_overall.vf".
+Unit <FTCE_MXILINX_toyProcessor_overall_8> synthesized.
+
+
+Synthesizing Unit <FTCE_MXILINX_toyProcessor_overall_9>.
+    Related source file is "toyProcessor_overall.vf".
+Unit <FTCE_MXILINX_toyProcessor_overall_9> synthesized.
+
+
+Synthesizing Unit <FTCE_MXILINX_toyProcessor_overall_10>.
+    Related source file is "toyProcessor_overall.vf".
+Unit <FTCE_MXILINX_toyProcessor_overall_10> synthesized.
+
+
+Synthesizing Unit <FTCE_MXILINX_toyProcessor_overall_11>.
+    Related source file is "toyProcessor_overall.vf".
+Unit <FTCE_MXILINX_toyProcessor_overall_11> synthesized.
+
+
+Synthesizing Unit <FTCE_MXILINX_toyProcessor_overall_12>.
+    Related source file is "toyProcessor_overall.vf".
+Unit <FTCE_MXILINX_toyProcessor_overall_12> synthesized.
+
+
+Synthesizing Unit <FTCE_MXILINX_toyProcessor_overall_13>.
+    Related source file is "toyProcessor_overall.vf".
+Unit <FTCE_MXILINX_toyProcessor_overall_13> synthesized.
+
+
+Synthesizing Unit <FTCE_MXILINX_toyProcessor_overall_14>.
+    Related source file is "toyProcessor_overall.vf".
+Unit <FTCE_MXILINX_toyProcessor_overall_14> synthesized.
+
+
+Synthesizing Unit <FTCE_MXILINX_toyProcessor_overall_15>.
+    Related source file is "toyProcessor_overall.vf".
+Unit <FTCE_MXILINX_toyProcessor_overall_15> synthesized.
+
+
+Synthesizing Unit <FTCE_MXILINX_toyProcessor_overall_16>.
+    Related source file is "toyProcessor_overall.vf".
+Unit <FTCE_MXILINX_toyProcessor_overall_16> synthesized.
+
+
+Synthesizing Unit <clk_signal_sch_MUSER_toyProcessor_overall>.
+    Related source file is "toyProcessor_overall.vf".
+Unit <clk_signal_sch_MUSER_toyProcessor_overall> synthesized.
+
+
+Synthesizing Unit <BypassClk_MUSER_toyProcessor_overall>.
+    Related source file is "toyProcessor_overall.vf".
+Unit <BypassClk_MUSER_toyProcessor_overall> synthesized.
+
+
+Synthesizing Unit <mux8_sch_MUSER_toyProcessor_overall>.
+    Related source file is "toyProcessor_overall.vf".
+Unit <mux8_sch_MUSER_toyProcessor_overall> synthesized.
+
+
+Synthesizing Unit <bus8_mux_MUSER_toyProcessor_overall>.
+    Related source file is "toyProcessor_overall.vf".
+Unit <bus8_mux_MUSER_toyProcessor_overall> synthesized.
+
+
+Synthesizing Unit <ha8_sch_MUSER_toyProcessor_overall>.
+    Related source file is "toyProcessor_overall.vf".
+Unit <ha8_sch_MUSER_toyProcessor_overall> synthesized.
+
+
+Synthesizing Unit <alu_sch_MUSER_toyProcessor_overall>.
+    Related source file is "toyProcessor_overall.vf".
+Unit <alu_sch_MUSER_toyProcessor_overall> synthesized.
+
+
+Synthesizing Unit <toZERO_sch_MUSER_toyProcessor_overall>.
+    Related source file is "toyProcessor_overall.vf".
+Unit <toZERO_sch_MUSER_toyProcessor_overall> synthesized.
+
+
+Synthesizing Unit <mux4_7bit_sch_MUSER_toyProcessor_overall>.
+    Related source file is "toyProcessor_overall.vf".
+Unit <mux4_7bit_sch_MUSER_toyProcessor_overall> synthesized.
+
+
+Synthesizing Unit <CB16CE_MXILINX_toyProcessor_overall>.
+    Related source file is "toyProcessor_overall.vf".
+Unit <CB16CE_MXILINX_toyProcessor_overall> synthesized.
+
+
+Synthesizing Unit <seven_seg_control_sch_MUSER_toyProcessor_overall>.
+    Related source file is "toyProcessor_overall.vf".
+WARNING:Xst:646 - Signal <Qout<13:0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+Unit <seven_seg_control_sch_MUSER_toyProcessor_overall> synthesized.
+
+
+Synthesizing Unit <ROM_array_MUSER_toyProcessor_overall>.
+    Related source file is "toyProcessor_overall.vf".
+Unit <ROM_array_MUSER_toyProcessor_overall> synthesized.
+
+
+Synthesizing Unit <RAM_array_MUSER_toyProcessor_overall>.
+    Related source file is "toyProcessor_overall.vf".
+Unit <RAM_array_MUSER_toyProcessor_overall> synthesized.
+
+
+Synthesizing Unit <counter_sch_MUSER_toyProcessor_overall>.
+    Related source file is "toyProcessor_overall.vf".
+Unit <counter_sch_MUSER_toyProcessor_overall> synthesized.
+
+
+Synthesizing Unit <mem_bootstrap_MUSER_toyProcessor_overall>.
+    Related source file is "toyProcessor_overall.vf".
+Unit <mem_bootstrap_MUSER_toyProcessor_overall> synthesized.
+
+
+Synthesizing Unit <Datapath_MUSER_toyProcessor_overall>.
+    Related source file is "toyProcessor_overall.vf".
+Unit <Datapath_MUSER_toyProcessor_overall> synthesized.
+
+
+Synthesizing Unit <toy_sch_MUSER_toyProcessor_overall>.
+    Related source file is "toyProcessor_overall.vf".
+WARNING:Xst:646 - Signal <IR<7:5>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+Unit <toy_sch_MUSER_toyProcessor_overall> synthesized.
+
+
+Synthesizing Unit <toyProcessor_overall>.
+    Related source file is "toyProcessor_overall.vf".
+Unit <toyProcessor_overall> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Registers                                            : 12
+ 1-bit register                                        : 12
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+INFO:Xst:2261 - The FF/Latch <STATE0> in Unit <XLXI_26> is equivalent to the following FF/Latch, which will be removed : <S0> 
+INFO:Xst:2261 - The FF/Latch <STATE1> in Unit <XLXI_26> is equivalent to the following FF/Latch, which will be removed : <S1> 
+INFO:Xst:2261 - The FF/Latch <STATE2> in Unit <XLXI_26> is equivalent to the following FF/Latch, which will be removed : <S2> 
+INFO:Xst:2261 - The FF/Latch <STATE3> in Unit <XLXI_26> is equivalent to the following FF/Latch, which will be removed : <S3> 
+INFO:Xst:2261 - The FF/Latch <STATE4> in Unit <XLXI_26> is equivalent to the following FF/Latch, which will be removed : <S4> 
+INFO:Xst:2261 - The FF/Latch <STATE5> in Unit <XLXI_26> is equivalent to the following FF/Latch, which will be removed : <S5> 
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Registers                                            : 70
+ Flip-Flops                                            : 70
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+INFO:Xst:2261 - The FF/Latch <STATE2> in Unit <CONTROL> is equivalent to the following FF/Latch, which will be removed : <S2> 
+INFO:Xst:2261 - The FF/Latch <STATE0> in Unit <CONTROL> is equivalent to the following FF/Latch, which will be removed : <S0> 
+INFO:Xst:2261 - The FF/Latch <STATE1> in Unit <CONTROL> is equivalent to the following FF/Latch, which will be removed : <S1> 
+INFO:Xst:2261 - The FF/Latch <STATE3> in Unit <CONTROL> is equivalent to the following FF/Latch, which will be removed : <S3> 
+INFO:Xst:2261 - The FF/Latch <STATE5> in Unit <CONTROL> is equivalent to the following FF/Latch, which will be removed : <S5> 
+INFO:Xst:2261 - The FF/Latch <S4> in Unit <CONTROL> is equivalent to the following FF/Latch, which will be removed : <STATE4> 
+WARNING:Xst:2170 - Unit toyProcessor_overall : the following signal(s) form a combinatorial loop: XLXI_17/XLXI_1/XLXN_6, XLXI_17/XLXN_12, XLXN_174.
+
+Optimizing unit <toyProcessor_overall> ...
+
+Optimizing unit <CONTROL> ...
+
+Optimizing unit <AND8_MXILINX_toyProcessor_overall> ...
+
+Optimizing unit <encode8_MUSER_toyProcessor_overall> ...
+
+Optimizing unit <enoutput8_sch_MUSER_toyProcessor_overall> ...
+
+Optimizing unit <OR8_MXILINX_toyProcessor_overall_1> ...
+
+Optimizing unit <OR8_MXILINX_toyProcessor_overall_2> ...
+
+Optimizing unit <OR8_MXILINX_toyProcessor_overall_3> ...
+
+Optimizing unit <OR8_MXILINX_toyProcessor_overall_4> ...
+
+Optimizing unit <OR8_MXILINX_toyProcessor_overall_5> ...
+
+Optimizing unit <OR8_MXILINX_toyProcessor_overall_6> ...
+
+Optimizing unit <OR8_MXILINX_toyProcessor_overall_7> ...
+
+Optimizing unit <OR8_MXILINX_toyProcessor_overall_8> ...
+
+Optimizing unit <reg_sch_MUSER_toyProcessor_overall> ...
+
+Optimizing unit <NOR8_MXILINX_toyProcessor_overall> ...
+
+Optimizing unit <D2_4E_MXILINX_toyProcessor_overall> ...
+
+Optimizing unit <FTCE_MXILINX_toyProcessor_overall_1> ...
+
+Optimizing unit <FTCE_MXILINX_toyProcessor_overall_2> ...
+
+Optimizing unit <FTCE_MXILINX_toyProcessor_overall_3> ...
+
+Optimizing unit <FTCE_MXILINX_toyProcessor_overall_4> ...
+
+Optimizing unit <FTCE_MXILINX_toyProcessor_overall_5> ...
+
+Optimizing unit <FTCE_MXILINX_toyProcessor_overall_6> ...
+
+Optimizing unit <FTCE_MXILINX_toyProcessor_overall_7> ...
+
+Optimizing unit <FTCE_MXILINX_toyProcessor_overall_8> ...
+
+Optimizing unit <FTCE_MXILINX_toyProcessor_overall_9> ...
+
+Optimizing unit <FTCE_MXILINX_toyProcessor_overall_10> ...
+
+Optimizing unit <FTCE_MXILINX_toyProcessor_overall_11> ...
+
+Optimizing unit <FTCE_MXILINX_toyProcessor_overall_12> ...
+
+Optimizing unit <FTCE_MXILINX_toyProcessor_overall_13> ...
+
+Optimizing unit <FTCE_MXILINX_toyProcessor_overall_14> ...
+
+Optimizing unit <FTCE_MXILINX_toyProcessor_overall_15> ...
+
+Optimizing unit <FTCE_MXILINX_toyProcessor_overall_16> ...
+
+Optimizing unit <controller_sch_MUSER_toyProcessor_overall> ...
+
+Optimizing unit <mux8_sch_MUSER_toyProcessor_overall> ...
+
+Optimizing unit <bus8_mux_MUSER_toyProcessor_overall> ...
+
+Optimizing unit <alu_sch_MUSER_toyProcessor_overall> ...
+
+Optimizing unit <CB16CE_MXILINX_toyProcessor_overall> ...
+
+Optimizing unit <seven_seg_control_sch_MUSER_toyProcessor_overall> ...
+
+Optimizing unit <RAM_array_MUSER_toyProcessor_overall> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block toyProcessor_overall, actual ratio is 7.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 64
+ Flip-Flops                                            : 64
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : toyProcessor_overall.ngr
+Top Level Output File Name         : toyProcessor_overall
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 47
+
+Cell Usage :
+# BELS                             : 630
+#      AND2                        : 257
+#      AND3                        : 50
+#      AND3B1                      : 2
+#      AND3B2                      : 1
+#      AND4                        : 7
+#      AND4B1                      : 3
+#      AND4B2                      : 3
+#      AND4B3                      : 1
+#      AND5                        : 3
+#      GND                         : 19
+#      INV                         : 79
+#      LUT2                        : 3
+#      LUT4                        : 28
+#      OR2                         : 75
+#      OR3                         : 2
+#      OR4                         : 41
+#      VCC                         : 2
+#      XOR2                        : 54
+# FlipFlops/Latches                : 64
+#      FD                          : 1
+#      FDCE                        : 16
+#      FDR                         : 4
+#      FDRE                        : 40
+#      FDRS                        : 2
+#      FDSE                        : 1
+# RAMS                             : 8
+#      RAM32X8S                    : 8
+# Clock Buffers                    : 2
+#      BUFG                        : 2
+# IO Buffers                       : 47
+#      IBUF                        : 3
+#      OBUF                        : 44
+# Logical                          : 1
+#      NOR2                        : 1
+# Others                           : 118
+#      FMAP                        : 54
+#      ROM32X1                     : 64
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s250ecp132-4 
+
+ Number of Slices:                      174  out of   2448     7%  
+ Number of Slice Flip Flops:             64  out of   4896     1%  
+ Number of 4 input LUTs:                366  out of   4896     7%  
+    Number used as logic:               110
+    Number used as RAMs:                128
+    Number used as ROMs:                128
+ Number of IOs:                          47
+ Number of bonded IOBs:                  47  out of     92    51%  
+ Number of GCLKs:                         2  out of     24     8%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+---------------------------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)                       | Load  |
+-----------------------------------+---------------------------------------------+-------+
+CLK                                | IBUF+BUFG                                   | 18    |
+XLXN_1741(XLXI_17/XLXI_5:O)        | BUFG(*)(XLXI_2/XLXI_8/XLXI_4/XLXI_1/XLXI_11)| 54    |
+-----------------------------------+---------------------------------------------+-------+
+(*) This 1 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-------------------------------------------+----------------------------------+-------+
+Control Signal                             | Buffer(FF name)                  | Load  |
+-------------------------------------------+----------------------------------+-------+
+XLXI_12/XLXI_2/TC(XLXI_12/XLXI_2/I_36_22:O)| NONE(XLXI_12/XLXI_2/I_Q0/I_36_35)| 16    |
+-------------------------------------------+----------------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 22.656ns (Maximum Frequency: 44.138MHz)
+   Minimum input arrival time before clock: 21.328ns
+   Maximum output required time after clock: 22.378ns
+   Maximum combinational path delay: 24.292ns
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CLK'
+  Clock period: 7.791ns (frequency: 128.353MHz)
+  Total number of paths / destination ports: 137 / 17
+-------------------------------------------------------------------------
+Delay:               7.791ns (Levels of Logic = 6)
+  Source:            XLXI_12/XLXI_2/I_Q0/I_36_35 (FF)
+  Destination:       XLXI_12/XLXI_2/I_Q13/I_36_35 (FF)
+  Source Clock:      CLK rising
+  Destination Clock: CLK rising
+
+  Data Path: XLXI_12/XLXI_2/I_Q0/I_36_35 to XLXI_12/XLXI_2/I_Q13/I_36_35
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             5   0.591   0.633  I_36_35 (Q)
+     end scope: 'I_Q0'
+     AND4:I3->O            5   0.704   0.633  I_36_10 (T4)
+     AND5:I4->O            5   0.704   0.633  I_36_14 (T8)
+     AND5:I4->O            5   0.704   0.633  I_36_29 (T12)
+     AND2:I1->O            1   0.704   0.420  I_36_23 (T13)
+     begin scope: 'I_Q13'
+     XOR2:I0->O            1   0.704   0.420  I_36_32 (TQ)
+     FDCE:D                    0.308          I_36_35
+    ----------------------------------------
+    Total                      7.791ns (4.419ns logic, 3.372ns route)
+                                       (56.7% logic, 43.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'XLXN_1741'
+  Clock period: 22.656ns (frequency: 44.138MHz)
+  Total number of paths / destination ports: 14857 / 201
+-------------------------------------------------------------------------
+Delay:               22.656ns (Levels of Logic = 18)
+  Source:            XLXI_2/XLXI_7/XLXI_26/S4 (FF)
+  Destination:       XLXI_2/XLXI_8/XLXI_3/XLXI_3 (FF)
+  Source Clock:      XLXN_1741 rising
+  Destination Clock: XLXN_1741 rising
+
+  Data Path: XLXI_2/XLXI_7/XLXI_26/S4 to XLXI_2/XLXI_8/XLXI_3/XLXI_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              9   0.591   0.820  XLXI_2/XLXI_7/XLXI_26/S4 (XLXI_2/XLXI_7/XLXI_26/S4)
+     AND2:I1->O           10   0.704   0.882  XLXI_2/XLXI_7/XLXI_12 (XLXI_2/XLXN_65)
+     XOR2:I0->O            2   0.704   0.447  XLXI_2/XLXI_8/XLXI_5/XLXI_16 (XLXI_2/XLXI_8/XLXI_5/XLXN_68)
+     XOR2:I0->O            2   0.704   0.447  XLXI_2/XLXI_8/XLXI_5/XLXI_7/XLXI_6 (XLXI_2/XLXI_8/XLXI_5/XLXI_7/XLXN_15)
+     AND2:I0->O            1   0.704   0.420  XLXI_2/XLXI_8/XLXI_5/XLXI_7/XLXI_2 (XLXI_2/XLXI_8/XLXI_5/XLXI_7/XLXN_16)
+     OR2:I1->O             2   0.704   0.447  XLXI_2/XLXI_8/XLXI_5/XLXI_7/XLXI_3 (XLXI_2/XLXI_8/XLXI_5/XLXN_35)
+     AND2:I1->O            1   0.704   0.420  XLXI_2/XLXI_8/XLXI_5/XLXI_8/XLXI_2 (XLXI_2/XLXI_8/XLXI_5/XLXI_8/XLXN_16)
+     OR2:I1->O             2   0.704   0.447  XLXI_2/XLXI_8/XLXI_5/XLXI_8/XLXI_3 (XLXI_2/XLXI_8/XLXI_5/XLXN_37)
+     AND2:I1->O            1   0.704   0.420  XLXI_2/XLXI_8/XLXI_5/XLXI_6/XLXI_2 (XLXI_2/XLXI_8/XLXI_5/XLXI_6/XLXN_16)
+     OR2:I1->O             2   0.704   0.447  XLXI_2/XLXI_8/XLXI_5/XLXI_6/XLXI_3 (XLXI_2/XLXI_8/XLXI_5/XLXN_38)
+     AND2:I1->O            1   0.704   0.420  XLXI_2/XLXI_8/XLXI_5/XLXI_5/XLXI_2 (XLXI_2/XLXI_8/XLXI_5/XLXI_5/XLXN_16)
+     OR2:I1->O             2   0.704   0.447  XLXI_2/XLXI_8/XLXI_5/XLXI_5/XLXI_3 (XLXI_2/XLXI_8/XLXI_5/XLXN_39)
+     AND2:I1->O            1   0.704   0.420  XLXI_2/XLXI_8/XLXI_5/XLXI_2/XLXI_2 (XLXI_2/XLXI_8/XLXI_5/XLXI_2/XLXN_16)
+     OR2:I1->O             2   0.704   0.447  XLXI_2/XLXI_8/XLXI_5/XLXI_2/XLXI_3 (XLXI_2/XLXI_8/XLXI_5/XLXN_42)
+     AND2:I1->O            1   0.704   0.420  XLXI_2/XLXI_8/XLXI_5/XLXI_4/XLXI_2 (XLXI_2/XLXI_8/XLXI_5/XLXI_4/XLXN_16)
+     OR2:I1->O             2   0.704   0.447  XLXI_2/XLXI_8/XLXI_5/XLXI_4/XLXI_3 (XLXI_2/XLXI_8/XLXI_5/XLXN_43)
+     AND2:I1->O            1   0.704   0.420  XLXI_2/XLXI_8/XLXI_5/XLXI_3/XLXI_2 (XLXI_2/XLXI_8/XLXI_5/XLXI_3/XLXN_16)
+     OR2:I1->O             2   0.704   0.447  XLXI_2/XLXI_8/XLXI_5/XLXI_3/XLXI_3 (XLXI_2/XLXI_8/XLXI_5/XLXN_44)
+     XOR2:I1->O            1   0.704   0.420  XLXI_2/XLXI_8/XLXI_5/XLXI_1/XLXI_7 (XLXI_2/XLXI_8/XLXN_32<7>)
+     FDRE:D                    0.308          XLXI_2/XLXI_8/XLXI_3/XLXI_3
+    ----------------------------------------
+    Total                     22.656ns (13.571ns logic, 9.085ns route)
+                                       (59.9% logic, 40.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK'
+  Total number of paths / destination ports: 2 / 2
+-------------------------------------------------------------------------
+Offset:              3.163ns (Levels of Logic = 1)
+  Source:            RESET (PAD)
+  Destination:       XLXI_17/XLXI_3 (FF)
+  Destination Clock: CLK rising
+
+  Data Path: RESET to XLXI_17/XLXI_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            16   1.218   1.034  RESET_IBUF (RESET_IBUF)
+     FDR:R                     0.911          XLXI_17/XLXI_3
+    ----------------------------------------
+    Total                      3.163ns (2.129ns logic, 1.034ns route)
+                                       (67.3% logic, 32.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'XLXN_1741'
+  Total number of paths / destination ports: 2734 / 174
+-------------------------------------------------------------------------
+Offset:              21.328ns (Levels of Logic = 16)
+  Source:            RESET (PAD)
+  Destination:       XLXI_2/XLXI_8/XLXI_2/XLXI_11 (FF)
+  Destination Clock: XLXN_1741 rising
+
+  Data Path: RESET to XLXI_2/XLXI_8/XLXI_2/XLXI_11
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            16   1.218   1.034  RESET_IBUF (RESET_IBUF)
+     INV:I->O              1   0.704   0.420  XLXI_2/XLXI_7/XLXI_19 (XLXI_2/XLXI_7/XLXN_19)
+     INV:I->O             26   0.704   1.260  XLXI_2/XLXI_7/XLXI_20 (XLXI_2/XLXN_59)
+     OR2:I1->O             1   0.704   0.420  XLXI_2/XLXI_7/XLXI_24 (XLXI_2/XLXI_7/XLXN_48)
+     INV:I->O             16   0.704   1.034  XLXI_2/XLXI_7/XLXI_18 (XLXI_2/XLXN_69)
+     INV:I->O              1   0.704   0.420  XLXI_2/XLXI_8/XLXI_8/XLXI_8/XLXI_4 (XLXI_2/XLXI_8/XLXI_8/XLXI_8/XLXN_2)
+     AND2:I0->O            1   0.704   0.420  XLXI_2/XLXI_8/XLXI_8/XLXI_8/XLXI_1 (XLXI_2/XLXI_8/XLXI_8/XLXI_8/XLXN_5)
+     OR2:I1->O             9   0.704   0.820  XLXI_2/XLXI_8/XLXI_8/XLXI_8/XLXI_2 (ADDR_7_OBUF)
+     AND2:I0->O            1   0.704   0.420  BOOTSTRAP/XLXI_4/XLXI_8/XLXI_3 (BOOTSTRAP/XLXI_4/XLXI_8/XLXN_6)
+     OR2:I0->O            13   0.704   0.983  BOOTSTRAP/XLXI_4/XLXI_8/XLXI_2 (BOOTSTRAP/XLXN_3<7>)
+     INV:I->O              4   0.704   0.587  BOOTSTRAP/XLXI_2/XLXI_30/XLXI_1/XLXI_22 (BOOTSTRAP/XLXI_2/XLXI_30/XLXI_1/SN3)
+     AND3:I2->O            8   0.704   0.757  BOOTSTRAP/XLXI_2/XLXI_30/XLXI_1/XLXI_26 (BOOTSTRAP/XLXI_2/XLXI_30/XLXN_10)
+     AND2:I1->O            1   0.704   0.420  BOOTSTRAP/XLXI_2/XLXI_30/XLXI_22/XLXI_1 (BOOTSTRAP/XLXI_2/XLXI_30/XLXN_161)
+     begin scope: 'BOOTSTRAP/XLXI_2/XLXI_30/XLXI_44'
+     OR4:I3->O             1   0.704   0.420  I_36_112 (S0)
+     OR2:I0->O             3   0.704   0.531  I_36_94 (O_DUMMY)
+     end scope: 'BOOTSTRAP/XLXI_2/XLXI_30/XLXI_44'
+     FDRE:D                    0.308          XLXI_2/XLXI_8/XLXI_2/XLXI_3
+    ----------------------------------------
+    Total                     21.328ns (11.382ns logic, 9.946ns route)
+                                       (53.4% logic, 46.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'XLXN_1741'
+  Total number of paths / destination ports: 6613 / 360
+-------------------------------------------------------------------------
+Offset:              22.378ns (Levels of Logic = 16)
+  Source:            XLXI_2/XLXI_8/XLXI_2/XLXI_7 (FF)
+  Destination:       D_IN<7> (PAD)
+  Source Clock:      XLXN_1741 rising
+
+  Data Path: XLXI_2/XLXI_8/XLXI_2/XLXI_7 to D_IN<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             4   0.591   0.587  XLXI_2/XLXI_8/XLXI_2/XLXI_7 (XLXI_2/IR<4>)
+     OR2:I0->O             1   0.704   0.420  XLXI_2/XLXI_7/XLXI_23 (XLXI_2/XLXI_7/XLXN_51)
+     AND2:I0->O            1   0.704   0.420  XLXI_2/XLXI_7/XLXI_22 (XLXI_2/XLXI_7/XLXN_49)
+     OR2:I0->O             1   0.704   0.420  XLXI_2/XLXI_7/XLXI_24 (XLXI_2/XLXI_7/XLXN_48)
+     INV:I->O             16   0.704   1.034  XLXI_2/XLXI_7/XLXI_18 (XLXI_2/XLXN_69)
+     INV:I->O              1   0.704   0.420  XLXI_2/XLXI_8/XLXI_8/XLXI_8/XLXI_4 (XLXI_2/XLXI_8/XLXI_8/XLXI_8/XLXN_2)
+     AND2:I0->O            1   0.704   0.420  XLXI_2/XLXI_8/XLXI_8/XLXI_8/XLXI_1 (XLXI_2/XLXI_8/XLXI_8/XLXI_8/XLXN_5)
+     OR2:I1->O             9   0.704   0.820  XLXI_2/XLXI_8/XLXI_8/XLXI_8/XLXI_2 (ADDR_7_OBUF)
+     AND2:I0->O            1   0.704   0.420  BOOTSTRAP/XLXI_4/XLXI_8/XLXI_3 (BOOTSTRAP/XLXI_4/XLXI_8/XLXN_6)
+     OR2:I0->O            13   0.704   0.983  BOOTSTRAP/XLXI_4/XLXI_8/XLXI_2 (BOOTSTRAP/XLXN_3<7>)
+     INV:I->O              4   0.704   0.587  BOOTSTRAP/XLXI_2/XLXI_30/XLXI_1/XLXI_22 (BOOTSTRAP/XLXI_2/XLXI_30/XLXI_1/SN3)
+     AND3:I2->O            8   0.704   0.757  BOOTSTRAP/XLXI_2/XLXI_30/XLXI_1/XLXI_26 (BOOTSTRAP/XLXI_2/XLXI_30/XLXN_10)
+     AND2:I1->O            1   0.704   0.420  BOOTSTRAP/XLXI_2/XLXI_30/XLXI_22/XLXI_1 (BOOTSTRAP/XLXI_2/XLXI_30/XLXN_161)
+     begin scope: 'BOOTSTRAP/XLXI_2/XLXI_30/XLXI_44'
+     OR4:I3->O             1   0.704   0.420  I_36_112 (S0)
+     OR2:I0->O             3   0.704   0.531  I_36_94 (O_DUMMY)
+     end scope: 'BOOTSTRAP/XLXI_2/XLXI_30/XLXI_44'
+     OBUF:I->O                 3.272          D_IN_7_OBUF (D_IN<7>)
+    ----------------------------------------
+    Total                     22.378ns (13.719ns logic, 8.659ns route)
+                                       (61.3% logic, 38.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK'
+  Total number of paths / destination ports: 64 / 11
+-------------------------------------------------------------------------
+Offset:              8.523ns (Levels of Logic = 5)
+  Source:            XLXI_12/XLXI_2/I_Q14/I_36_35 (FF)
+  Destination:       seven_seg_out<6> (PAD)
+  Source Clock:      CLK rising
+
+  Data Path: XLXI_12/XLXI_2/I_Q14/I_36_35 to seven_seg_out<6>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q            28   0.591   1.261  I_36_35 (Q)
+     end scope: 'I_Q14'
+     end scope: 'XLXI_12/XLXI_2'
+     INV:I->O              2   0.704   0.447  XLXI_12/XLXI_1/XLXI_1/XLXI_6 (XLXI_12/XLXI_1/XLXI_1/XLXN_6)
+     AND3:I0->O            1   0.704   0.420  XLXI_12/XLXI_1/XLXI_1/XLXI_1 (XLXI_12/XLXI_1/XLXI_1/XLXN_1)
+     OR4:I3->O             1   0.704   0.420  XLXI_12/XLXI_1/XLXI_1/XLXI_5 (seven_seg_out_5_OBUF)
+     OBUF:I->O                 3.272          seven_seg_out_5_OBUF (seven_seg_out<5>)
+    ----------------------------------------
+    Total                      8.523ns (5.975ns logic, 2.548ns route)
+                                       (70.1% logic, 29.9% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 1152 / 23
+-------------------------------------------------------------------------
+Delay:               24.292ns (Levels of Logic = 17)
+  Source:            RESET (PAD)
+  Destination:       D_IN<7> (PAD)
+
+  Data Path: RESET to D_IN<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            16   1.218   1.034  RESET_IBUF (RESET_IBUF)
+     INV:I->O              1   0.704   0.420  XLXI_2/XLXI_7/XLXI_19 (XLXI_2/XLXI_7/XLXN_19)
+     INV:I->O             26   0.704   1.260  XLXI_2/XLXI_7/XLXI_20 (XLXI_2/XLXN_59)
+     OR2:I1->O             1   0.704   0.420  XLXI_2/XLXI_7/XLXI_24 (XLXI_2/XLXI_7/XLXN_48)
+     INV:I->O             16   0.704   1.034  XLXI_2/XLXI_7/XLXI_18 (XLXI_2/XLXN_69)
+     INV:I->O              1   0.704   0.420  XLXI_2/XLXI_8/XLXI_8/XLXI_8/XLXI_4 (XLXI_2/XLXI_8/XLXI_8/XLXI_8/XLXN_2)
+     AND2:I0->O            1   0.704   0.420  XLXI_2/XLXI_8/XLXI_8/XLXI_8/XLXI_1 (XLXI_2/XLXI_8/XLXI_8/XLXI_8/XLXN_5)
+     OR2:I1->O             9   0.704   0.820  XLXI_2/XLXI_8/XLXI_8/XLXI_8/XLXI_2 (ADDR_7_OBUF)
+     AND2:I0->O            1   0.704   0.420  BOOTSTRAP/XLXI_4/XLXI_8/XLXI_3 (BOOTSTRAP/XLXI_4/XLXI_8/XLXN_6)
+     OR2:I0->O            13   0.704   0.983  BOOTSTRAP/XLXI_4/XLXI_8/XLXI_2 (BOOTSTRAP/XLXN_3<7>)
+     INV:I->O              4   0.704   0.587  BOOTSTRAP/XLXI_2/XLXI_30/XLXI_1/XLXI_22 (BOOTSTRAP/XLXI_2/XLXI_30/XLXI_1/SN3)
+     AND3:I2->O            8   0.704   0.757  BOOTSTRAP/XLXI_2/XLXI_30/XLXI_1/XLXI_26 (BOOTSTRAP/XLXI_2/XLXI_30/XLXN_10)
+     AND2:I1->O            1   0.704   0.420  BOOTSTRAP/XLXI_2/XLXI_30/XLXI_22/XLXI_1 (BOOTSTRAP/XLXI_2/XLXI_30/XLXN_161)
+     begin scope: 'BOOTSTRAP/XLXI_2/XLXI_30/XLXI_44'
+     OR4:I3->O             1   0.704   0.420  I_36_112 (S0)
+     OR2:I0->O             3   0.704   0.531  I_36_94 (O_DUMMY)
+     end scope: 'BOOTSTRAP/XLXI_2/XLXI_30/XLXI_44'
+     OBUF:I->O                 3.272          D_IN_7_OBUF (D_IN<7>)
+    ----------------------------------------
+    Total                     24.292ns (14.346ns logic, 9.946ns route)
+                                       (59.1% logic, 40.9% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 14.00 secs
+Total CPU time to Xst completion: 14.21 secs
+ 
+--> 
+
+Total memory usage is 285476 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   13 (   0 filtered)
+Number of infos    :   12 (   0 filtered)
+

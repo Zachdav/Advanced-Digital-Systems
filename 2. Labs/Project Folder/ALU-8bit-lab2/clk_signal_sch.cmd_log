@@ -1,0 +1,1 @@
+sch2sym -intstyle ise -family spartan3e -w -refsym clk_signal_sch E:/ALU-8bit-lab2/clk_signal_sch.sch E:/ALU-8bit-lab2/clk_signal_sch.sym 

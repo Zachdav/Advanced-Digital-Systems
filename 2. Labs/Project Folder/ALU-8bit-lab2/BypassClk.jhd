@@ -1,0 +1,3 @@
+MODULE BypassClk
+	SUBMODULE clk_signal_sch
+		INSTANCE XLXI_1

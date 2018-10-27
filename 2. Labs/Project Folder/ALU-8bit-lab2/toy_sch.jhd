@@ -1,0 +1,5 @@
+MODULE toy_sch
+	SUBMODULE controller_sch
+		INSTANCE XLXI_7
+	SUBMODULE Datapath
+		INSTANCE XLXI_8

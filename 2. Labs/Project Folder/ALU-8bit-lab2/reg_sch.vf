@@ -1,0 +1,76 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.2
+//  \   \         Application : sch2hdl
+//  /   /         Filename : reg_sch.vf
+// /___/   /\     Timestamp : 03/21/2018 17:54:01
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan3e -verilog E:/ALU-8bit-lab2/reg_sch.vf -w E:/ALU-8bit-lab2/reg_sch.sch
+//Design Name: reg_sch
+//Device: spartan3e
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module reg_sch(CLK, 
+               LOAD, 
+               REG_IN, 
+               RST, 
+               REG_OUT);
+
+    input CLK;
+    input LOAD;
+    input [7:0] REG_IN;
+    input RST;
+   output [7:0] REG_OUT;
+   
+   
+   FDRE #( .INIT(1'b0) ) XLXI_3 (.C(CLK), 
+                .CE(LOAD), 
+                .D(REG_IN[7]), 
+                .R(RST), 
+                .Q(REG_OUT[7]));
+   FDRE #( .INIT(1'b0) ) XLXI_5 (.C(CLK), 
+                .CE(LOAD), 
+                .D(REG_IN[6]), 
+                .R(RST), 
+                .Q(REG_OUT[6]));
+   FDRE #( .INIT(1'b0) ) XLXI_6 (.C(CLK), 
+                .CE(LOAD), 
+                .D(REG_IN[5]), 
+                .R(RST), 
+                .Q(REG_OUT[5]));
+   FDRE #( .INIT(1'b0) ) XLXI_7 (.C(CLK), 
+                .CE(LOAD), 
+                .D(REG_IN[4]), 
+                .R(RST), 
+                .Q(REG_OUT[4]));
+   FDRE #( .INIT(1'b0) ) XLXI_8 (.C(CLK), 
+                .CE(LOAD), 
+                .D(REG_IN[3]), 
+                .R(RST), 
+                .Q(REG_OUT[3]));
+   FDRE #( .INIT(1'b0) ) XLXI_9 (.C(CLK), 
+                .CE(LOAD), 
+                .D(REG_IN[2]), 
+                .R(RST), 
+                .Q(REG_OUT[2]));
+   FDRE #( .INIT(1'b0) ) XLXI_10 (.C(CLK), 
+                 .CE(LOAD), 
+                 .D(REG_IN[1]), 
+                 .R(RST), 
+                 .Q(REG_OUT[1]));
+   FDRE #( .INIT(1'b0) ) XLXI_11 (.C(CLK), 
+                 .CE(LOAD), 
+                 .D(REG_IN[0]), 
+                 .R(RST), 
+                 .Q(REG_OUT[0]));
+endmodule

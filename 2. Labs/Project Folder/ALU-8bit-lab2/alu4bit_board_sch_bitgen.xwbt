@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=Z:\CSEE 4280\Lab 2\ALU-8bit-lab2\alu4bit_board_sch.ncd
+OUTFILE=Z:\CSEE 4280\Lab 2\ALU-8bit-lab2\alu4bit_board_sch.bit
+FAMILY=Spartan3E
+PART=xc3s250e-4cp132
+WORKINGDIR=Z:\CSEE 4280\Lab 2\ALU-8bit-lab2
+LICENSE=WebPack
+USER_INFO=206971330_0_0_375

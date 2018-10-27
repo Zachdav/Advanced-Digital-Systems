@@ -1,0 +1,70 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.2
+//  \   \         Application : sch2hdl
+//  /   /         Filename : enoutput8_sch.vf
+// /___/   /\     Timestamp : 03/21/2018 17:53:56
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan3e -verilog E:/ALU-8bit-lab2/enoutput8_sch.vf -w E:/ALU-8bit-lab2/enoutput8_sch.sch
+//Design Name: enoutput8_sch
+//Device: spartan3e
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module enoutput8_sch(MUXIN, 
+                     SEL, 
+                     MUXOUT0, 
+                     MUXOUT1, 
+                     MUXOUT2, 
+                     MUXOUT3, 
+                     MUXOUT4, 
+                     MUXOUT5, 
+                     MUXOUT6, 
+                     MUXOUT7);
+
+    input [7:0] MUXIN;
+    input SEL;
+   output MUXOUT0;
+   output MUXOUT1;
+   output MUXOUT2;
+   output MUXOUT3;
+   output MUXOUT4;
+   output MUXOUT5;
+   output MUXOUT6;
+   output MUXOUT7;
+   
+   
+   AND2  XLXI_1 (.I0(MUXIN[7]), 
+                .I1(SEL), 
+                .O(MUXOUT7));
+   AND2  XLXI_2 (.I0(MUXIN[6]), 
+                .I1(SEL), 
+                .O(MUXOUT6));
+   AND2  XLXI_3 (.I0(SEL), 
+                .I1(MUXIN[5]), 
+                .O(MUXOUT5));
+   AND2  XLXI_4 (.I0(SEL), 
+                .I1(MUXIN[4]), 
+                .O(MUXOUT4));
+   AND2  XLXI_5 (.I0(SEL), 
+                .I1(MUXIN[3]), 
+                .O(MUXOUT3));
+   AND2  XLXI_6 (.I0(SEL), 
+                .I1(MUXIN[2]), 
+                .O(MUXOUT2));
+   AND2  XLXI_7 (.I0(SEL), 
+                .I1(MUXIN[1]), 
+                .O(MUXOUT1));
+   AND2  XLXI_8 (.I0(SEL), 
+                .I1(MUXIN[0]), 
+                .O(MUXOUT0));
+endmodule

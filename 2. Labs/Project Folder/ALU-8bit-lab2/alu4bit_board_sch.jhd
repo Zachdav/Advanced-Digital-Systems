@@ -1,0 +1,13 @@
+MODULE alu4bit_board_sch
+	SUBMODULE LED7SegmentBehavioral
+		INSTANCE XLXI_1
+	SUBMODULE LED7SegmentBehavioral
+		INSTANCE XLXI_2
+	SUBMODULE LED7SegmentBehavioral
+		INSTANCE XLXI_3
+	SUBMODULE LED7SegmentBehavioral
+		INSTANCE XLXI_4
+	SUBMODULE alu4bit_sch
+		INSTANCE XLXI_6
+	SUBMODULE seven_seg_control_sch
+		INSTANCE XLXI_8

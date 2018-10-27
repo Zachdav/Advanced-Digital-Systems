@@ -1,0 +1,124 @@
+xst -intstyle ise -ifn "F:/ALU-8bit-lab2/toyProcessor_overall.xst" -ofn "F:/ALU-8bit-lab2/toyProcessor_overall.syr" 
+xst -intstyle ise -ifn "F:/ALU-8bit-lab2/toyProcessor_overall.xst" -ofn "F:/ALU-8bit-lab2/toyProcessor_overall.syr" 
+xst -intstyle ise -ifn "F:/ALU-8bit-lab2/toyProcessor_overall.xst" -ofn "F:/ALU-8bit-lab2/toyProcessor_overall.syr" 
+xst -intstyle ise -ifn "F:/ALU-8bit-lab2/toyProcessor_overall.xst" -ofn "F:/ALU-8bit-lab2/toyProcessor_overall.syr" 
+xst -intstyle ise -ifn "F:/ALU-8bit-lab2/toyProcessor_overall.xst" -ofn "F:/ALU-8bit-lab2/toyProcessor_overall.syr" 
+xst -intstyle ise -ifn "F:/ALU-8bit-lab2/toyProcessor_overall.xst" -ofn "F:/ALU-8bit-lab2/toyProcessor_overall.syr" 
+xst -intstyle ise -ifn "F:/ALU-8bit-lab2/toyProcessor_overall.xst" -ofn "F:/ALU-8bit-lab2/toyProcessor_overall.syr" 
+xst -intstyle ise -ifn "F:/ALU-8bit-lab2/toyProcessor_overall.xst" -ofn "F:/ALU-8bit-lab2/toyProcessor_overall.syr" 
+xst -intstyle ise -ifn "F:/ALU-8bit-lab2/toyProcessor_overall.xst" -ofn "F:/ALU-8bit-lab2/toyProcessor_overall.syr" 
+xst -intstyle ise -ifn "F:/ALU-8bit-lab2/toyProcessor_overall.xst" -ofn "F:/ALU-8bit-lab2/toyProcessor_overall.syr" 
+xst -intstyle ise -ifn "F:/ALU-8bit-lab2/toyProcessor_overall.xst" -ofn "F:/ALU-8bit-lab2/toyProcessor_overall.syr" 
+xst -intstyle ise -ifn "F:/ALU-8bit-lab2/toyProcessor_overall.xst" -ofn "F:/ALU-8bit-lab2/toyProcessor_overall.syr" 
+xst -intstyle ise -ifn "F:/ALU-8bit-lab2/toyProcessor_overall.xst" -ofn "F:/ALU-8bit-lab2/toyProcessor_overall.syr" 
+xst -intstyle ise -ifn "F:/ALU-8bit-lab2/toyProcessor_overall.xst" -ofn "F:/ALU-8bit-lab2/toyProcessor_overall.syr" 
+xst -intstyle ise -ifn "F:/ALU-8bit-lab2/toyProcessor_overall.xst" -ofn "F:/ALU-8bit-lab2/toyProcessor_overall.syr" 
+xst -intstyle ise -ifn "F:/ALU-8bit-lab2/toyProcessor_overall.xst" -ofn "F:/ALU-8bit-lab2/toyProcessor_overall.syr" 
+xst -intstyle ise -ifn "F:/ALU-8bit-lab2/toyProcessor_overall.xst" -ofn "F:/ALU-8bit-lab2/toyProcessor_overall.syr" 
+xst -intstyle ise -ifn "F:/ALU-8bit-lab2/toyProcessor_overall.xst" -ofn "F:/ALU-8bit-lab2/toyProcessor_overall.syr" 
+xst -intstyle ise -ifn "F:/ALU-8bit-lab2/toyProcessor_overall.xst" -ofn "F:/ALU-8bit-lab2/toyProcessor_overall.syr" 
+xst -intstyle ise -ifn "F:/ALU-8bit-lab2/toyProcessor_overall.xst" -ofn "F:/ALU-8bit-lab2/toyProcessor_overall.syr" 
+xst -intstyle ise -ifn "F:/ALU-8bit-lab2/toyProcessor_overall.xst" -ofn "F:/ALU-8bit-lab2/toyProcessor_overall.syr" 
+xst -intstyle ise -ifn "F:/ALU-8bit-lab2/toyProcessor_overall.xst" -ofn "F:/ALU-8bit-lab2/toyProcessor_overall.syr" 
+xst -intstyle ise -ifn "F:/ALU-8bit-lab2/toyProcessor_overall.xst" -ofn "F:/ALU-8bit-lab2/toyProcessor_overall.syr" 
+xst -intstyle ise -ifn "F:/ALU-8bit-lab2/toyProcessor_overall.xst" -ofn "F:/ALU-8bit-lab2/toyProcessor_overall.syr" 
+xst -intstyle ise -ifn "F:/ALU-8bit-lab2/toyProcessor_overall.xst" -ofn "F:/ALU-8bit-lab2/toyProcessor_overall.syr" 
+xst -intstyle ise -ifn "F:/ALU-8bit-lab2/toyProcessor_overall.xst" -ofn "F:/ALU-8bit-lab2/toyProcessor_overall.syr" 
+xst -intstyle ise -ifn "F:/ALU-8bit-lab2/toyProcessor_overall.xst" -ofn "F:/ALU-8bit-lab2/toyProcessor_overall.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc toyProcessor_ucf.ucf -p xc3s250e-cp132-4 toyProcessor_overall.ngc toyProcessor_overall.ngd  
+map -intstyle ise -p xc3s250e-cp132-4 -cm area -ir off -pr off -c 100 -o toyProcessor_overall_map.ncd toyProcessor_overall.ngd toyProcessor_overall.pcf 
+par -w -intstyle ise -ol high -t 1 toyProcessor_overall_map.ncd toyProcessor_overall.ncd toyProcessor_overall.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml toyProcessor_overall.twx toyProcessor_overall.ncd -o toyProcessor_overall.twr toyProcessor_overall.pcf -ucf toyProcessor_ucf.ucf 
+bitgen -intstyle ise -f toyProcessor_overall.ut toyProcessor_overall.ncd 
+xst -intstyle ise -ifn "E:/ALU-8bit-lab2/toyProcessor_overall.xst" -ofn "E:/ALU-8bit-lab2/toyProcessor_overall.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc toyProcessor_ucf.ucf -p xc3s250e-cp132-4 toyProcessor_overall.ngc toyProcessor_overall.ngd  
+map -intstyle ise -p xc3s250e-cp132-4 -cm area -ir off -pr off -c 100 -o toyProcessor_overall_map.ncd toyProcessor_overall.ngd toyProcessor_overall.pcf 
+par -w -intstyle ise -ol high -t 1 toyProcessor_overall_map.ncd toyProcessor_overall.ncd toyProcessor_overall.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml toyProcessor_overall.twx toyProcessor_overall.ncd -o toyProcessor_overall.twr toyProcessor_overall.pcf -ucf toyProcessor_ucf.ucf 
+bitgen -intstyle ise -f toyProcessor_overall.ut toyProcessor_overall.ncd 
+xst -intstyle ise -ifn "E:/ALU-8bit-lab2/toyProcessor_overall.xst" -ofn "E:/ALU-8bit-lab2/toyProcessor_overall.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc toyProcessor_ucf.ucf -p xc3s250e-cp132-4 toyProcessor_overall.ngc toyProcessor_overall.ngd  
+map -intstyle ise -p xc3s250e-cp132-4 -cm area -ir off -pr off -c 100 -o toyProcessor_overall_map.ncd toyProcessor_overall.ngd toyProcessor_overall.pcf 
+par -w -intstyle ise -ol high -t 1 toyProcessor_overall_map.ncd toyProcessor_overall.ncd toyProcessor_overall.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml toyProcessor_overall.twx toyProcessor_overall.ncd -o toyProcessor_overall.twr toyProcessor_overall.pcf -ucf toyProcessor_ucf.ucf 
+bitgen -intstyle ise -f toyProcessor_overall.ut toyProcessor_overall.ncd 
+xst -intstyle ise -ifn "E:/ALU-8bit-lab2/toyProcessor_overall.xst" -ofn "E:/ALU-8bit-lab2/toyProcessor_overall.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc toyProcessor_ucf.ucf -p xc3s250e-cp132-4 toyProcessor_overall.ngc toyProcessor_overall.ngd  
+xst -intstyle ise -ifn "E:/ALU-8bit-lab2/toyProcessor_overall.xst" -ofn "E:/ALU-8bit-lab2/toyProcessor_overall.syr" 
+xst -intstyle ise -ifn "E:/ALU-8bit-lab2/toyProcessor_overall.xst" -ofn "E:/ALU-8bit-lab2/toyProcessor_overall.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc toyProcessor_ucf.ucf -p xc3s250e-cp132-4 toyProcessor_overall.ngc toyProcessor_overall.ngd  
+map -intstyle ise -p xc3s250e-cp132-4 -cm area -ir off -pr off -c 100 -o toyProcessor_overall_map.ncd toyProcessor_overall.ngd toyProcessor_overall.pcf 
+par -w -intstyle ise -ol high -t 1 toyProcessor_overall_map.ncd toyProcessor_overall.ncd toyProcessor_overall.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml toyProcessor_overall.twx toyProcessor_overall.ncd -o toyProcessor_overall.twr toyProcessor_overall.pcf -ucf toyProcessor_ucf.ucf 
+bitgen -intstyle ise -f toyProcessor_overall.ut toyProcessor_overall.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc toyProcessor_ucf.ucf -p xc3s250e-cp132-4 toyProcessor_overall.ngc toyProcessor_overall.ngd  
+map -intstyle ise -p xc3s250e-cp132-4 -cm area -ir off -pr off -c 100 -o toyProcessor_overall_map.ncd toyProcessor_overall.ngd toyProcessor_overall.pcf 
+par -w -intstyle ise -ol high -t 1 toyProcessor_overall_map.ncd toyProcessor_overall.ncd toyProcessor_overall.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml toyProcessor_overall.twx toyProcessor_overall.ncd -o toyProcessor_overall.twr toyProcessor_overall.pcf -ucf toyProcessor_ucf.ucf 
+bitgen -intstyle ise -f toyProcessor_overall.ut toyProcessor_overall.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc toyProcessor_ucf.ucf -p xc3s250e-cp132-4 toyProcessor_overall.ngc toyProcessor_overall.ngd  
+map -intstyle ise -p xc3s250e-cp132-4 -cm area -ir off -pr off -c 100 -o toyProcessor_overall_map.ncd toyProcessor_overall.ngd toyProcessor_overall.pcf 
+par -w -intstyle ise -ol high -t 1 toyProcessor_overall_map.ncd toyProcessor_overall.ncd toyProcessor_overall.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml toyProcessor_overall.twx toyProcessor_overall.ncd -o toyProcessor_overall.twr toyProcessor_overall.pcf -ucf toyProcessor_ucf.ucf 
+bitgen -intstyle ise -f toyProcessor_overall.ut toyProcessor_overall.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc toyProcessor_ucf.ucf -p xc3s250e-cp132-4 toyProcessor_overall.ngc toyProcessor_overall.ngd  
+map -intstyle ise -p xc3s250e-cp132-4 -cm area -ir off -pr off -c 100 -o toyProcessor_overall_map.ncd toyProcessor_overall.ngd toyProcessor_overall.pcf 
+par -w -intstyle ise -ol high -t 1 toyProcessor_overall_map.ncd toyProcessor_overall.ncd toyProcessor_overall.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml toyProcessor_overall.twx toyProcessor_overall.ncd -o toyProcessor_overall.twr toyProcessor_overall.pcf -ucf toyProcessor_ucf.ucf 
+bitgen -intstyle ise -f toyProcessor_overall.ut toyProcessor_overall.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc toyProcessor_ucf.ucf -p xc3s250e-cp132-4 toyProcessor_overall.ngc toyProcessor_overall.ngd  
+map -intstyle ise -p xc3s250e-cp132-4 -cm area -ir off -pr off -c 100 -o toyProcessor_overall_map.ncd toyProcessor_overall.ngd toyProcessor_overall.pcf 
+par -w -intstyle ise -ol high -t 1 toyProcessor_overall_map.ncd toyProcessor_overall.ncd toyProcessor_overall.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml toyProcessor_overall.twx toyProcessor_overall.ncd -o toyProcessor_overall.twr toyProcessor_overall.pcf -ucf toyProcessor_ucf.ucf 
+bitgen -intstyle ise -f toyProcessor_overall.ut toyProcessor_overall.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc toyProcessor_ucf.ucf -p xc3s250e-cp132-4 "toyProcessor_overall.ngc" toyProcessor_overall.ngd  
+map -intstyle ise -p xc3s250e-cp132-4 -cm area -ir off -pr off -c 100 -o toyProcessor_overall_map.ncd toyProcessor_overall.ngd toyProcessor_overall.pcf 
+par -w -intstyle ise -ol high -t 1 toyProcessor_overall_map.ncd toyProcessor_overall.ncd toyProcessor_overall.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml toyProcessor_overall.twx toyProcessor_overall.ncd -o toyProcessor_overall.twr toyProcessor_overall.pcf -ucf toyProcessor_ucf.ucf 
+bitgen -intstyle ise -f toyProcessor_overall.ut toyProcessor_overall.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc toyProcessor_ucf.ucf -p xc3s250e-cp132-4 "toyProcessor_overall.ngc" toyProcessor_overall.ngd  
+map -intstyle ise -p xc3s250e-cp132-4 -cm area -ir off -pr off -c 100 -o toyProcessor_overall_map.ncd toyProcessor_overall.ngd toyProcessor_overall.pcf 
+par -w -intstyle ise -ol high -t 1 toyProcessor_overall_map.ncd toyProcessor_overall.ncd toyProcessor_overall.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml toyProcessor_overall.twx toyProcessor_overall.ncd -o toyProcessor_overall.twr toyProcessor_overall.pcf -ucf toyProcessor_ucf.ucf 
+bitgen -intstyle ise -f toyProcessor_overall.ut toyProcessor_overall.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc toyProcessor_ucf.ucf -p xc3s250e-cp132-4 toyProcessor_overall.ngc toyProcessor_overall.ngd  
+map -intstyle ise -p xc3s250e-cp132-4 -cm area -ir off -pr off -c 100 -o toyProcessor_overall_map.ncd toyProcessor_overall.ngd toyProcessor_overall.pcf 
+par -w -intstyle ise -ol high -t 1 toyProcessor_overall_map.ncd toyProcessor_overall.ncd toyProcessor_overall.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml toyProcessor_overall.twx toyProcessor_overall.ncd -o toyProcessor_overall.twr toyProcessor_overall.pcf -ucf toyProcessor_ucf.ucf 
+bitgen -intstyle ise -f toyProcessor_overall.ut toyProcessor_overall.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc toyProcessor_ucf.ucf -p xc3s250e-cp132-4 toyProcessor_overall.ngc toyProcessor_overall.ngd  
+map -intstyle ise -p xc3s250e-cp132-4 -cm area -ir off -pr off -c 100 -o toyProcessor_overall_map.ncd toyProcessor_overall.ngd toyProcessor_overall.pcf 
+par -w -intstyle ise -ol high -t 1 toyProcessor_overall_map.ncd toyProcessor_overall.ncd toyProcessor_overall.pcf 
+xst -intstyle ise -ifn "E:/ALU-8bit-lab2/toyProcessor_overall.xst" -ofn "E:/ALU-8bit-lab2/toyProcessor_overall.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc toyProcessor_ucf.ucf -p xc3s250e-cp132-4 toyProcessor_overall.ngc toyProcessor_overall.ngd  
+map -intstyle ise -p xc3s250e-cp132-4 -cm area -ir off -pr off -c 100 -o toyProcessor_overall_map.ncd toyProcessor_overall.ngd toyProcessor_overall.pcf 
+par -w -intstyle ise -ol high -t 1 toyProcessor_overall_map.ncd toyProcessor_overall.ncd toyProcessor_overall.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml toyProcessor_overall.twx toyProcessor_overall.ncd -o toyProcessor_overall.twr toyProcessor_overall.pcf -ucf toyProcessor_ucf.ucf 
+bitgen -intstyle ise -f toyProcessor_overall.ut toyProcessor_overall.ncd 
+xst -intstyle ise -ifn "E:/ALU-8bit-lab2/toyProcessor_overall.xst" -ofn "E:/ALU-8bit-lab2/toyProcessor_overall.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc toyProcessor_ucf.ucf -p xc3s250e-cp132-4 toyProcessor_overall.ngc toyProcessor_overall.ngd  
+map -intstyle ise -p xc3s250e-cp132-4 -cm area -ir off -pr off -c 100 -o toyProcessor_overall_map.ncd toyProcessor_overall.ngd toyProcessor_overall.pcf 
+par -w -intstyle ise -ol high -t 1 toyProcessor_overall_map.ncd toyProcessor_overall.ncd toyProcessor_overall.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml toyProcessor_overall.twx toyProcessor_overall.ncd -o toyProcessor_overall.twr toyProcessor_overall.pcf -ucf toyProcessor_ucf.ucf 
+bitgen -intstyle ise -f toyProcessor_overall.ut toyProcessor_overall.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc toyProcessor_ucf.ucf -p xc3s250e-cp132-4 toyProcessor_overall.ngc toyProcessor_overall.ngd  
+map -intstyle ise -p xc3s250e-cp132-4 -cm area -ir off -pr off -c 100 -o toyProcessor_overall_map.ncd toyProcessor_overall.ngd toyProcessor_overall.pcf 
+par -w -intstyle ise -ol high -t 1 toyProcessor_overall_map.ncd toyProcessor_overall.ncd toyProcessor_overall.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml toyProcessor_overall.twx toyProcessor_overall.ncd -o toyProcessor_overall.twr toyProcessor_overall.pcf -ucf toyProcessor_ucf.ucf 
+bitgen -intstyle ise -f toyProcessor_overall.ut toyProcessor_overall.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc toyProcessor_ucf.ucf -p xc3s250e-cp132-4 toyProcessor_overall.ngc toyProcessor_overall.ngd  
+map -intstyle ise -p xc3s250e-cp132-4 -cm area -ir off -pr off -c 100 -o toyProcessor_overall_map.ncd toyProcessor_overall.ngd toyProcessor_overall.pcf 
+par -w -intstyle ise -ol high -t 1 toyProcessor_overall_map.ncd toyProcessor_overall.ncd toyProcessor_overall.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml toyProcessor_overall.twx toyProcessor_overall.ncd -o toyProcessor_overall.twr toyProcessor_overall.pcf -ucf toyProcessor_ucf.ucf 
+bitgen -intstyle ise -f toyProcessor_overall.ut toyProcessor_overall.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc toyProcessor_ucf.ucf -p xc3s250e-cp132-4 toyProcessor_overall.ngc toyProcessor_overall.ngd  
+map -intstyle ise -p xc3s250e-cp132-4 -cm area -ir off -pr off -c 100 -o toyProcessor_overall_map.ncd toyProcessor_overall.ngd toyProcessor_overall.pcf 
+par -w -intstyle ise -ol high -t 1 toyProcessor_overall_map.ncd toyProcessor_overall.ncd toyProcessor_overall.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml toyProcessor_overall.twx toyProcessor_overall.ncd -o toyProcessor_overall.twr toyProcessor_overall.pcf -ucf toyProcessor_ucf.ucf 
+bitgen -intstyle ise -f toyProcessor_overall.ut toyProcessor_overall.ncd 
+xst -intstyle ise -ifn "E:/ALU-8bit-lab2/toyProcessor_overall.xst" -ofn "E:/ALU-8bit-lab2/toyProcessor_overall.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc toyProcessor_ucf.ucf -p xc3s250e-cp132-4 toyProcessor_overall.ngc toyProcessor_overall.ngd  
+map -intstyle ise -p xc3s250e-cp132-4 -cm area -ir off -pr off -c 100 -o toyProcessor_overall_map.ncd toyProcessor_overall.ngd toyProcessor_overall.pcf 
+par -w -intstyle ise -ol high -t 1 toyProcessor_overall_map.ncd toyProcessor_overall.ncd toyProcessor_overall.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml toyProcessor_overall.twx toyProcessor_overall.ncd -o toyProcessor_overall.twr toyProcessor_overall.pcf -ucf toyProcessor_ucf.ucf 
+bitgen -intstyle ise -f toyProcessor_overall.ut toyProcessor_overall.ncd 

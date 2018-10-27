@@ -1,0 +1,48 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.2
+//  \   \         Application : sch2hdl
+//  /   /         Filename : mux.vf
+// /___/   /\     Timestamp : 03/21/2018 17:54:02
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan3e -verilog E:/ALU-8bit-lab2/mux.vf -w E:/ALU-8bit-lab2/mux.sch
+//Design Name: mux
+//Device: spartan3e
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module mux(in0, 
+           in1, 
+           sel, 
+           mux_out);
+
+    input in0;
+    input in1;
+    input sel;
+   output mux_out;
+   
+   wire XLXN_2;
+   wire XLXN_5;
+   wire XLXN_6;
+   
+   AND2  XLXI_1 (.I0(XLXN_2), 
+                .I1(in0), 
+                .O(XLXN_5));
+   OR2  XLXI_2 (.I0(XLXN_6), 
+               .I1(XLXN_5), 
+               .O(mux_out));
+   AND2  XLXI_3 (.I0(in1), 
+                .I1(sel), 
+                .O(XLXN_6));
+   INV  XLXI_4 (.I(sel), 
+               .O(XLXN_2));
+endmodule

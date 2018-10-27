@@ -1,0 +1,4 @@
+sch2hdl -intstyle ise -family spartan3e -verilog mem_bootstrap_drc.vf -w C:/Users/vkp43001/Downloads/Archive/ALU-8bit-lab2/mem_bootstrap.sch 
+sch2sym -intstyle ise -family spartan3e -w -refsym mem_bootstrap C:/Users/vkp43001/Downloads/Archive/ALU-8bit-lab2/mem_bootstrap.sch C:/Users/vkp43001/Downloads/Archive/ALU-8bit-lab2/mem_bootstrap.sym 
+sch2sym -intstyle ise -family spartan3e -w -refsym mem_bootstrap F:/ALU-8bit-lab2/mem_bootstrap.sch F:/ALU-8bit-lab2/mem_bootstrap.sym 
+sch2sym -intstyle ise -family spartan3e -w -refsym mem_bootstrap F:/ALU-8bit-lab2/mem_bootstrap.sch F:/ALU-8bit-lab2/mem_bootstrap.sym 

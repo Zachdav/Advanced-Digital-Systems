@@ -1,0 +1,2656 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.2
+//  \   \         Application : sch2hdl
+//  /   /         Filename : toyProcessor_overall.vf
+// /___/   /\     Timestamp : 03/21/2018 17:54:28
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan3e -verilog E:/ALU-8bit-lab2/toyProcessor_overall.vf -w E:/ALU-8bit-lab2/toyProcessor_overall.sch
+//Design Name: toyProcessor_overall
+//Device: spartan3e
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module D2_4E_MXILINX_toyProcessor_overall(A0, 
+                                          A1, 
+                                          E, 
+                                          D0, 
+                                          D1, 
+                                          D2, 
+                                          D3);
+
+    input A0;
+    input A1;
+    input E;
+   output D0;
+   output D1;
+   output D2;
+   output D3;
+   
+   
+   AND3  I_36_30 (.I0(A1), 
+                 .I1(A0), 
+                 .I2(E), 
+                 .O(D3));
+   AND3B1  I_36_31 (.I0(A0), 
+                   .I1(A1), 
+                   .I2(E), 
+                   .O(D2));
+   AND3B1  I_36_32 (.I0(A1), 
+                   .I1(A0), 
+                   .I2(E), 
+                   .O(D1));
+   AND3B2  I_36_33 (.I0(A0), 
+                   .I1(A1), 
+                   .I2(E), 
+                   .O(D0));
+endmodule
+`timescale 1ns / 1ps
+
+module FTCE_MXILINX_toyProcessor_overall(C, 
+                                         CE, 
+                                         CLR, 
+                                         T, 
+                                         Q);
+
+   parameter INIT = 1'b0;
+   
+    input C;
+    input CE;
+    input CLR;
+    input T;
+   output Q;
+   
+   wire TQ;
+   wire Q_DUMMY;
+   
+   assign Q = Q_DUMMY;
+   XOR2  I_36_32 (.I0(T), 
+                 .I1(Q_DUMMY), 
+                 .O(TQ));
+   (* RLOC = "X0Y0" *) 
+   FDCE  I_36_35 (.C(C), 
+                 .CE(CE), 
+                 .CLR(CLR), 
+                 .D(TQ), 
+                 .Q(Q_DUMMY));
+endmodule
+`timescale 1ns / 1ps
+
+module CB16CE_MXILINX_toyProcessor_overall(C, 
+                                           CE, 
+                                           CLR, 
+                                           CEO, 
+                                           Q, 
+                                           TC);
+
+    input C;
+    input CE;
+    input CLR;
+   output CEO;
+   output [15:0] Q;
+   output TC;
+   
+   wire T2;
+   wire T3;
+   wire T4;
+   wire T5;
+   wire T6;
+   wire T7;
+   wire T8;
+   wire T9;
+   wire T10;
+   wire T11;
+   wire T12;
+   wire T13;
+   wire T14;
+   wire T15;
+   wire XLXN_1;
+   wire [15:0] Q_DUMMY;
+   wire TC_DUMMY;
+   
+   assign Q[15:0] = Q_DUMMY[15:0];
+   assign TC = TC_DUMMY;
+   (* HU_SET = "I_Q0_136" *) 
+   FTCE_MXILINX_toyProcessor_overall #( .INIT(1'b0) ) I_Q0 (.C(C), 
+                                           .CE(CE), 
+                                           .CLR(CLR), 
+                                           .T(XLXN_1), 
+                                           .Q(Q_DUMMY[0]));
+   (* HU_SET = "I_Q1_135" *) 
+   FTCE_MXILINX_toyProcessor_overall #( .INIT(1'b0) ) I_Q1 (.C(C), 
+                                           .CE(CE), 
+                                           .CLR(CLR), 
+                                           .T(Q_DUMMY[0]), 
+                                           .Q(Q_DUMMY[1]));
+   (* HU_SET = "I_Q2_138" *) 
+   FTCE_MXILINX_toyProcessor_overall #( .INIT(1'b0) ) I_Q2 (.C(C), 
+                                           .CE(CE), 
+                                           .CLR(CLR), 
+                                           .T(T2), 
+                                           .Q(Q_DUMMY[2]));
+   (* HU_SET = "I_Q3_137" *) 
+   FTCE_MXILINX_toyProcessor_overall #( .INIT(1'b0) ) I_Q3 (.C(C), 
+                                           .CE(CE), 
+                                           .CLR(CLR), 
+                                           .T(T3), 
+                                           .Q(Q_DUMMY[3]));
+   (* HU_SET = "I_Q4_142" *) 
+   FTCE_MXILINX_toyProcessor_overall #( .INIT(1'b0) ) I_Q4 (.C(C), 
+                                           .CE(CE), 
+                                           .CLR(CLR), 
+                                           .T(T4), 
+                                           .Q(Q_DUMMY[4]));
+   (* HU_SET = "I_Q5_141" *) 
+   FTCE_MXILINX_toyProcessor_overall #( .INIT(1'b0) ) I_Q5 (.C(C), 
+                                           .CE(CE), 
+                                           .CLR(CLR), 
+                                           .T(T5), 
+                                           .Q(Q_DUMMY[5]));
+   (* HU_SET = "I_Q6_140" *) 
+   FTCE_MXILINX_toyProcessor_overall #( .INIT(1'b0) ) I_Q6 (.C(C), 
+                                           .CE(CE), 
+                                           .CLR(CLR), 
+                                           .T(T6), 
+                                           .Q(Q_DUMMY[6]));
+   (* HU_SET = "I_Q7_139" *) 
+   FTCE_MXILINX_toyProcessor_overall #( .INIT(1'b0) ) I_Q7 (.C(C), 
+                                           .CE(CE), 
+                                           .CLR(CLR), 
+                                           .T(T7), 
+                                           .Q(Q_DUMMY[7]));
+   (* HU_SET = "I_Q8_143" *) 
+   FTCE_MXILINX_toyProcessor_overall #( .INIT(1'b0) ) I_Q8 (.C(C), 
+                                           .CE(CE), 
+                                           .CLR(CLR), 
+                                           .T(T8), 
+                                           .Q(Q_DUMMY[8]));
+   (* HU_SET = "I_Q9_144" *) 
+   FTCE_MXILINX_toyProcessor_overall #( .INIT(1'b0) ) I_Q9 (.C(C), 
+                                           .CE(CE), 
+                                           .CLR(CLR), 
+                                           .T(T9), 
+                                           .Q(Q_DUMMY[9]));
+   (* HU_SET = "I_Q10_145" *) 
+   FTCE_MXILINX_toyProcessor_overall #( .INIT(1'b0) ) I_Q10 (.C(C), 
+                                            .CE(CE), 
+                                            .CLR(CLR), 
+                                            .T(T10), 
+                                            .Q(Q_DUMMY[10]));
+   (* HU_SET = "I_Q11_146" *) 
+   FTCE_MXILINX_toyProcessor_overall #( .INIT(1'b0) ) I_Q11 (.C(C), 
+                                            .CE(CE), 
+                                            .CLR(CLR), 
+                                            .T(T11), 
+                                            .Q(Q_DUMMY[11]));
+   (* HU_SET = "I_Q12_147" *) 
+   FTCE_MXILINX_toyProcessor_overall #( .INIT(1'b0) ) I_Q12 (.C(C), 
+                                            .CE(CE), 
+                                            .CLR(CLR), 
+                                            .T(T12), 
+                                            .Q(Q_DUMMY[12]));
+   (* HU_SET = "I_Q13_148" *) 
+   FTCE_MXILINX_toyProcessor_overall #( .INIT(1'b0) ) I_Q13 (.C(C), 
+                                            .CE(CE), 
+                                            .CLR(CLR), 
+                                            .T(T13), 
+                                            .Q(Q_DUMMY[13]));
+   (* HU_SET = "I_Q14_149" *) 
+   FTCE_MXILINX_toyProcessor_overall #( .INIT(1'b0) ) I_Q14 (.C(C), 
+                                            .CE(CE), 
+                                            .CLR(CLR), 
+                                            .T(T14), 
+                                            .Q(Q_DUMMY[14]));
+   (* HU_SET = "I_Q15_150" *) 
+   FTCE_MXILINX_toyProcessor_overall #( .INIT(1'b0) ) I_Q15 (.C(C), 
+                                            .CE(CE), 
+                                            .CLR(CLR), 
+                                            .T(T15), 
+                                            .Q(Q_DUMMY[15]));
+   AND3  I_36_3 (.I0(Q_DUMMY[2]), 
+                .I1(Q_DUMMY[1]), 
+                .I2(Q_DUMMY[0]), 
+                .O(T3));
+   AND2  I_36_4 (.I0(Q_DUMMY[1]), 
+                .I1(Q_DUMMY[0]), 
+                .O(T2));
+   VCC  I_36_9 (.P(XLXN_1));
+   AND4  I_36_10 (.I0(Q_DUMMY[3]), 
+                 .I1(Q_DUMMY[2]), 
+                 .I2(Q_DUMMY[1]), 
+                 .I3(Q_DUMMY[0]), 
+                 .O(T4));
+   AND5  I_36_14 (.I0(Q_DUMMY[7]), 
+                 .I1(Q_DUMMY[6]), 
+                 .I2(Q_DUMMY[5]), 
+                 .I3(Q_DUMMY[4]), 
+                 .I4(T4), 
+                 .O(T8));
+   AND2  I_36_15 (.I0(Q_DUMMY[4]), 
+                 .I1(T4), 
+                 .O(T5));
+   AND3  I_36_19 (.I0(Q_DUMMY[5]), 
+                 .I1(Q_DUMMY[4]), 
+                 .I2(T4), 
+                 .O(T6));
+   AND4  I_36_21 (.I0(Q_DUMMY[6]), 
+                 .I1(Q_DUMMY[5]), 
+                 .I2(Q_DUMMY[4]), 
+                 .I3(T4), 
+                 .O(T7));
+   AND5  I_36_22 (.I0(Q_DUMMY[15]), 
+                 .I1(Q_DUMMY[14]), 
+                 .I2(Q_DUMMY[13]), 
+                 .I3(Q_DUMMY[12]), 
+                 .I4(T12), 
+                 .O(TC_DUMMY));
+   AND2  I_36_23 (.I0(Q_DUMMY[12]), 
+                 .I1(T12), 
+                 .O(T13));
+   AND3  I_36_24 (.I0(Q_DUMMY[13]), 
+                 .I1(Q_DUMMY[12]), 
+                 .I2(T12), 
+                 .O(T14));
+   AND4  I_36_25 (.I0(Q_DUMMY[14]), 
+                 .I1(Q_DUMMY[13]), 
+                 .I2(Q_DUMMY[12]), 
+                 .I3(T12), 
+                 .O(T15));
+   AND4  I_36_26 (.I0(Q_DUMMY[10]), 
+                 .I1(Q_DUMMY[9]), 
+                 .I2(Q_DUMMY[8]), 
+                 .I3(T8), 
+                 .O(T11));
+   AND3  I_36_27 (.I0(Q_DUMMY[9]), 
+                 .I1(Q_DUMMY[8]), 
+                 .I2(T8), 
+                 .O(T10));
+   AND2  I_36_28 (.I0(Q_DUMMY[8]), 
+                 .I1(T8), 
+                 .O(T9));
+   AND5  I_36_29 (.I0(Q_DUMMY[11]), 
+                 .I1(Q_DUMMY[10]), 
+                 .I2(Q_DUMMY[9]), 
+                 .I3(Q_DUMMY[8]), 
+                 .I4(T8), 
+                 .O(T12));
+   AND2  I_36_54 (.I0(CE), 
+                 .I1(TC_DUMMY), 
+                 .O(CEO));
+endmodule
+`timescale 1ns / 1ps
+
+module mux4_sch_MUSER_toyProcessor_overall(c0, 
+                                           c1, 
+                                           in0, 
+                                           in1, 
+                                           in2, 
+                                           in3, 
+                                           mux_out);
+
+    input c0;
+    input c1;
+    input in0;
+    input in1;
+    input in2;
+    input in3;
+   output mux_out;
+   
+   wire XLXN_1;
+   wire XLXN_2;
+   wire XLXN_4;
+   wire XLXN_5;
+   wire XLXN_6;
+   wire XLXN_7;
+   
+   AND3  XLXI_1 (.I0(XLXN_6), 
+                .I1(XLXN_7), 
+                .I2(in0), 
+                .O(XLXN_1));
+   AND3  XLXI_2 (.I0(c0), 
+                .I1(XLXN_7), 
+                .I2(in1), 
+                .O(XLXN_2));
+   AND3  XLXI_3 (.I0(XLXN_6), 
+                .I1(c1), 
+                .I2(in2), 
+                .O(XLXN_4));
+   AND3  XLXI_4 (.I0(c0), 
+                .I1(c1), 
+                .I2(in3), 
+                .O(XLXN_5));
+   OR4  XLXI_5 (.I0(XLXN_5), 
+               .I1(XLXN_4), 
+               .I2(XLXN_2), 
+               .I3(XLXN_1), 
+               .O(mux_out));
+   INV  XLXI_6 (.I(c0), 
+               .O(XLXN_6));
+   INV  XLXI_7 (.I(c1), 
+               .O(XLXN_7));
+endmodule
+`timescale 1ns / 1ps
+
+module mux4_7bit_sch_MUSER_toyProcessor_overall(c0, 
+                                                c1, 
+                                                in0, 
+                                                in1, 
+                                                in2, 
+                                                in3, 
+                                                mux_out);
+
+    input c0;
+    input c1;
+    input [6:0] in0;
+    input [6:0] in1;
+    input [6:0] in2;
+    input [6:0] in3;
+   output [6:0] mux_out;
+   
+   
+   mux4_sch_MUSER_toyProcessor_overall  XLXI_1 (.c0(c0), 
+                                               .c1(c1), 
+                                               .in0(in0[5]), 
+                                               .in1(in1[5]), 
+                                               .in2(in2[5]), 
+                                               .in3(in3[5]), 
+                                               .mux_out(mux_out[5]));
+   mux4_sch_MUSER_toyProcessor_overall  XLXI_2 (.c0(c0), 
+                                               .c1(c1), 
+                                               .in0(in0[6]), 
+                                               .in1(in1[6]), 
+                                               .in2(in2[6]), 
+                                               .in3(in3[6]), 
+                                               .mux_out(mux_out[6]));
+   mux4_sch_MUSER_toyProcessor_overall  XLXI_3 (.c0(c0), 
+                                               .c1(c1), 
+                                               .in0(in0[3]), 
+                                               .in1(in1[3]), 
+                                               .in2(in2[3]), 
+                                               .in3(in3[3]), 
+                                               .mux_out(mux_out[3]));
+   mux4_sch_MUSER_toyProcessor_overall  XLXI_4 (.c0(c0), 
+                                               .c1(c1), 
+                                               .in0(in0[4]), 
+                                               .in1(in1[4]), 
+                                               .in2(in2[4]), 
+                                               .in3(in3[4]), 
+                                               .mux_out(mux_out[4]));
+   mux4_sch_MUSER_toyProcessor_overall  XLXI_5 (.c0(c0), 
+                                               .c1(c1), 
+                                               .in0(in0[1]), 
+                                               .in1(in1[1]), 
+                                               .in2(in2[1]), 
+                                               .in3(in3[1]), 
+                                               .mux_out(mux_out[1]));
+   mux4_sch_MUSER_toyProcessor_overall  XLXI_6 (.c0(c0), 
+                                               .c1(c1), 
+                                               .in0(in0[2]), 
+                                               .in1(in1[2]), 
+                                               .in2(in2[2]), 
+                                               .in3(in3[2]), 
+                                               .mux_out(mux_out[2]));
+   mux4_sch_MUSER_toyProcessor_overall  XLXI_7 (.c0(c0), 
+                                               .c1(c1), 
+                                               .in0(in0[0]), 
+                                               .in1(in1[0]), 
+                                               .in2(in2[0]), 
+                                               .in3(in3[0]), 
+                                               .mux_out(mux_out[0]));
+endmodule
+`timescale 1ns / 1ps
+
+module seven_seg_control_sch_MUSER_toyProcessor_overall(CLK, 
+                                                        L, 
+                                                        ML, 
+                                                        MR, 
+                                                        R, 
+                                                        EN_L, 
+                                                        EN_ML, 
+                                                        EN_MR, 
+                                                        EN_R, 
+                                                        seven_seg_out);
+
+    input CLK;
+    input [6:0] L;
+    input [6:0] ML;
+    input [6:0] MR;
+    input [6:0] R;
+   output EN_L;
+   output EN_ML;
+   output EN_MR;
+   output EN_R;
+   output [6:0] seven_seg_out;
+   
+   wire [15:0] Qout;
+   wire XLXN_1;
+   wire XLXN_2;
+   wire XLXN_3;
+   wire XLXN_4;
+   wire XLXN_22;
+   wire XLXN_24;
+   wire XLXN_26;
+   
+   mux4_7bit_sch_MUSER_toyProcessor_overall  XLXI_1 (.c0(Qout[14]), 
+                                                    .c1(Qout[15]), 
+                                                    .in0(L[6:0]), 
+                                                    .in1(ML[6:0]), 
+                                                    .in2(MR[6:0]), 
+                                                    .in3(R[6:0]), 
+                                                    
+         .mux_out(seven_seg_out[6:0]));
+   (* HU_SET = "XLXI_2_151" *) 
+   CB16CE_MXILINX_toyProcessor_overall  XLXI_2 (.C(CLK), 
+                                               .CE(XLXN_24), 
+                                               .CLR(XLXN_22), 
+                                               .CEO(), 
+                                               .Q(Qout[15:0]), 
+                                               .TC(XLXN_22));
+   (* HU_SET = "XLXI_3_152" *) 
+   D2_4E_MXILINX_toyProcessor_overall  XLXI_3 (.A0(Qout[14]), 
+                                              .A1(Qout[15]), 
+                                              .E(XLXN_26), 
+                                              .D0(XLXN_4), 
+                                              .D1(XLXN_3), 
+                                              .D2(XLXN_2), 
+                                              .D3(XLXN_1));
+   INV  XLXI_4 (.I(XLXN_4), 
+               .O(EN_L));
+   INV  XLXI_5 (.I(XLXN_3), 
+               .O(EN_ML));
+   INV  XLXI_6 (.I(XLXN_2), 
+               .O(EN_MR));
+   INV  XLXI_7 (.I(XLXN_1), 
+               .O(EN_R));
+   VCC  XLXI_15 (.P(XLXN_24));
+   VCC  XLXI_16 (.P(XLXN_26));
+endmodule
+`timescale 1ns / 1ps
+
+module mux_MUSER_toyProcessor_overall(in0, 
+                                      in1, 
+                                      sel, 
+                                      mux_out);
+
+    input in0;
+    input in1;
+    input sel;
+   output mux_out;
+   
+   wire XLXN_2;
+   wire XLXN_5;
+   wire XLXN_6;
+   
+   AND2  XLXI_1 (.I0(XLXN_2), 
+                .I1(in0), 
+                .O(XLXN_5));
+   OR2  XLXI_2 (.I0(XLXN_6), 
+               .I1(XLXN_5), 
+               .O(mux_out));
+   AND2  XLXI_3 (.I0(in1), 
+                .I1(sel), 
+                .O(XLXN_6));
+   INV  XLXI_4 (.I(sel), 
+               .O(XLXN_2));
+endmodule
+`timescale 1ns / 1ps
+
+module mux8_sch_MUSER_toyProcessor_overall(in0, 
+                                           in1, 
+                                           sel, 
+                                           mux_out);
+
+    input [7:0] in0;
+    input [7:0] in1;
+    input sel;
+   output [7:0] mux_out;
+   
+   
+   mux_MUSER_toyProcessor_overall  XLXI_1 (.in0(in0[0]), 
+                                          .in1(in1[0]), 
+                                          .sel(sel), 
+                                          .mux_out(mux_out[0]));
+   mux_MUSER_toyProcessor_overall  XLXI_2 (.in0(in0[1]), 
+                                          .in1(in1[1]), 
+                                          .sel(sel), 
+                                          .mux_out(mux_out[1]));
+   mux_MUSER_toyProcessor_overall  XLXI_3 (.in0(in0[2]), 
+                                          .in1(in1[2]), 
+                                          .sel(sel), 
+                                          .mux_out(mux_out[2]));
+   mux_MUSER_toyProcessor_overall  XLXI_4 (.in0(in0[3]), 
+                                          .in1(in1[3]), 
+                                          .sel(sel), 
+                                          .mux_out(mux_out[3]));
+   mux_MUSER_toyProcessor_overall  XLXI_5 (.in0(in0[4]), 
+                                          .in1(in1[4]), 
+                                          .sel(sel), 
+                                          .mux_out(mux_out[4]));
+   mux_MUSER_toyProcessor_overall  XLXI_6 (.in0(in0[5]), 
+                                          .in1(in1[5]), 
+                                          .sel(sel), 
+                                          .mux_out(mux_out[5]));
+   mux_MUSER_toyProcessor_overall  XLXI_7 (.in0(in0[6]), 
+                                          .in1(in1[6]), 
+                                          .sel(sel), 
+                                          .mux_out(mux_out[6]));
+   mux_MUSER_toyProcessor_overall  XLXI_8 (.in0(in0[7]), 
+                                          .in1(in1[7]), 
+                                          .sel(sel), 
+                                          .mux_out(mux_out[7]));
+endmodule
+`timescale 1ns / 1ps
+
+module NOR8_MXILINX_toyProcessor_overall(I0, 
+                                         I1, 
+                                         I2, 
+                                         I3, 
+                                         I4, 
+                                         I5, 
+                                         I6, 
+                                         I7, 
+                                         O);
+
+    input I0;
+    input I1;
+    input I2;
+    input I3;
+    input I4;
+    input I5;
+    input I6;
+    input I7;
+   output O;
+   
+   wire dummy;
+   wire S0;
+   wire S1;
+   wire O_DUMMY;
+   
+   assign O = O_DUMMY;
+   (* RLOC = "X0Y0" *) 
+   FMAP  I_36_29 (.I1(I0), 
+                 .I2(I1), 
+                 .I3(I2), 
+                 .I4(I3), 
+                 .O(S0));
+   OR4  I_36_110 (.I0(I0), 
+                 .I1(I1), 
+                 .I2(I2), 
+                 .I3(I3), 
+                 .O(S0));
+   OR4  I_36_127 (.I0(I4), 
+                 .I1(I5), 
+                 .I2(I6), 
+                 .I3(I7), 
+                 .O(S1));
+   (* RLOC = "X0Y0" *) 
+   FMAP  I_36_138 (.I1(I4), 
+                  .I2(I5), 
+                  .I3(I6), 
+                  .I4(I7), 
+                  .O(S1));
+   NOR2  I_36_140 (.I0(S0), 
+                  .I1(S1), 
+                  .O(O_DUMMY));
+   (* RLOC = "X0Y1" *) 
+   FMAP  I_36_144 (.I1(S0), 
+                  .I2(S1), 
+                  .I3(dummy), 
+                  .I4(dummy), 
+                  .O(O_DUMMY));
+endmodule
+`timescale 1ns / 1ps
+
+module toZERO_sch_MUSER_toyProcessor_overall(zero_in, 
+                                             zero_out);
+
+    input [7:0] zero_in;
+   output zero_out;
+   
+   
+   (* HU_SET = "XLXI_1_153" *) 
+   NOR8_MXILINX_toyProcessor_overall  XLXI_1 (.I0(zero_in[0]), 
+                                             .I1(zero_in[1]), 
+                                             .I2(zero_in[2]), 
+                                             .I3(zero_in[3]), 
+                                             .I4(zero_in[4]), 
+                                             .I5(zero_in[5]), 
+                                             .I6(zero_in[6]), 
+                                             .I7(zero_in[7]), 
+                                             .O(zero_out));
+endmodule
+`timescale 1ns / 1ps
+
+module fa_sch_MUSER_toyProcessor_overall(cprev, 
+                                         x, 
+                                         y, 
+                                         cnext, 
+                                         res);
+
+    input cprev;
+    input x;
+    input y;
+   output cnext;
+   output res;
+   
+   wire XLXN_7;
+   wire XLXN_15;
+   wire XLXN_16;
+   
+   AND2  XLXI_1 (.I0(x), 
+                .I1(y), 
+                .O(XLXN_7));
+   AND2  XLXI_2 (.I0(XLXN_15), 
+                .I1(cprev), 
+                .O(XLXN_16));
+   OR2  XLXI_3 (.I0(XLXN_7), 
+               .I1(XLXN_16), 
+               .O(cnext));
+   XOR2  XLXI_6 (.I0(y), 
+                .I1(x), 
+                .O(XLXN_15));
+   XOR2  XLXI_7 (.I0(XLXN_15), 
+                .I1(cprev), 
+                .O(res));
+endmodule
+`timescale 1ns / 1ps
+
+module alu_sch_MUSER_toyProcessor_overall(sel, 
+                                          x, 
+                                          y, 
+                                          cnext, 
+                                          dataout);
+
+    input sel;
+    input [7:0] x;
+    input [7:0] y;
+   output cnext;
+   output [7:0] dataout;
+   
+   wire XLXN_35;
+   wire XLXN_37;
+   wire XLXN_38;
+   wire XLXN_39;
+   wire XLXN_42;
+   wire XLXN_43;
+   wire XLXN_44;
+   wire XLXN_54;
+   wire XLXN_56;
+   wire XLXN_58;
+   wire XLXN_60;
+   wire XLXN_62;
+   wire XLXN_64;
+   wire XLXN_66;
+   wire XLXN_68;
+   
+   fa_sch_MUSER_toyProcessor_overall  XLXI_1 (.cprev(XLXN_44), 
+                                             .x(x[7]), 
+                                             .y(XLXN_54), 
+                                             .cnext(cnext), 
+                                             .res(dataout[7]));
+   fa_sch_MUSER_toyProcessor_overall  XLXI_2 (.cprev(XLXN_39), 
+                                             .x(x[4]), 
+                                             .y(XLXN_58), 
+                                             .cnext(XLXN_42), 
+                                             .res(dataout[4]));
+   fa_sch_MUSER_toyProcessor_overall  XLXI_3 (.cprev(XLXN_43), 
+                                             .x(x[6]), 
+                                             .y(XLXN_56), 
+                                             .cnext(XLXN_44), 
+                                             .res(dataout[6]));
+   fa_sch_MUSER_toyProcessor_overall  XLXI_4 (.cprev(XLXN_42), 
+                                             .x(x[5]), 
+                                             .y(XLXN_60), 
+                                             .cnext(XLXN_43), 
+                                             .res(dataout[5]));
+   fa_sch_MUSER_toyProcessor_overall  XLXI_5 (.cprev(XLXN_38), 
+                                             .x(x[3]), 
+                                             .y(XLXN_62), 
+                                             .cnext(XLXN_39), 
+                                             .res(dataout[3]));
+   fa_sch_MUSER_toyProcessor_overall  XLXI_6 (.cprev(XLXN_37), 
+                                             .x(x[2]), 
+                                             .y(XLXN_64), 
+                                             .cnext(XLXN_38), 
+                                             .res(dataout[2]));
+   fa_sch_MUSER_toyProcessor_overall  XLXI_7 (.cprev(sel), 
+                                             .x(x[0]), 
+                                             .y(XLXN_68), 
+                                             .cnext(XLXN_35), 
+                                             .res(dataout[0]));
+   fa_sch_MUSER_toyProcessor_overall  XLXI_8 (.cprev(XLXN_35), 
+                                             .x(x[1]), 
+                                             .y(XLXN_66), 
+                                             .cnext(XLXN_37), 
+                                             .res(dataout[1]));
+   XOR2  XLXI_9 (.I0(sel), 
+                .I1(y[7]), 
+                .O(XLXN_54));
+   XOR2  XLXI_10 (.I0(sel), 
+                 .I1(y[6]), 
+                 .O(XLXN_56));
+   XOR2  XLXI_11 (.I0(sel), 
+                 .I1(y[5]), 
+                 .O(XLXN_60));
+   XOR2  XLXI_12 (.I0(sel), 
+                 .I1(y[4]), 
+                 .O(XLXN_58));
+   XOR2  XLXI_13 (.I0(sel), 
+                 .I1(y[3]), 
+                 .O(XLXN_62));
+   XOR2  XLXI_14 (.I0(sel), 
+                 .I1(y[2]), 
+                 .O(XLXN_64));
+   XOR2  XLXI_15 (.I0(sel), 
+                 .I1(y[1]), 
+                 .O(XLXN_66));
+   XOR2  XLXI_16 (.I0(sel), 
+                 .I1(y[0]), 
+                 .O(XLXN_68));
+endmodule
+`timescale 1ns / 1ps
+
+module ha_sch_MUSER_toyProcessor_overall(Ci, 
+                                         Xi, 
+                                         Cout, 
+                                         S);
+
+    input Ci;
+    input Xi;
+   output Cout;
+   output S;
+   
+   
+   AND2  XLXI_1 (.I0(Xi), 
+                .I1(Ci), 
+                .O(Cout));
+   XOR2  XLXI_2 (.I0(Xi), 
+                .I1(Ci), 
+                .O(S));
+endmodule
+`timescale 1ns / 1ps
+
+module ha8_sch_MUSER_toyProcessor_overall(HA_IN, 
+                                          HA_OUT);
+
+    input [7:0] HA_IN;
+   output [7:0] HA_OUT;
+   
+   wire XLXN_11;
+   wire XLXN_12;
+   wire XLXN_13;
+   wire XLXN_14;
+   wire XLXN_15;
+   wire XLXN_16;
+   
+   ha_sch_MUSER_toyProcessor_overall  XLXI_2 (.Ci(XLXN_16), 
+                                             .Xi(HA_IN[2]), 
+                                             .Cout(XLXN_15), 
+                                             .S(HA_OUT[2]));
+   ha_sch_MUSER_toyProcessor_overall  XLXI_3 (.Ci(HA_IN[0]), 
+                                             .Xi(HA_IN[1]), 
+                                             .Cout(XLXN_16), 
+                                             .S(HA_OUT[1]));
+   ha_sch_MUSER_toyProcessor_overall  XLXI_4 (.Ci(XLXN_13), 
+                                             .Xi(HA_IN[5]), 
+                                             .Cout(XLXN_12), 
+                                             .S(HA_OUT[5]));
+   ha_sch_MUSER_toyProcessor_overall  XLXI_5 (.Ci(XLXN_15), 
+                                             .Xi(HA_IN[3]), 
+                                             .Cout(XLXN_14), 
+                                             .S(HA_OUT[3]));
+   ha_sch_MUSER_toyProcessor_overall  XLXI_6 (.Ci(XLXN_14), 
+                                             .Xi(HA_IN[4]), 
+                                             .Cout(XLXN_13), 
+                                             .S(HA_OUT[4]));
+   ha_sch_MUSER_toyProcessor_overall  XLXI_7 (.Ci(XLXN_12), 
+                                             .Xi(HA_IN[6]), 
+                                             .Cout(XLXN_11), 
+                                             .S(HA_OUT[6]));
+   ha_sch_MUSER_toyProcessor_overall  XLXI_8 (.Ci(XLXN_11), 
+                                             .Xi(HA_IN[7]), 
+                                             .Cout(), 
+                                             .S(HA_OUT[7]));
+   INV  XLXI_9 (.I(HA_IN[0]), 
+               .O(HA_OUT[0]));
+endmodule
+`timescale 1ns / 1ps
+
+module reg_sch_MUSER_toyProcessor_overall(CLK, 
+                                          LOAD, 
+                                          REG_IN, 
+                                          RST, 
+                                          REG_OUT);
+
+    input CLK;
+    input LOAD;
+    input [7:0] REG_IN;
+    input RST;
+   output [7:0] REG_OUT;
+   
+   
+   FDRE #( .INIT(1'b0) ) XLXI_3 (.C(CLK), 
+                .CE(LOAD), 
+                .D(REG_IN[7]), 
+                .R(RST), 
+                .Q(REG_OUT[7]));
+   FDRE #( .INIT(1'b0) ) XLXI_5 (.C(CLK), 
+                .CE(LOAD), 
+                .D(REG_IN[6]), 
+                .R(RST), 
+                .Q(REG_OUT[6]));
+   FDRE #( .INIT(1'b0) ) XLXI_6 (.C(CLK), 
+                .CE(LOAD), 
+                .D(REG_IN[5]), 
+                .R(RST), 
+                .Q(REG_OUT[5]));
+   FDRE #( .INIT(1'b0) ) XLXI_7 (.C(CLK), 
+                .CE(LOAD), 
+                .D(REG_IN[4]), 
+                .R(RST), 
+                .Q(REG_OUT[4]));
+   FDRE #( .INIT(1'b0) ) XLXI_8 (.C(CLK), 
+                .CE(LOAD), 
+                .D(REG_IN[3]), 
+                .R(RST), 
+                .Q(REG_OUT[3]));
+   FDRE #( .INIT(1'b0) ) XLXI_9 (.C(CLK), 
+                .CE(LOAD), 
+                .D(REG_IN[2]), 
+                .R(RST), 
+                .Q(REG_OUT[2]));
+   FDRE #( .INIT(1'b0) ) XLXI_10 (.C(CLK), 
+                 .CE(LOAD), 
+                 .D(REG_IN[1]), 
+                 .R(RST), 
+                 .Q(REG_OUT[1]));
+   FDRE #( .INIT(1'b0) ) XLXI_11 (.C(CLK), 
+                 .CE(LOAD), 
+                 .D(REG_IN[0]), 
+                 .R(RST), 
+                 .Q(REG_OUT[0]));
+endmodule
+`timescale 1ns / 1ps
+
+module counter_sch_MUSER_toyProcessor_overall(CLK, 
+                                              COUNT, 
+                                              COUNT_IN, 
+                                              LOAD, 
+                                              RST, 
+                                              COUNT_OUT);
+
+    input CLK;
+    input COUNT;
+    input [7:0] COUNT_IN;
+    input LOAD;
+    input RST;
+   output [7:0] COUNT_OUT;
+   
+   wire XLXN_1;
+   wire XLXN_2;
+   wire XLXN_9;
+   wire [7:0] XLXN_11;
+   wire [7:0] XLXN_12;
+   wire [7:0] COUNT_OUT_DUMMY;
+   
+   assign COUNT_OUT[7:0] = COUNT_OUT_DUMMY[7:0];
+   reg_sch_MUSER_toyProcessor_overall  XLXI_1 (.CLK(CLK), 
+                                              .LOAD(XLXN_2), 
+                                              .REG_IN(XLXN_11[7:0]), 
+                                              .RST(RST), 
+                                              .REG_OUT(COUNT_OUT_DUMMY[7:0]));
+   ha8_sch_MUSER_toyProcessor_overall  XLXI_2 (.HA_IN(COUNT_OUT_DUMMY[7:0]), 
+                                              .HA_OUT(XLXN_12[7:0]));
+   mux8_sch_MUSER_toyProcessor_overall  XLXI_3 (.in0(COUNT_IN[7:0]), 
+                                               .in1(XLXN_12[7:0]), 
+                                               .sel(XLXN_1), 
+                                               .mux_out(XLXN_11[7:0]));
+   AND2  XLXI_4 (.I0(COUNT), 
+                .I1(XLXN_9), 
+                .O(XLXN_1));
+   OR2  XLXI_5 (.I0(COUNT), 
+               .I1(LOAD), 
+               .O(XLXN_2));
+   INV  XLXI_6 (.I(LOAD), 
+               .O(XLXN_9));
+endmodule
+`timescale 1ns / 1ps
+
+module Datapath_MUSER_toyProcessor_overall(ADDORSUB, 
+                                           CLK, 
+                                           CL_AC, 
+                                           CL_D, 
+                                           CL_IR, 
+                                           CL_PC, 
+                                           COUNT, 
+                                           DORPC, 
+                                           D_IN, 
+                                           LD_AC, 
+                                           LD_D, 
+                                           LD_IR, 
+                                           LD_PC, 
+                                           A, 
+                                           IR_OUT, 
+                                           REG_OUT, 
+                                           ZERO);
+
+    input ADDORSUB;
+    input CLK;
+    input CL_AC;
+    input CL_D;
+    input CL_IR;
+    input CL_PC;
+    input COUNT;
+    input DORPC;
+    input [7:0] D_IN;
+    input LD_AC;
+    input LD_D;
+    input LD_IR;
+    input LD_PC;
+   output [7:0] A;
+   output [7:0] IR_OUT;
+   output [7:0] REG_OUT;
+   output ZERO;
+   
+   wire [7:0] XLXN_2;
+   wire [7:0] XLXN_32;
+   wire [7:0] XLXN_39;
+   wire [7:0] REG_OUT_DUMMY;
+   
+   assign REG_OUT[7:0] = REG_OUT_DUMMY[7:0];
+   reg_sch_MUSER_toyProcessor_overall  XLXI_1 (.CLK(CLK), 
+                                              .LOAD(LD_D), 
+                                              .REG_IN(D_IN[7:0]), 
+                                              .RST(CL_D), 
+                                              .REG_OUT(XLXN_39[7:0]));
+   reg_sch_MUSER_toyProcessor_overall  XLXI_2 (.CLK(CLK), 
+                                              .LOAD(LD_IR), 
+                                              .REG_IN(D_IN[7:0]), 
+                                              .RST(CL_IR), 
+                                              .REG_OUT(IR_OUT[7:0]));
+   reg_sch_MUSER_toyProcessor_overall  XLXI_3 (.CLK(CLK), 
+                                              .LOAD(LD_AC), 
+                                              .REG_IN(XLXN_32[7:0]), 
+                                              .RST(CL_AC), 
+                                              .REG_OUT(REG_OUT_DUMMY[7:0]));
+   counter_sch_MUSER_toyProcessor_overall  XLXI_4 (.CLK(CLK), 
+                                                  .COUNT(COUNT), 
+                                                  .COUNT_IN(XLXN_39[7:0]), 
+                                                  .LOAD(LD_PC), 
+                                                  .RST(CL_PC), 
+                                                  .COUNT_OUT(XLXN_2[7:0]));
+   alu_sch_MUSER_toyProcessor_overall  XLXI_5 (.sel(ADDORSUB), 
+                                              .x(REG_OUT_DUMMY[7:0]), 
+                                              .y(XLXN_39[7:0]), 
+                                              .cnext(), 
+                                              .dataout(XLXN_32[7:0]));
+   toZERO_sch_MUSER_toyProcessor_overall  XLXI_7 (.zero_in(REG_OUT_DUMMY[7:0]), 
+                                                 .zero_out(ZERO));
+   mux8_sch_MUSER_toyProcessor_overall  XLXI_8 (.in0(XLXN_39[7:0]), 
+                                               .in1(XLXN_2[7:0]), 
+                                               .sel(DORPC), 
+                                               .mux_out(A[7:0]));
+endmodule
+`timescale 1ns / 1ps
+
+module controller_sch_MUSER_toyProcessor_overall(ADD, 
+                                                 BNZ, 
+                                                 CLK, 
+                                                 CLR, 
+                                                 Overflow, 
+                                                 RST, 
+                                                 STORE, 
+                                                 SUB, 
+                                                 ZERO, 
+                                                 ADDSUB, 
+                                                 CL, 
+                                                 CL_AC, 
+                                                 DORPC, 
+                                                 LD_AC, 
+                                                 LD_D, 
+                                                 LD_IR, 
+                                                 LD_PC, 
+                                                 MEM_EN, 
+                                                 PC_CNT, 
+                                                 RORW, 
+                                                 S0, 
+                                                 S1, 
+                                                 S2, 
+                                                 S3, 
+                                                 S4, 
+                                                 S5);
+
+    input ADD;
+    input BNZ;
+    input CLK;
+    input CLR;
+    input Overflow;
+    input RST;
+    input STORE;
+    input SUB;
+    input ZERO;
+   output ADDSUB;
+   output CL;
+   output CL_AC;
+   output DORPC;
+   output LD_AC;
+   output LD_D;
+   output LD_IR;
+   output LD_PC;
+   output MEM_EN;
+   output PC_CNT;
+   output RORW;
+   output S0;
+   output S1;
+   output S2;
+   output S3;
+   output S4;
+   output S5;
+   
+   wire XLXN_6;
+   wire XLXN_15;
+   wire XLXN_17;
+   wire XLXN_18;
+   wire XLXN_19;
+   wire XLXN_31;
+   wire XLXN_34;
+   wire XLXN_36;
+   wire XLXN_37;
+   wire XLXN_43;
+   wire XLXN_48;
+   wire XLXN_49;
+   wire XLXN_51;
+   wire XLXN_55;
+   wire CL_DUMMY;
+   wire S0_DUMMY;
+   wire S2_DUMMY;
+   wire S4_DUMMY;
+   wire LD_D_DUMMY;
+   wire LD_IR_DUMMY;
+   
+   assign CL = CL_DUMMY;
+   assign LD_D = LD_D_DUMMY;
+   assign LD_IR = LD_IR_DUMMY;
+   assign S0 = S0_DUMMY;
+   assign S2 = S2_DUMMY;
+   assign S4 = S4_DUMMY;
+   INV  XLXI_2 (.I(LD_IR_DUMMY), 
+               .O(XLXN_6));
+   INV  XLXI_3 (.I(XLXN_6), 
+               .O(S1));
+   OR2  XLXI_4 (.I0(SUB), 
+               .I1(ADD), 
+               .O(XLXN_43));
+   OR3  XLXI_5 (.I0(XLXN_18), 
+               .I1(STORE), 
+               .I2(XLXN_43), 
+               .O(XLXN_15));
+   AND2  XLXI_6 (.I0(XLXN_15), 
+                .I1(S4_DUMMY), 
+                .O(XLXN_34));
+   AND2  XLXI_7 (.I0(STORE), 
+                .I1(S4_DUMMY), 
+                .O(XLXN_31));
+   OR3  XLXI_8 (.I0(XLXN_31), 
+               .I1(LD_D_DUMMY), 
+               .I2(LD_IR_DUMMY), 
+               .O(MEM_EN));
+   OR2  XLXI_9 (.I0(XLXN_34), 
+               .I1(LD_IR_DUMMY), 
+               .O(PC_CNT));
+   OR2  XLXI_10 (.I0(XLXN_36), 
+                .I1(CL_DUMMY), 
+                .O(CL_AC));
+   AND2  XLXI_11 (.I0(CLR), 
+                 .I1(S2_DUMMY), 
+                 .O(XLXN_36));
+   AND2  XLXI_12 (.I0(SUB), 
+                 .I1(S4_DUMMY), 
+                 .O(ADDSUB));
+   AND2  XLXI_13 (.I0(XLXN_43), 
+                 .I1(S4_DUMMY), 
+                 .O(LD_AC));
+   AND2  XLXI_14 (.I0(S4_DUMMY), 
+                 .I1(STORE), 
+                 .O(XLXN_55));
+   AND3  XLXI_15 (.I0(BNZ), 
+                 .I1(ZERO), 
+                 .I2(S4_DUMMY), 
+                 .O(LD_PC));
+   INV  XLXI_16 (.I(LD_D_DUMMY), 
+                .O(XLXN_37));
+   INV  XLXI_17 (.I(XLXN_37), 
+                .O(S3));
+   INV  XLXI_18 (.I(XLXN_48), 
+                .O(DORPC));
+   INV  XLXI_19 (.I(RST), 
+                .O(XLXN_19));
+   INV  XLXI_20 (.I(XLXN_19), 
+                .O(CL_DUMMY));
+   AND2  XLXI_21 (.I0(BNZ), 
+                 .I1(XLXN_17), 
+                 .O(XLXN_18));
+   AND2  XLXI_22 (.I0(XLXN_51), 
+                 .I1(S4_DUMMY), 
+                 .O(XLXN_49));
+   OR2  XLXI_23 (.I0(STORE), 
+                .I1(BNZ), 
+                .O(XLXN_51));
+   OR2  XLXI_24 (.I0(XLXN_49), 
+                .I1(CL_DUMMY), 
+                .O(XLXN_48));
+   INV  XLXI_25 (.I(ZERO), 
+                .O(XLXN_17));
+   CONTROL  XLXI_26 (.CLK(CLK), 
+                    .CLR(CLR), 
+                    .Overflow(Overflow), 
+                    .RST(RST), 
+                    .S0(S0_DUMMY), 
+                    .S1(LD_IR_DUMMY), 
+                    .S2(S2_DUMMY), 
+                    .S3(LD_D_DUMMY), 
+                    .S4(S4_DUMMY), 
+                    .S5(S5));
+   OR2  XLXI_28 (.I0(S0_DUMMY), 
+                .I1(XLXN_55), 
+                .O(RORW));
+endmodule
+`timescale 1ns / 1ps
+
+module toy_sch_MUSER_toyProcessor_overall(CLK, 
+                                          D_IN, 
+                                          Overflow, 
+                                          RESET, 
+                                          ADDR, 
+                                          D_OUT, 
+                                          MEM_EN, 
+                                          RORW, 
+                                          S0, 
+                                          S1, 
+                                          S2, 
+                                          S3, 
+                                          S4, 
+                                          S5);
+
+    input CLK;
+    input [7:0] D_IN;
+    input Overflow;
+    input RESET;
+   output [7:0] ADDR;
+   output [7:0] D_OUT;
+   output MEM_EN;
+   output RORW;
+   output S0;
+   output S1;
+   output S2;
+   output S3;
+   output S4;
+   output S5;
+   
+   wire [7:0] IR;
+   wire XLXN_56;
+   wire XLXN_59;
+   wire XLXN_60;
+   wire XLXN_62;
+   wire XLXN_65;
+   wire XLXN_66;
+   wire XLXN_67;
+   wire XLXN_69;
+   wire XLXN_70;
+   wire XLXN_75;
+   
+   controller_sch_MUSER_toyProcessor_overall  XLXI_7 (.ADD(IR[0]), 
+                                                     .BNZ(IR[3]), 
+                                                     .CLK(CLK), 
+                                                     .CLR(IR[2]), 
+                                                     .Overflow(Overflow), 
+                                                     .RST(RESET), 
+                                                     .STORE(IR[4]), 
+                                                     .SUB(IR[1]), 
+                                                     .ZERO(XLXN_75), 
+                                                     .ADDSUB(XLXN_65), 
+                                                     .CL(XLXN_59), 
+                                                     .CL_AC(XLXN_56), 
+                                                     .DORPC(XLXN_69), 
+                                                     .LD_AC(XLXN_66), 
+                                                     .LD_D(XLXN_70), 
+                                                     .LD_IR(XLXN_62), 
+                                                     .LD_PC(XLXN_67), 
+                                                     .MEM_EN(MEM_EN), 
+                                                     .PC_CNT(XLXN_60), 
+                                                     .RORW(RORW), 
+                                                     .S0(S0), 
+                                                     .S1(S1), 
+                                                     .S2(S2), 
+                                                     .S3(S3), 
+                                                     .S4(S4), 
+                                                     .S5(S5));
+   Datapath_MUSER_toyProcessor_overall  XLXI_8 (.ADDORSUB(XLXN_65), 
+                                               .CLK(CLK), 
+                                               .CL_AC(XLXN_56), 
+                                               .CL_D(XLXN_59), 
+                                               .CL_IR(XLXN_59), 
+                                               .CL_PC(XLXN_59), 
+                                               .COUNT(XLXN_60), 
+                                               .DORPC(XLXN_69), 
+                                               .D_IN(D_IN[7:0]), 
+                                               .LD_AC(XLXN_66), 
+                                               .LD_D(XLXN_70), 
+                                               .LD_IR(XLXN_62), 
+                                               .LD_PC(XLXN_67), 
+                                               .A(ADDR[7:0]), 
+                                               .IR_OUT(IR[7:0]), 
+                                               .REG_OUT(D_OUT[7:0]), 
+                                               .ZERO(XLXN_75));
+endmodule
+`timescale 1ns / 1ps
+
+module AND8_MXILINX_toyProcessor_overall(I0, 
+                                         I1, 
+                                         I2, 
+                                         I3, 
+                                         I4, 
+                                         I5, 
+                                         I6, 
+                                         I7, 
+                                         O);
+
+    input I0;
+    input I1;
+    input I2;
+    input I3;
+    input I4;
+    input I5;
+    input I6;
+    input I7;
+   output O;
+   
+   wire dummy;
+   wire S0;
+   wire S1;
+   wire O_DUMMY;
+   
+   assign O = O_DUMMY;
+   (* RLOC = "X0Y0" *) 
+   FMAP  I_36_29 (.I1(I0), 
+                 .I2(I1), 
+                 .I3(I2), 
+                 .I4(I3), 
+                 .O(S0));
+   AND4  I_36_110 (.I0(I0), 
+                  .I1(I1), 
+                  .I2(I2), 
+                  .I3(I3), 
+                  .O(S0));
+   AND4  I_36_127 (.I0(I4), 
+                  .I1(I5), 
+                  .I2(I6), 
+                  .I3(I7), 
+                  .O(S1));
+   (* RLOC = "X0Y0" *) 
+   FMAP  I_36_138 (.I1(I4), 
+                  .I2(I5), 
+                  .I3(I6), 
+                  .I4(I7), 
+                  .O(S1));
+   AND2  I_36_142 (.I0(S0), 
+                  .I1(S1), 
+                  .O(O_DUMMY));
+   (* RLOC = "X0Y1" *) 
+   FMAP  I_36_152 (.I1(S0), 
+                  .I2(S1), 
+                  .I3(dummy), 
+                  .I4(dummy), 
+                  .O(O_DUMMY));
+endmodule
+`timescale 1ns / 1ps
+
+module OR8_MXILINX_toyProcessor_overall(I0, 
+                                        I1, 
+                                        I2, 
+                                        I3, 
+                                        I4, 
+                                        I5, 
+                                        I6, 
+                                        I7, 
+                                        O);
+
+    input I0;
+    input I1;
+    input I2;
+    input I3;
+    input I4;
+    input I5;
+    input I6;
+    input I7;
+   output O;
+   
+   wire dummy;
+   wire S0;
+   wire S1;
+   wire O_DUMMY;
+   
+   assign O = O_DUMMY;
+   (* RLOC = "X0Y1" *) 
+   FMAP  I_36_91 (.I1(S0), 
+                 .I2(S1), 
+                 .I3(dummy), 
+                 .I4(dummy), 
+                 .O(O_DUMMY));
+   OR2  I_36_94 (.I0(S0), 
+                .I1(S1), 
+                .O(O_DUMMY));
+   OR4  I_36_95 (.I0(I4), 
+                .I1(I5), 
+                .I2(I6), 
+                .I3(I7), 
+                .O(S1));
+   OR4  I_36_112 (.I0(I0), 
+                 .I1(I1), 
+                 .I2(I2), 
+                 .I3(I3), 
+                 .O(S0));
+   (* RLOC = "X0Y0" *) 
+   FMAP  I_36_116 (.I1(I0), 
+                  .I2(I1), 
+                  .I3(I2), 
+                  .I4(I3), 
+                  .O(S0));
+   (* RLOC = "X0Y0" *) 
+   FMAP  I_36_117 (.I1(I4), 
+                  .I2(I5), 
+                  .I3(I6), 
+                  .I4(I7), 
+                  .O(S1));
+endmodule
+`timescale 1ns / 1ps
+
+module enoutput8_sch_MUSER_toyProcessor_overall(MUXIN, 
+                                                SEL, 
+                                                MUXOUT0, 
+                                                MUXOUT1, 
+                                                MUXOUT2, 
+                                                MUXOUT3, 
+                                                MUXOUT4, 
+                                                MUXOUT5, 
+                                                MUXOUT6, 
+                                                MUXOUT7);
+
+    input [7:0] MUXIN;
+    input SEL;
+   output MUXOUT0;
+   output MUXOUT1;
+   output MUXOUT2;
+   output MUXOUT3;
+   output MUXOUT4;
+   output MUXOUT5;
+   output MUXOUT6;
+   output MUXOUT7;
+   
+   
+   AND2  XLXI_1 (.I0(MUXIN[7]), 
+                .I1(SEL), 
+                .O(MUXOUT7));
+   AND2  XLXI_2 (.I0(MUXIN[6]), 
+                .I1(SEL), 
+                .O(MUXOUT6));
+   AND2  XLXI_3 (.I0(SEL), 
+                .I1(MUXIN[5]), 
+                .O(MUXOUT5));
+   AND2  XLXI_4 (.I0(SEL), 
+                .I1(MUXIN[4]), 
+                .O(MUXOUT4));
+   AND2  XLXI_5 (.I0(SEL), 
+                .I1(MUXIN[3]), 
+                .O(MUXOUT3));
+   AND2  XLXI_6 (.I0(SEL), 
+                .I1(MUXIN[2]), 
+                .O(MUXOUT2));
+   AND2  XLXI_7 (.I0(SEL), 
+                .I1(MUXIN[1]), 
+                .O(MUXOUT1));
+   AND2  XLXI_8 (.I0(SEL), 
+                .I1(MUXIN[0]), 
+                .O(MUXOUT0));
+endmodule
+`timescale 1ns / 1ps
+
+module encode8_MUSER_toyProcessor_overall(S1, 
+                                          S2, 
+                                          S3, 
+                                          Out0, 
+                                          Out1, 
+                                          Out2, 
+                                          Out3, 
+                                          Out4, 
+                                          Out5, 
+                                          Out6, 
+                                          Out7);
+
+    input S1;
+    input S2;
+    input S3;
+   output Out0;
+   output Out1;
+   output Out2;
+   output Out3;
+   output Out4;
+   output Out5;
+   output Out6;
+   output Out7;
+   
+   wire SN1;
+   wire SN2;
+   wire SN3;
+   
+   INV  XLXI_22 (.I(S3), 
+                .O(SN3));
+   INV  XLXI_23 (.I(S2), 
+                .O(SN2));
+   INV  XLXI_24 (.I(S1), 
+                .O(SN1));
+   AND3  XLXI_25 (.I0(S1), 
+                 .I1(S2), 
+                 .I2(S3), 
+                 .O(Out7));
+   AND3  XLXI_26 (.I0(S1), 
+                 .I1(S2), 
+                 .I2(SN3), 
+                 .O(Out3));
+   AND3  XLXI_27 (.I0(S1), 
+                 .I1(SN2), 
+                 .I2(S3), 
+                 .O(Out5));
+   AND3  XLXI_28 (.I0(S2), 
+                 .I1(S3), 
+                 .I2(SN1), 
+                 .O(Out6));
+   AND3  XLXI_29 (.I0(SN3), 
+                 .I1(SN2), 
+                 .I2(S1), 
+                 .O(Out1));
+   AND3  XLXI_30 (.I0(SN1), 
+                 .I1(S2), 
+                 .I2(SN3), 
+                 .O(Out2));
+   AND3  XLXI_31 (.I0(SN1), 
+                 .I1(SN2), 
+                 .I2(S3), 
+                 .O(Out4));
+   AND3  XLXI_32 (.I0(SN3), 
+                 .I1(SN2), 
+                 .I2(SN1), 
+                 .O(Out0));
+endmodule
+`timescale 1ns / 1ps
+
+module bus8_mux_MUSER_toyProcessor_overall(DIN0, 
+                                           DIN1, 
+                                           DIN2, 
+                                           DIN3, 
+                                           DIN4, 
+                                           DIN5, 
+                                           DIN6, 
+                                           DIN7, 
+                                           S0, 
+                                           S1, 
+                                           S2, 
+                                           DOUT);
+
+    input [7:0] DIN0;
+    input [7:0] DIN1;
+    input [7:0] DIN2;
+    input [7:0] DIN3;
+    input [7:0] DIN4;
+    input [7:0] DIN5;
+    input [7:0] DIN6;
+    input [7:0] DIN7;
+    input S0;
+    input S1;
+    input S2;
+   output [7:0] DOUT;
+   
+   wire XLXN_9;
+   wire XLXN_10;
+   wire XLXN_59;
+   wire XLXN_60;
+   wire XLXN_62;
+   wire XLXN_63;
+   wire XLXN_64;
+   wire XLXN_65;
+   wire XLXN_66;
+   wire XLXN_67;
+   wire XLXN_68;
+   wire XLXN_69;
+   wire XLXN_75;
+   wire XLXN_76;
+   wire XLXN_77;
+   wire XLXN_78;
+   wire XLXN_90;
+   wire XLXN_91;
+   wire XLXN_92;
+   wire XLXN_93;
+   wire XLXN_94;
+   wire XLXN_95;
+   wire XLXN_96;
+   wire XLXN_97;
+   wire XLXN_98;
+   wire XLXN_99;
+   wire XLXN_100;
+   wire XLXN_101;
+   wire XLXN_102;
+   wire XLXN_103;
+   wire XLXN_104;
+   wire XLXN_105;
+   wire XLXN_106;
+   wire XLXN_107;
+   wire XLXN_108;
+   wire XLXN_109;
+   wire XLXN_110;
+   wire XLXN_111;
+   wire XLXN_112;
+   wire XLXN_113;
+   wire XLXN_114;
+   wire XLXN_116;
+   wire XLXN_118;
+   wire XLXN_119;
+   wire XLXN_120;
+   wire XLXN_121;
+   wire XLXN_122;
+   wire XLXN_123;
+   wire XLXN_124;
+   wire XLXN_125;
+   wire XLXN_126;
+   wire XLXN_127;
+   wire XLXN_128;
+   wire XLXN_129;
+   wire XLXN_130;
+   wire XLXN_131;
+   wire XLXN_133;
+   wire XLXN_134;
+   wire XLXN_135;
+   wire XLXN_136;
+   wire XLXN_137;
+   wire XLXN_138;
+   wire XLXN_139;
+   wire XLXN_140;
+   wire XLXN_143;
+   wire XLXN_151;
+   wire XLXN_154;
+   wire XLXN_156;
+   wire XLXN_157;
+   wire XLXN_158;
+   wire XLXN_160;
+   wire XLXN_161;
+   
+   encode8_MUSER_toyProcessor_overall  XLXI_1 (.S1(S0), 
+                                              .S2(S1), 
+                                              .S3(S2), 
+                                              .Out0(XLXN_65), 
+                                              .Out1(XLXN_63), 
+                                              .Out2(XLXN_64), 
+                                              .Out3(XLXN_10), 
+                                              .Out4(XLXN_62), 
+                                              .Out5(XLXN_60), 
+                                              .Out6(XLXN_59), 
+                                              .Out7(XLXN_9));
+   enoutput8_sch_MUSER_toyProcessor_overall  XLXI_14 (.MUXIN(DIN7[7:0]), 
+                                                     .SEL(XLXN_9), 
+                                                     .MUXOUT0(XLXN_66), 
+                                                     .MUXOUT1(XLXN_90), 
+                                                     .MUXOUT2(XLXN_98), 
+                                                     .MUXOUT3(XLXN_106), 
+                                                     .MUXOUT4(XLXN_114), 
+                                                     .MUXOUT5(XLXN_124), 
+                                                     .MUXOUT6(XLXN_133), 
+                                                     .MUXOUT7(XLXN_143));
+   enoutput8_sch_MUSER_toyProcessor_overall  XLXI_15 (.MUXIN(DIN6[7:0]), 
+                                                     .SEL(XLXN_59), 
+                                                     .MUXOUT0(XLXN_67), 
+                                                     .MUXOUT1(XLXN_91), 
+                                                     .MUXOUT2(XLXN_99), 
+                                                     .MUXOUT3(XLXN_107), 
+                                                     .MUXOUT4(XLXN_116), 
+                                                     .MUXOUT5(XLXN_125), 
+                                                     .MUXOUT6(XLXN_134), 
+                                                     .MUXOUT7(XLXN_151));
+   enoutput8_sch_MUSER_toyProcessor_overall  XLXI_16 (.MUXIN(DIN5[7:0]), 
+                                                     .SEL(XLXN_60), 
+                                                     .MUXOUT0(XLXN_68), 
+                                                     .MUXOUT1(XLXN_92), 
+                                                     .MUXOUT2(XLXN_100), 
+                                                     .MUXOUT3(XLXN_108), 
+                                                     .MUXOUT4(XLXN_118), 
+                                                     .MUXOUT5(XLXN_126), 
+                                                     .MUXOUT6(XLXN_135), 
+                                                     .MUXOUT7(XLXN_154));
+   enoutput8_sch_MUSER_toyProcessor_overall  XLXI_18 (.MUXIN(DIN4[7:0]), 
+                                                     .SEL(XLXN_62), 
+                                                     .MUXOUT0(XLXN_69), 
+                                                     .MUXOUT1(XLXN_93), 
+                                                     .MUXOUT2(XLXN_101), 
+                                                     .MUXOUT3(XLXN_109), 
+                                                     .MUXOUT4(XLXN_119), 
+                                                     .MUXOUT5(XLXN_127), 
+                                                     .MUXOUT6(XLXN_136), 
+                                                     .MUXOUT7(XLXN_156));
+   enoutput8_sch_MUSER_toyProcessor_overall  XLXI_19 (.MUXIN(DIN2[7:0]), 
+                                                     .SEL(XLXN_64), 
+                                                     .MUXOUT0(XLXN_76), 
+                                                     .MUXOUT1(XLXN_95), 
+                                                     .MUXOUT2(XLXN_103), 
+                                                     .MUXOUT3(XLXN_111), 
+                                                     .MUXOUT4(XLXN_121), 
+                                                     .MUXOUT5(XLXN_129), 
+                                                     .MUXOUT6(XLXN_138), 
+                                                     .MUXOUT7(XLXN_160));
+   enoutput8_sch_MUSER_toyProcessor_overall  XLXI_20 (.MUXIN(DIN1[7:0]), 
+                                                     .SEL(XLXN_63), 
+                                                     .MUXOUT0(XLXN_77), 
+                                                     .MUXOUT1(XLXN_96), 
+                                                     .MUXOUT2(XLXN_104), 
+                                                     .MUXOUT3(XLXN_112), 
+                                                     .MUXOUT4(XLXN_122), 
+                                                     .MUXOUT5(XLXN_130), 
+                                                     .MUXOUT6(XLXN_139), 
+                                                     .MUXOUT7(XLXN_158));
+   enoutput8_sch_MUSER_toyProcessor_overall  XLXI_21 (.MUXIN(DIN0[7:0]), 
+                                                     .SEL(XLXN_65), 
+                                                     .MUXOUT0(XLXN_78), 
+                                                     .MUXOUT1(XLXN_97), 
+                                                     .MUXOUT2(XLXN_105), 
+                                                     .MUXOUT3(XLXN_113), 
+                                                     .MUXOUT4(XLXN_123), 
+                                                     .MUXOUT5(XLXN_131), 
+                                                     .MUXOUT6(XLXN_140), 
+                                                     .MUXOUT7(XLXN_157));
+   enoutput8_sch_MUSER_toyProcessor_overall  XLXI_22 (.MUXIN(DIN3[7:0]), 
+                                                     .SEL(XLXN_10), 
+                                                     .MUXOUT0(XLXN_75), 
+                                                     .MUXOUT1(XLXN_94), 
+                                                     .MUXOUT2(XLXN_102), 
+                                                     .MUXOUT3(XLXN_110), 
+                                                     .MUXOUT4(XLXN_120), 
+                                                     .MUXOUT5(XLXN_128), 
+                                                     .MUXOUT6(XLXN_137), 
+                                                     .MUXOUT7(XLXN_161));
+   (* HU_SET = "XLXI_34_154" *) 
+   OR8_MXILINX_toyProcessor_overall  XLXI_34 (.I0(XLXN_78), 
+                                             .I1(XLXN_77), 
+                                             .I2(XLXN_76), 
+                                             .I3(XLXN_75), 
+                                             .I4(XLXN_69), 
+                                             .I5(XLXN_68), 
+                                             .I6(XLXN_67), 
+                                             .I7(XLXN_66), 
+                                             .O(DOUT[0]));
+   (* HU_SET = "XLXI_38_155" *) 
+   OR8_MXILINX_toyProcessor_overall  XLXI_38 (.I0(XLXN_97), 
+                                             .I1(XLXN_96), 
+                                             .I2(XLXN_95), 
+                                             .I3(XLXN_94), 
+                                             .I4(XLXN_93), 
+                                             .I5(XLXN_92), 
+                                             .I6(XLXN_91), 
+                                             .I7(XLXN_90), 
+                                             .O(DOUT[1]));
+   (* HU_SET = "XLXI_39_156" *) 
+   OR8_MXILINX_toyProcessor_overall  XLXI_39 (.I0(XLXN_105), 
+                                             .I1(XLXN_104), 
+                                             .I2(XLXN_103), 
+                                             .I3(XLXN_102), 
+                                             .I4(XLXN_101), 
+                                             .I5(XLXN_100), 
+                                             .I6(XLXN_99), 
+                                             .I7(XLXN_98), 
+                                             .O(DOUT[2]));
+   (* HU_SET = "XLXI_40_157" *) 
+   OR8_MXILINX_toyProcessor_overall  XLXI_40 (.I0(XLXN_113), 
+                                             .I1(XLXN_112), 
+                                             .I2(XLXN_111), 
+                                             .I3(XLXN_110), 
+                                             .I4(XLXN_109), 
+                                             .I5(XLXN_108), 
+                                             .I6(XLXN_107), 
+                                             .I7(XLXN_106), 
+                                             .O(DOUT[3]));
+   (* HU_SET = "XLXI_41_158" *) 
+   OR8_MXILINX_toyProcessor_overall  XLXI_41 (.I0(XLXN_123), 
+                                             .I1(XLXN_122), 
+                                             .I2(XLXN_121), 
+                                             .I3(XLXN_120), 
+                                             .I4(XLXN_119), 
+                                             .I5(XLXN_118), 
+                                             .I6(XLXN_116), 
+                                             .I7(XLXN_114), 
+                                             .O(DOUT[4]));
+   (* HU_SET = "XLXI_42_159" *) 
+   OR8_MXILINX_toyProcessor_overall  XLXI_42 (.I0(XLXN_131), 
+                                             .I1(XLXN_130), 
+                                             .I2(XLXN_129), 
+                                             .I3(XLXN_128), 
+                                             .I4(XLXN_127), 
+                                             .I5(XLXN_126), 
+                                             .I6(XLXN_125), 
+                                             .I7(XLXN_124), 
+                                             .O(DOUT[5]));
+   (* HU_SET = "XLXI_43_160" *) 
+   OR8_MXILINX_toyProcessor_overall  XLXI_43 (.I0(XLXN_140), 
+                                             .I1(XLXN_139), 
+                                             .I2(XLXN_138), 
+                                             .I3(XLXN_137), 
+                                             .I4(XLXN_136), 
+                                             .I5(XLXN_135), 
+                                             .I6(XLXN_134), 
+                                             .I7(XLXN_133), 
+                                             .O(DOUT[6]));
+   (* HU_SET = "XLXI_44_161" *) 
+   OR8_MXILINX_toyProcessor_overall  XLXI_44 (.I0(XLXN_157), 
+                                             .I1(XLXN_158), 
+                                             .I2(XLXN_160), 
+                                             .I3(XLXN_161), 
+                                             .I4(XLXN_156), 
+                                             .I5(XLXN_154), 
+                                             .I6(XLXN_151), 
+                                             .I7(XLXN_143), 
+                                             .O(DOUT[7]));
+endmodule
+`timescale 1ns / 1ps
+
+module RAM_array_MUSER_toyProcessor_overall(ADDR, 
+                                            CLK, 
+                                            DATA_IN, 
+                                            WE, 
+                                            DATA_OUT1);
+
+    input [7:0] ADDR;
+    input CLK;
+    input [7:0] DATA_IN;
+    input WE;
+   output [0:7] DATA_OUT1;
+   
+   wire XLXN_1;
+   wire XLXN_2;
+   wire XLXN_3;
+   wire XLXN_4;
+   wire XLXN_8;
+   wire XLXN_10;
+   wire XLXN_11;
+   wire XLXN_12;
+   wire [7:0] XLXN_13;
+   wire [7:0] XLXN_14;
+   wire [7:0] XLXN_15;
+   wire [7:0] XLXN_16;
+   wire [7:0] XLXN_17;
+   wire [7:0] XLXN_18;
+   wire [7:0] XLXN_19;
+   wire [7:0] XLXN_20;
+   
+   RAM32X8S #( .INIT_00(32'h00000000), .INIT_01(32'h00000000), 
+         .INIT_02(32'h00000000), .INIT_03(32'h00000000), 
+         .INIT_04(32'h00000000), .INIT_05(32'h00000000), 
+         .INIT_06(32'h00000000), .INIT_07(32'h00000000) ) XLXI_1 (.A0(ADDR[0]), 
+                    .A1(ADDR[1]), 
+                    .A2(ADDR[2]), 
+                    .A3(ADDR[3]), 
+                    .A4(ADDR[4]), 
+                    .D(DATA_IN[7:0]), 
+                    .WCLK(CLK), 
+                    .WE(XLXN_1), 
+                    .O(XLXN_13[7:0]));
+   RAM32X8S #( .INIT_00(32'h00000000), .INIT_01(32'h00000000), 
+         .INIT_02(32'h00000000), .INIT_03(32'h00000000), 
+         .INIT_04(32'h00000000), .INIT_05(32'h00000000), 
+         .INIT_06(32'h00000000), .INIT_07(32'h00000000) ) XLXI_2 (.A0(ADDR[0]), 
+                    .A1(ADDR[1]), 
+                    .A2(ADDR[2]), 
+                    .A3(ADDR[3]), 
+                    .A4(ADDR[4]), 
+                    .D(DATA_IN[7:0]), 
+                    .WCLK(CLK), 
+                    .WE(XLXN_2), 
+                    .O(XLXN_14[7:0]));
+   AND4B3  XLXI_9 (.I0(ADDR[7]), 
+                  .I1(ADDR[6]), 
+                  .I2(ADDR[5]), 
+                  .I3(WE), 
+                  .O(XLXN_1));
+   RAM32X8S #( .INIT_00(32'h00000000), .INIT_01(32'h00000000), 
+         .INIT_02(32'h00000000), .INIT_03(32'h00000000), 
+         .INIT_04(32'h00000000), .INIT_05(32'h00000000), 
+         .INIT_06(32'h00000000), .INIT_07(32'h00000000) ) XLXI_11 
+         (.A0(ADDR[0]), 
+                     .A1(ADDR[1]), 
+                     .A2(ADDR[2]), 
+                     .A3(ADDR[3]), 
+                     .A4(ADDR[4]), 
+                     .D(DATA_IN[7:0]), 
+                     .WCLK(CLK), 
+                     .WE(XLXN_3), 
+                     .O(XLXN_15[7:0]));
+   RAM32X8S #( .INIT_00(32'h00000000), .INIT_01(32'h00000000), 
+         .INIT_02(32'h00000000), .INIT_03(32'h00000000), 
+         .INIT_04(32'h00000000), .INIT_05(32'h00000000), 
+         .INIT_06(32'h00000000), .INIT_07(32'h00000000) ) XLXI_12 
+         (.A0(ADDR[0]), 
+                     .A1(ADDR[1]), 
+                     .A2(ADDR[2]), 
+                     .A3(ADDR[3]), 
+                     .A4(ADDR[4]), 
+                     .D(DATA_IN[7:0]), 
+                     .WCLK(CLK), 
+                     .WE(XLXN_4), 
+                     .O(XLXN_16[7:0]));
+   RAM32X8S #( .INIT_00(32'h00000000), .INIT_01(32'h00000000), 
+         .INIT_02(32'h00000000), .INIT_03(32'h00000000), 
+         .INIT_04(32'h00000000), .INIT_05(32'h00000000), 
+         .INIT_06(32'h00000000), .INIT_07(32'h00000000) ) XLXI_15 
+         (.A0(ADDR[0]), 
+                     .A1(ADDR[1]), 
+                     .A2(ADDR[2]), 
+                     .A3(ADDR[3]), 
+                     .A4(ADDR[4]), 
+                     .D(DATA_IN[7:0]), 
+                     .WCLK(CLK), 
+                     .WE(XLXN_10), 
+                     .O(XLXN_17[7:0]));
+   RAM32X8S #( .INIT_00(32'h00000000), .INIT_01(32'h00000000), 
+         .INIT_02(32'h00000000), .INIT_03(32'h00000000), 
+         .INIT_04(32'h00000000), .INIT_05(32'h00000000), 
+         .INIT_06(32'h00000000), .INIT_07(32'h00000000) ) XLXI_16 
+         (.A0(ADDR[0]), 
+                     .A1(ADDR[1]), 
+                     .A2(ADDR[2]), 
+                     .A3(ADDR[3]), 
+                     .A4(ADDR[4]), 
+                     .D(DATA_IN[7:0]), 
+                     .WCLK(CLK), 
+                     .WE(XLXN_11), 
+                     .O(XLXN_18[7:0]));
+   RAM32X8S #( .INIT_00(32'h00000000), .INIT_01(32'h00000000), 
+         .INIT_02(32'h00000000), .INIT_03(32'h00000000), 
+         .INIT_04(32'h00000000), .INIT_05(32'h00000000), 
+         .INIT_06(32'h00000000), .INIT_07(32'h00000000) ) XLXI_19 
+         (.A0(ADDR[0]), 
+                     .A1(ADDR[1]), 
+                     .A2(ADDR[2]), 
+                     .A3(ADDR[3]), 
+                     .A4(ADDR[4]), 
+                     .D(DATA_IN[7:0]), 
+                     .WCLK(CLK), 
+                     .WE(XLXN_12), 
+                     .O(XLXN_19[7:0]));
+   RAM32X8S #( .INIT_00(32'h00000000), .INIT_01(32'h00000000), 
+         .INIT_02(32'h00000000), .INIT_03(32'h00000000), 
+         .INIT_04(32'h00000000), .INIT_05(32'h00000000), 
+         .INIT_06(32'h00000000), .INIT_07(32'h00000000) ) XLXI_20 
+         (.A0(ADDR[0]), 
+                     .A1(ADDR[1]), 
+                     .A2(ADDR[2]), 
+                     .A3(ADDR[3]), 
+                     .A4(ADDR[4]), 
+                     .D(DATA_IN[7:0]), 
+                     .WCLK(CLK), 
+                     .WE(XLXN_8), 
+                     .O(XLXN_20[7:0]));
+   AND4B2  XLXI_23 (.I0(ADDR[7]), 
+                   .I1(ADDR[6]), 
+                   .I2(ADDR[5]), 
+                   .I3(WE), 
+                   .O(XLXN_2));
+   AND4B2  XLXI_24 (.I0(ADDR[7]), 
+                   .I1(ADDR[5]), 
+                   .I2(ADDR[6]), 
+                   .I3(WE), 
+                   .O(XLXN_3));
+   AND4B1  XLXI_25 (.I0(ADDR[7]), 
+                   .I1(ADDR[6]), 
+                   .I2(ADDR[5]), 
+                   .I3(WE), 
+                   .O(XLXN_4));
+   AND4B1  XLXI_27 (.I0(ADDR[5]), 
+                   .I1(ADDR[6]), 
+                   .I2(ADDR[7]), 
+                   .I3(WE), 
+                   .O(XLXN_12));
+   AND4B1  XLXI_28 (.I0(ADDR[6]), 
+                   .I1(ADDR[7]), 
+                   .I2(ADDR[5]), 
+                   .I3(WE), 
+                   .O(XLXN_11));
+   AND4B2  XLXI_29 (.I0(ADDR[6]), 
+                   .I1(ADDR[5]), 
+                   .I2(ADDR[7]), 
+                   .I3(WE), 
+                   .O(XLXN_10));
+   bus8_mux_MUSER_toyProcessor_overall  XLXI_30 (.DIN0(XLXN_13[7:0]), 
+                                                .DIN1(XLXN_14[7:0]), 
+                                                .DIN2(XLXN_15[7:0]), 
+                                                .DIN3(XLXN_16[7:0]), 
+                                                .DIN4(XLXN_17[7:0]), 
+                                                .DIN5(XLXN_18[7:0]), 
+                                                .DIN6(XLXN_19[7:0]), 
+                                                .DIN7(XLXN_20[7:0]), 
+                                                .S0(ADDR[5]), 
+                                                .S1(ADDR[6]), 
+                                                .S2(ADDR[7]), 
+                                                .DOUT(DATA_OUT1[0:7]));
+   AND4  XLXI_48 (.I0(ADDR[7]), 
+                 .I1(ADDR[6]), 
+                 .I2(ADDR[5]), 
+                 .I3(WE), 
+                 .O(XLXN_8));
+endmodule
+`timescale 1ns / 1ps
+
+module ROM_array_MUSER_toyProcessor_overall(ADDR, 
+                                            DATA_OUT);
+
+    input [7:0] ADDR;
+   output [7:0] DATA_OUT;
+   
+   wire [7:0] A1;
+   wire [7:0] A2;
+   wire [7:0] A3;
+   wire [7:0] A4;
+   wire [7:0] A5;
+   wire [7:0] A6;
+   wire [7:0] A7;
+   wire [7:0] A8;
+   
+   ROM32X1 #( .INIT(32'h00000912) ) ROM11 (.A0(ADDR[0]), 
+                  .A1(ADDR[1]), 
+                  .A2(ADDR[2]), 
+                  .A3(ADDR[3]), 
+                  .A4(ADDR[4]), 
+                  .O(A1[7]));
+   ROM32X1 #( .INIT(32'h00000910) ) ROM12 (.A0(ADDR[0]), 
+                  .A1(ADDR[1]), 
+                  .A2(ADDR[2]), 
+                  .A3(ADDR[3]), 
+                  .A4(ADDR[4]), 
+                  .O(A1[6]));
+   ROM32X1 #( .INIT(32'h00000912) ) ROM13 (.A0(ADDR[0]), 
+                  .A1(ADDR[1]), 
+                  .A2(ADDR[2]), 
+                  .A3(ADDR[3]), 
+                  .A4(ADDR[4]), 
+                  .O(A1[5]));
+   ROM32X1 #( .INIT(32'h00000990) ) ROM14 (.A0(ADDR[0]), 
+                  .A1(ADDR[1]), 
+                  .A2(ADDR[2]), 
+                  .A3(ADDR[3]), 
+                  .A4(ADDR[4]), 
+                  .O(A1[4]));
+   ROM32X1 #( .INIT(32'h00000D12) ) ROM15 (.A0(ADDR[0]), 
+                  .A1(ADDR[1]), 
+                  .A2(ADDR[2]), 
+                  .A3(ADDR[3]), 
+                  .A4(ADDR[4]), 
+                  .O(A1[3]));
+   ROM32X1 #( .INIT(32'h00000B14) ) ROM16 (.A0(ADDR[0]), 
+                  .A1(ADDR[1]), 
+                  .A2(ADDR[2]), 
+                  .A3(ADDR[3]), 
+                  .A4(ADDR[4]), 
+                  .O(A1[2]));
+   ROM32X1 #( .INIT(32'h00000932) ) ROM17 (.A0(ADDR[0]), 
+                  .A1(ADDR[1]), 
+                  .A2(ADDR[2]), 
+                  .A3(ADDR[3]), 
+                  .A4(ADDR[4]), 
+                  .O(A1[1]));
+   ROM32X1 #( .INIT(32'h00000149) ) ROM18 (.A0(ADDR[0]), 
+                  .A1(ADDR[1]), 
+                  .A2(ADDR[2]), 
+                  .A3(ADDR[3]), 
+                  .A4(ADDR[4]), 
+                  .O(A1[0]));
+   ROM32X1 #( .INIT(32'h00000000) ) ROM21 (.A0(ADDR[0]), 
+                  .A1(ADDR[1]), 
+                  .A2(ADDR[2]), 
+                  .A3(ADDR[3]), 
+                  .A4(ADDR[4]), 
+                  .O(A2[7]));
+   ROM32X1 #( .INIT(32'h00000000) ) ROM22 (.A0(ADDR[0]), 
+                  .A1(ADDR[1]), 
+                  .A2(ADDR[2]), 
+                  .A3(ADDR[3]), 
+                  .A4(ADDR[4]), 
+                  .O(A2[6]));
+   ROM32X1 #( .INIT(32'h00000000) ) ROM23 (.A0(ADDR[0]), 
+                  .A1(ADDR[1]), 
+                  .A2(ADDR[2]), 
+                  .A3(ADDR[3]), 
+                  .A4(ADDR[4]), 
+                  .O(A2[5]));
+   ROM32X1 #( .INIT(32'h00000000) ) ROM24 (.A0(ADDR[0]), 
+                  .A1(ADDR[1]), 
+                  .A2(ADDR[2]), 
+                  .A3(ADDR[3]), 
+                  .A4(ADDR[4]), 
+                  .O(A2[4]));
+   ROM32X1 #( .INIT(32'h00000000) ) ROM25 (.A0(ADDR[0]), 
+                  .A1(ADDR[1]), 
+                  .A2(ADDR[2]), 
+                  .A3(ADDR[3]), 
+                  .A4(ADDR[4]), 
+                  .O(A2[3]));
+   ROM32X1 #( .INIT(32'h00000000) ) ROM26 (.A0(ADDR[0]), 
+                  .A1(ADDR[1]), 
+                  .A2(ADDR[2]), 
+                  .A3(ADDR[3]), 
+                  .A4(ADDR[4]), 
+                  .O(A2[2]));
+   ROM32X1 #( .INIT(32'h00000000) ) ROM27 (.A0(ADDR[0]), 
+                  .A1(ADDR[1]), 
+                  .A2(ADDR[2]), 
+                  .A3(ADDR[3]), 
+                  .A4(ADDR[4]), 
+                  .O(A2[1]));
+   ROM32X1 #( .INIT(32'h00000000) ) ROM28 (.A0(ADDR[0]), 
+                  .A1(ADDR[1]), 
+                  .A2(ADDR[2]), 
+                  .A3(ADDR[3]), 
+                  .A4(ADDR[4]), 
+                  .O(A2[0]));
+   ROM32X1 #( .INIT(32'h00000000) ) ROM31 (.A0(ADDR[0]), 
+                  .A1(ADDR[1]), 
+                  .A2(ADDR[2]), 
+                  .A3(ADDR[3]), 
+                  .A4(ADDR[4]), 
+                  .O(A3[7]));
+   ROM32X1 #( .INIT(32'h00000000) ) ROM32 (.A0(ADDR[0]), 
+                  .A1(ADDR[1]), 
+                  .A2(ADDR[2]), 
+                  .A3(ADDR[3]), 
+                  .A4(ADDR[4]), 
+                  .O(A3[6]));
+   ROM32X1 #( .INIT(32'h00000000) ) ROM33 (.A0(ADDR[0]), 
+                  .A1(ADDR[1]), 
+                  .A2(ADDR[2]), 
+                  .A3(ADDR[3]), 
+                  .A4(ADDR[4]), 
+                  .O(A3[5]));
+   ROM32X1 #( .INIT(32'h00000000) ) ROM34 (.A0(ADDR[0]), 
+                  .A1(ADDR[1]), 
+                  .A2(ADDR[2]), 
+                  .A3(ADDR[3]), 
+                  .A4(ADDR[4]), 
+                  .O(A3[4]));
+   ROM32X1 #( .INIT(32'h00000000) ) ROM35 (.A0(ADDR[0]), 
+                  .A1(ADDR[1]), 
+                  .A2(ADDR[2]), 
+                  .A3(ADDR[3]), 
+                  .A4(ADDR[4]), 
+                  .O(A3[3]));
+   ROM32X1 #( .INIT(32'h00000000) ) ROM36 (.A0(ADDR[0]), 
+                  .A1(ADDR[1]), 
+                  .A2(ADDR[2]), 
+                  .A3(ADDR[3]), 
+                  .A4(ADDR[4]), 
+                  .O(A3[2]));
+   ROM32X1 #( .INIT(32'h00000000) ) ROM37 (.A0(ADDR[0]), 
+                  .A1(ADDR[1]), 
+                  .A2(ADDR[2]), 
+                  .A3(ADDR[3]), 
+                  .A4(ADDR[4]), 
+                  .O(A3[1]));
+   ROM32X1 #( .INIT(32'h00000000) ) ROM38 (.A0(ADDR[0]), 
+                  .A1(ADDR[1]), 
+                  .A2(ADDR[2]), 
+                  .A3(ADDR[3]), 
+                  .A4(ADDR[4]), 
+                  .O(A3[0]));
+   ROM32X1 #( .INIT(32'h00000000) ) ROM41 (.A0(ADDR[0]), 
+                  .A1(ADDR[1]), 
+                  .A2(ADDR[2]), 
+                  .A3(ADDR[3]), 
+                  .A4(ADDR[4]), 
+                  .O(A4[7]));
+   ROM32X1 #( .INIT(32'h00000000) ) ROM42 (.A0(ADDR[0]), 
+                  .A1(ADDR[1]), 
+                  .A2(ADDR[2]), 
+                  .A3(ADDR[3]), 
+                  .A4(ADDR[4]), 
+                  .O(A4[6]));
+   ROM32X1 #( .INIT(32'h00000000) ) ROM43 (.A0(ADDR[0]), 
+                  .A1(ADDR[1]), 
+                  .A2(ADDR[2]), 
+                  .A3(ADDR[3]), 
+                  .A4(ADDR[4]), 
+                  .O(A4[5]));
+   ROM32X1 #( .INIT(32'h00000000) ) ROM44 (.A0(ADDR[0]), 
+                  .A1(ADDR[1]), 
+                  .A2(ADDR[2]), 
+                  .A3(ADDR[3]), 
+                  .A4(ADDR[4]), 
+                  .O(A4[4]));
+   ROM32X1 #( .INIT(32'h00000000) ) ROM45 (.A0(ADDR[0]), 
+                  .A1(ADDR[1]), 
+                  .A2(ADDR[2]), 
+                  .A3(ADDR[3]), 
+                  .A4(ADDR[4]), 
+                  .O(A4[3]));
+   ROM32X1 #( .INIT(32'h00000000) ) ROM46 (.A0(ADDR[0]), 
+                  .A1(ADDR[1]), 
+                  .A2(ADDR[2]), 
+                  .A3(ADDR[3]), 
+                  .A4(ADDR[4]), 
+                  .O(A4[2]));
+   ROM32X1 #( .INIT(32'h00000000) ) ROM47 (.A0(ADDR[0]), 
+                  .A1(ADDR[1]), 
+                  .A2(ADDR[2]), 
+                  .A3(ADDR[3]), 
+                  .A4(ADDR[4]), 
+                  .O(A4[1]));
+   ROM32X1 #( .INIT(32'h00000000) ) ROM48 (.A0(ADDR[0]), 
+                  .A1(ADDR[1]), 
+                  .A2(ADDR[2]), 
+                  .A3(ADDR[3]), 
+                  .A4(ADDR[4]), 
+                  .O(A4[0]));
+   ROM32X1 #( .INIT(32'h00000000) ) ROM51 (.A0(ADDR[0]), 
+                  .A1(ADDR[1]), 
+                  .A2(ADDR[2]), 
+                  .A3(ADDR[3]), 
+                  .A4(ADDR[4]), 
+                  .O(A5[7]));
+   ROM32X1 #( .INIT(32'h00000000) ) ROM52 (.A0(ADDR[0]), 
+                  .A1(ADDR[1]), 
+                  .A2(ADDR[2]), 
+                  .A3(ADDR[3]), 
+                  .A4(ADDR[4]), 
+                  .O(A5[6]));
+   ROM32X1 #( .INIT(32'h00000000) ) ROM53 (.A0(ADDR[0]), 
+                  .A1(ADDR[1]), 
+                  .A2(ADDR[2]), 
+                  .A3(ADDR[3]), 
+                  .A4(ADDR[4]), 
+                  .O(A5[5]));
+   ROM32X1 #( .INIT(32'h00000000) ) ROM54 (.A0(ADDR[0]), 
+                  .A1(ADDR[1]), 
+                  .A2(ADDR[2]), 
+                  .A3(ADDR[3]), 
+                  .A4(ADDR[4]), 
+                  .O(A5[4]));
+   ROM32X1 #( .INIT(32'h00000000) ) ROM55 (.A0(ADDR[0]), 
+                  .A1(ADDR[1]), 
+                  .A2(ADDR[2]), 
+                  .A3(ADDR[3]), 
+                  .A4(ADDR[4]), 
+                  .O(A5[3]));
+   ROM32X1 #( .INIT(32'h00000000) ) ROM56 (.A0(ADDR[0]), 
+                  .A1(ADDR[1]), 
+                  .A2(ADDR[2]), 
+                  .A3(ADDR[3]), 
+                  .A4(ADDR[4]), 
+                  .O(A5[2]));
+   ROM32X1 #( .INIT(32'h00000000) ) ROM57 (.A0(ADDR[0]), 
+                  .A1(ADDR[1]), 
+                  .A2(ADDR[2]), 
+                  .A3(ADDR[3]), 
+                  .A4(ADDR[4]), 
+                  .O(A5[1]));
+   ROM32X1 #( .INIT(32'h00000000) ) ROM58 (.A0(ADDR[0]), 
+                  .A1(ADDR[1]), 
+                  .A2(ADDR[2]), 
+                  .A3(ADDR[3]), 
+                  .A4(ADDR[4]), 
+                  .O(A5[0]));
+   ROM32X1 #( .INIT(32'h00000000) ) ROM61 (.A0(ADDR[0]), 
+                  .A1(ADDR[1]), 
+                  .A2(ADDR[2]), 
+                  .A3(ADDR[3]), 
+                  .A4(ADDR[4]), 
+                  .O(A6[7]));
+   ROM32X1 #( .INIT(32'h00000000) ) ROM62 (.A0(ADDR[0]), 
+                  .A1(ADDR[1]), 
+                  .A2(ADDR[2]), 
+                  .A3(ADDR[3]), 
+                  .A4(ADDR[4]), 
+                  .O(A6[6]));
+   ROM32X1 #( .INIT(32'h00000000) ) ROM63 (.A0(ADDR[0]), 
+                  .A1(ADDR[1]), 
+                  .A2(ADDR[2]), 
+                  .A3(ADDR[3]), 
+                  .A4(ADDR[4]), 
+                  .O(A6[5]));
+   ROM32X1 #( .INIT(32'h00000000) ) ROM64 (.A0(ADDR[0]), 
+                  .A1(ADDR[1]), 
+                  .A2(ADDR[2]), 
+                  .A3(ADDR[3]), 
+                  .A4(ADDR[4]), 
+                  .O(A6[4]));
+   ROM32X1 #( .INIT(32'h00000000) ) ROM65 (.A0(ADDR[0]), 
+                  .A1(ADDR[1]), 
+                  .A2(ADDR[2]), 
+                  .A3(ADDR[3]), 
+                  .A4(ADDR[4]), 
+                  .O(A6[3]));
+   ROM32X1 #( .INIT(32'h00000000) ) ROM66 (.A0(ADDR[0]), 
+                  .A1(ADDR[1]), 
+                  .A2(ADDR[2]), 
+                  .A3(ADDR[3]), 
+                  .A4(ADDR[4]), 
+                  .O(A6[2]));
+   ROM32X1 #( .INIT(32'h00000000) ) ROM67 (.A0(ADDR[0]), 
+                  .A1(ADDR[1]), 
+                  .A2(ADDR[2]), 
+                  .A3(ADDR[3]), 
+                  .A4(ADDR[4]), 
+                  .O(A6[1]));
+   ROM32X1 #( .INIT(32'h00000000) ) ROM68 (.A0(ADDR[0]), 
+                  .A1(ADDR[1]), 
+                  .A2(ADDR[2]), 
+                  .A3(ADDR[3]), 
+                  .A4(ADDR[4]), 
+                  .O(A6[0]));
+   ROM32X1 #( .INIT(32'h00000000) ) ROM71 (.A0(ADDR[0]), 
+                  .A1(ADDR[1]), 
+                  .A2(ADDR[2]), 
+                  .A3(ADDR[3]), 
+                  .A4(ADDR[4]), 
+                  .O(A7[7]));
+   ROM32X1 #( .INIT(32'h00000000) ) ROM72 (.A0(ADDR[0]), 
+                  .A1(ADDR[1]), 
+                  .A2(ADDR[2]), 
+                  .A3(ADDR[3]), 
+                  .A4(ADDR[4]), 
+                  .O(A7[6]));
+   ROM32X1 #( .INIT(32'h00000000) ) ROM73 (.A0(ADDR[0]), 
+                  .A1(ADDR[1]), 
+                  .A2(ADDR[2]), 
+                  .A3(ADDR[3]), 
+                  .A4(ADDR[4]), 
+                  .O(A7[5]));
+   ROM32X1 #( .INIT(32'h00000000) ) ROM74 (.A0(ADDR[0]), 
+                  .A1(ADDR[1]), 
+                  .A2(ADDR[2]), 
+                  .A3(ADDR[3]), 
+                  .A4(ADDR[4]), 
+                  .O(A7[4]));
+   ROM32X1 #( .INIT(32'h00000000) ) ROM75 (.A0(ADDR[0]), 
+                  .A1(ADDR[1]), 
+                  .A2(ADDR[2]), 
+                  .A3(ADDR[3]), 
+                  .A4(ADDR[4]), 
+                  .O(A7[3]));
+   ROM32X1 #( .INIT(32'h00000000) ) ROM76 (.A0(ADDR[0]), 
+                  .A1(ADDR[1]), 
+                  .A2(ADDR[2]), 
+                  .A3(ADDR[3]), 
+                  .A4(ADDR[4]), 
+                  .O(A7[2]));
+   ROM32X1 #( .INIT(32'h00000000) ) ROM77 (.A0(ADDR[0]), 
+                  .A1(ADDR[1]), 
+                  .A2(ADDR[2]), 
+                  .A3(ADDR[3]), 
+                  .A4(ADDR[4]), 
+                  .O(A7[1]));
+   ROM32X1 #( .INIT(32'h00000000) ) ROM78 (.A0(ADDR[0]), 
+                  .A1(ADDR[1]), 
+                  .A2(ADDR[2]), 
+                  .A3(ADDR[3]), 
+                  .A4(ADDR[4]), 
+                  .O(A7[0]));
+   ROM32X1 #( .INIT(32'h00000001) ) ROM81 (.A0(ADDR[0]), 
+                  .A1(ADDR[1]), 
+                  .A2(ADDR[2]), 
+                  .A3(ADDR[3]), 
+                  .A4(ADDR[4]), 
+                  .O(A8[7]));
+   ROM32X1 #( .INIT(32'h00000000) ) ROM82 (.A0(ADDR[0]), 
+                  .A1(ADDR[1]), 
+                  .A2(ADDR[2]), 
+                  .A3(ADDR[3]), 
+                  .A4(ADDR[4]), 
+                  .O(A8[6]));
+   ROM32X1 #( .INIT(32'h00000000) ) ROM83 (.A0(ADDR[0]), 
+                  .A1(ADDR[1]), 
+                  .A2(ADDR[2]), 
+                  .A3(ADDR[3]), 
+                  .A4(ADDR[4]), 
+                  .O(A8[5]));
+   ROM32X1 #( .INIT(32'h00000000) ) ROM84 (.A0(ADDR[0]), 
+                  .A1(ADDR[1]), 
+                  .A2(ADDR[2]), 
+                  .A3(ADDR[3]), 
+                  .A4(ADDR[4]), 
+                  .O(A8[4]));
+   ROM32X1 #( .INIT(32'h00000000) ) ROM85 (.A0(ADDR[0]), 
+                  .A1(ADDR[1]), 
+                  .A2(ADDR[2]), 
+                  .A3(ADDR[3]), 
+                  .A4(ADDR[4]), 
+                  .O(A8[3]));
+   ROM32X1 #( .INIT(32'h00000000) ) ROM86 (.A0(ADDR[0]), 
+                  .A1(ADDR[1]), 
+                  .A2(ADDR[2]), 
+                  .A3(ADDR[3]), 
+                  .A4(ADDR[4]), 
+                  .O(A8[2]));
+   ROM32X1 #( .INIT(32'h00000000) ) ROM87 (.A0(ADDR[0]), 
+                  .A1(ADDR[1]), 
+                  .A2(ADDR[2]), 
+                  .A3(ADDR[3]), 
+                  .A4(ADDR[4]), 
+                  .O(A8[1]));
+   ROM32X1 #( .INIT(32'h00000000) ) ROM88 (.A0(ADDR[0]), 
+                  .A1(ADDR[1]), 
+                  .A2(ADDR[2]), 
+                  .A3(ADDR[3]), 
+                  .A4(ADDR[4]), 
+                  .O(A8[0]));
+   bus8_mux_MUSER_toyProcessor_overall  XLXI_1 (.DIN0(A1[7:0]), 
+                                               .DIN1(A2[7:0]), 
+                                               .DIN2(A3[7:0]), 
+                                               .DIN3(A4[7:0]), 
+                                               .DIN4(A5[7:0]), 
+                                               .DIN5(A6[7:0]), 
+                                               .DIN6(A7[7:0]), 
+                                               .DIN7(A8[7:0]), 
+                                               .S0(ADDR[5]), 
+                                               .S1(ADDR[6]), 
+                                               .S2(ADDR[7]), 
+                                               .DOUT(DATA_OUT[7:0]));
+endmodule
+`timescale 1ns / 1ps
+
+module mem_bootstrap_MUSER_toyProcessor_overall(CLK, 
+                                                CNT_EN, 
+                                                MUXControl, 
+                                                ProcAddr, 
+                                                ProcDR, 
+                                                RESET_CNT, 
+                                                WRITE_EN, 
+                                                DATA_OUT, 
+                                                Overflow);
+
+    input CLK;
+    input CNT_EN;
+    input MUXControl;
+    input [7:0] ProcAddr;
+    input [7:0] ProcDR;
+    input RESET_CNT;
+    input WRITE_EN;
+   output [7:0] DATA_OUT;
+   output Overflow;
+   
+   wire [7:0] COUNT_OUT;
+   wire [7:0] XLXN_3;
+   wire XLXN_9;
+   wire [7:0] XLXN_12;
+   wire [7:0] XLXN_17;
+   wire [7:0] XLXN_19;
+   
+   assign XLXN_19 = 8'h00;
+   ROM_array_MUSER_toyProcessor_overall  ROMARRAY (.ADDR(COUNT_OUT[7:0]), 
+                                                  .DATA_OUT(XLXN_12[7:0]));
+   RAM_array_MUSER_toyProcessor_overall  XLXI_2 (.ADDR(XLXN_3[7:0]), 
+                                                .CLK(CLK), 
+                                                .DATA_IN(XLXN_17[7:0]), 
+                                                .WE(WRITE_EN), 
+                                                .DATA_OUT1(DATA_OUT[7:0]));
+   mux8_sch_MUSER_toyProcessor_overall  XLXI_3 (.in0(XLXN_12[7:0]), 
+                                               .in1(ProcDR[7:0]), 
+                                               .sel(MUXControl), 
+                                               .mux_out(XLXN_17[7:0]));
+   mux8_sch_MUSER_toyProcessor_overall  XLXI_4 (.in0(COUNT_OUT[7:0]), 
+                                               .in1(ProcAddr[7:0]), 
+                                               .sel(MUXControl), 
+                                               .mux_out(XLXN_3[7:0]));
+   counter_sch_MUSER_toyProcessor_overall  XLXI_5 (.CLK(CLK), 
+                                                  .COUNT(CNT_EN), 
+                                                  .COUNT_IN(XLXN_19[7:0]), 
+                                                  .LOAD(XLXN_9), 
+                                                  .RST(RESET_CNT), 
+                                                  .COUNT_OUT(COUNT_OUT[7:0]));
+   GND  XLXI_6 (.G(XLXN_9));
+   (* HU_SET = "XLXI_19_162" *) 
+   AND8_MXILINX_toyProcessor_overall  XLXI_19 (.I0(COUNT_OUT[7]), 
+                                              .I1(COUNT_OUT[6]), 
+                                              .I2(COUNT_OUT[5]), 
+                                              .I3(COUNT_OUT[4]), 
+                                              .I4(COUNT_OUT[3]), 
+                                              .I5(COUNT_OUT[2]), 
+                                              .I6(COUNT_OUT[1]), 
+                                              .I7(COUNT_OUT[0]), 
+                                              .O(Overflow));
+endmodule
+`timescale 1ns / 1ps
+
+module clk_signal_sch_MUSER_toyProcessor_overall(CLK, 
+                                                 PUSH, 
+                                                 SIGNAL_OUT);
+
+    input CLK;
+    input PUSH;
+   output SIGNAL_OUT;
+   
+   wire XLXN_1;
+   wire XLXN_2;
+   wire XLXN_5;
+   wire XLXN_6;
+   wire SIGNAL_OUT_DUMMY;
+   
+   assign SIGNAL_OUT = SIGNAL_OUT_DUMMY;
+   FD #( .INIT(1'b0) ) XLXI_1 (.C(CLK), 
+              .D(PUSH), 
+              .Q(XLXN_1));
+   AND2  XLXI_2 (.I0(XLXN_2), 
+                .I1(PUSH), 
+                .O(XLXN_5));
+   AND2  XLXI_3 (.I0(SIGNAL_OUT_DUMMY), 
+                .I1(CLK), 
+                .O(XLXN_6));
+   OR2  XLXI_4 (.I0(XLXN_6), 
+               .I1(XLXN_5), 
+               .O(SIGNAL_OUT_DUMMY));
+   INV  XLXI_5 (.I(XLXN_1), 
+               .O(XLXN_2));
+endmodule
+`timescale 1ns / 1ps
+
+module BypassClk_MUSER_toyProcessor_overall(CLK, 
+                                            OVERFLOW, 
+                                            PUSH, 
+                                            RESET, 
+                                            SIG_OUT);
+
+    input CLK;
+    input OVERFLOW;
+    input PUSH;
+    input RESET;
+   output SIG_OUT;
+   
+   wire XLXN_1;
+   wire XLXN_3;
+   wire XLXN_8;
+   wire XLXN_11;
+   wire XLXN_12;
+   
+   clk_signal_sch_MUSER_toyProcessor_overall  XLXI_1 (.CLK(CLK), 
+                                                     .PUSH(PUSH), 
+                                                     .SIGNAL_OUT(XLXN_12));
+   FDR #( .INIT(1'b0) ) XLXI_3 (.C(CLK), 
+               .D(XLXN_1), 
+               .R(RESET), 
+               .Q(XLXN_3));
+   OR2  XLXI_4 (.I0(OVERFLOW), 
+               .I1(XLXN_3), 
+               .O(XLXN_1));
+   OR2  XLXI_5 (.I0(XLXN_11), 
+               .I1(XLXN_12), 
+               .O(SIG_OUT));
+   AND2  XLXI_6 (.I0(XLXN_8), 
+                .I1(CLK), 
+                .O(XLXN_11));
+   INV  XLXI_7 (.I(XLXN_3), 
+               .O(XLXN_8));
+endmodule
+`timescale 1ns / 1ps
+
+module toyProcessor_overall(CLK, 
+                            PUSH, 
+                            RESET, 
+                            ADDR, 
+                            D_IN, 
+                            EN_L, 
+                            EN_ML, 
+                            EN_MR, 
+                            EN_R, 
+                            MEM_EN, 
+                            Output, 
+                            Overflow, 
+                            seven_seg_out, 
+                            S0, 
+                            S1, 
+                            S2, 
+                            S3, 
+                            S4, 
+                            S5, 
+                            WRITE_EN);
+
+    input CLK;
+    input PUSH;
+    input RESET;
+   output [7:0] ADDR;
+   output [7:0] D_IN;
+   output EN_L;
+   output EN_ML;
+   output EN_MR;
+   output EN_R;
+   output MEM_EN;
+   output [7:0] Output;
+   output Overflow;
+   output [6:0] seven_seg_out;
+   output S0;
+   output S1;
+   output S2;
+   output S3;
+   output S4;
+   output S5;
+   output WRITE_EN;
+   
+   wire [6:0] L;
+   wire [6:0] ML;
+   wire [6:0] MR;
+   wire [6:0] R;
+   wire XLXN_19;
+   wire XLXN_20;
+   wire XLXN_174;
+   wire [7:0] Output_DUMMY;
+   wire Overflow_DUMMY;
+   wire S0_DUMMY;
+   wire [7:0] D_IN_DUMMY;
+   wire WRITE_EN_DUMMY;
+   wire [7:0] ADDR_DUMMY;
+   
+   assign ADDR[7:0] = ADDR_DUMMY[7:0];
+   assign D_IN[7:0] = D_IN_DUMMY[7:0];
+   assign Output[7:0] = Output_DUMMY[7:0];
+   assign Overflow = Overflow_DUMMY;
+   assign S0 = S0_DUMMY;
+   assign WRITE_EN = WRITE_EN_DUMMY;
+   mem_bootstrap_MUSER_toyProcessor_overall  BOOTSTRAP (.CLK(XLXN_174), 
+                                                       .CNT_EN(XLXN_19), 
+                                                       .MUXControl(XLXN_20), 
+                                                       
+         .ProcAddr(ADDR_DUMMY[7:0]), 
+                                                       
+         .ProcDR(Output_DUMMY[7:0]), 
+                                                       .RESET_CNT(RESET), 
+                                                       
+         .WRITE_EN(WRITE_EN_DUMMY), 
+                                                       
+         .DATA_OUT(D_IN_DUMMY[7:0]), 
+                                                       
+         .Overflow(Overflow_DUMMY));
+   toy_sch_MUSER_toyProcessor_overall  XLXI_2 (.CLK(XLXN_174), 
+                                              .D_IN(D_IN_DUMMY[7:0]), 
+                                              .Overflow(Overflow_DUMMY), 
+                                              .RESET(RESET), 
+                                              .ADDR(ADDR_DUMMY[7:0]), 
+                                              .D_OUT(Output_DUMMY[7:0]), 
+                                              .MEM_EN(MEM_EN), 
+                                              .RORW(WRITE_EN_DUMMY), 
+                                              .S0(S0_DUMMY), 
+                                              .S1(S1), 
+                                              .S2(S2), 
+                                              .S3(S3), 
+                                              .S4(S4), 
+                                              .S5(S5));
+   INV  XLXI_3 (.I(S0_DUMMY), 
+               .O(XLXN_20));
+   VCC  XLXI_4 (.P(XLXN_19));
+   LED7SegmentBehavioral  XLXI_9 (.In0(ADDR_DUMMY[4]), 
+                                 .In1(ADDR_DUMMY[5]), 
+                                 .In2(ADDR_DUMMY[6]), 
+                                 .In3(ADDR_DUMMY[7]), 
+                                 .A(L[0]), 
+                                 .B(L[1]), 
+                                 .C(L[2]), 
+                                 .D(L[3]), 
+                                 .E(L[4]), 
+                                 .F(L[5]), 
+                                 .G(L[6]));
+   LED7SegmentBehavioral  XLXI_10 (.In0(ADDR_DUMMY[0]), 
+                                  .In1(ADDR_DUMMY[1]), 
+                                  .In2(ADDR_DUMMY[2]), 
+                                  .In3(ADDR_DUMMY[3]), 
+                                  .A(ML[0]), 
+                                  .B(ML[1]), 
+                                  .C(ML[2]), 
+                                  .D(ML[3]), 
+                                  .E(ML[4]), 
+                                  .F(ML[5]), 
+                                  .G(ML[6]));
+   LED7SegmentBehavioral  XLXI_11 (.In0(Output_DUMMY[4]), 
+                                  .In1(Output_DUMMY[5]), 
+                                  .In2(Output_DUMMY[6]), 
+                                  .In3(Output_DUMMY[7]), 
+                                  .A(MR[0]), 
+                                  .B(MR[1]), 
+                                  .C(MR[2]), 
+                                  .D(MR[3]), 
+                                  .E(MR[4]), 
+                                  .F(MR[5]), 
+                                  .G(MR[6]));
+   seven_seg_control_sch_MUSER_toyProcessor_overall  XLXI_12 (.CLK(CLK), 
+                                                             .L(L[6:0]), 
+                                                             .ML(ML[6:0]), 
+                                                             .MR(MR[6:0]), 
+                                                             .R(R[6:0]), 
+                                                             .EN_L(EN_L), 
+                                                             .EN_ML(EN_ML), 
+                                                             .EN_MR(EN_MR), 
+                                                             .EN_R(EN_R), 
+                                                             
+         .seven_seg_out(seven_seg_out[6:0]));
+   LED7SegmentBehavioral  XLXI_16 (.In0(Output_DUMMY[0]), 
+                                  .In1(Output_DUMMY[1]), 
+                                  .In2(Output_DUMMY[2]), 
+                                  .In3(Output_DUMMY[3]), 
+                                  .A(R[0]), 
+                                  .B(R[1]), 
+                                  .C(R[2]), 
+                                  .D(R[3]), 
+                                  .E(R[4]), 
+                                  .F(R[5]), 
+                                  .G(R[6]));
+   BypassClk_MUSER_toyProcessor_overall  XLXI_17 (.CLK(CLK), 
+                                                 .OVERFLOW(Overflow_DUMMY), 
+                                                 .PUSH(PUSH), 
+                                                 .RESET(RESET), 
+                                                 .SIG_OUT(XLXN_174));
+endmodule

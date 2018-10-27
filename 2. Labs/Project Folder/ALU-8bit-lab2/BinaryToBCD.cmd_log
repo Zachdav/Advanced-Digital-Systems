@@ -1,0 +1,4 @@
+vhdtdtfi -lib work {Z:/CSEE 4280/Lab 2/ALU-8bit-lab2/BinaryToBCD.v} -lang verilog -prj ALU-8bit-lab2 -o BinaryToBCD.spl -module BinaryToBCD -template C:/Xilinx/14.2/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 BinaryToBCD.spl {Z:/CSEE 4280/Lab 2/ALU-8bit-lab2/BinaryToBCD.sym} 
+vhdtdtfi -lib work {Z:/CSEE 4280/Lab 2/ALU-8bit-lab2/BinaryToBCD.v} -lang verilog -prj ALU-8bit-lab2 -o BinaryToBCD.spl -module BinaryToBCD -template C:/Xilinx/14.2/ISE_DS/ISE//data/splveri.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 BinaryToBCD.spl {Z:/CSEE 4280/Lab 2/ALU-8bit-lab2/BinaryToBCD.sym} 
